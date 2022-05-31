@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html class="h-100" lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="임직원용 인실리코 오픈 플랫폼 서비스  ">
+  <meta name="author" content="인실리코플랫폼팀" />
+  <meta name="generator" content="Jekyll v4.1.1" />
+  <meta property="og:title" content="WISDOM" />
+  <meta property="og:description" content="This is WISDOM" />
+  <meta property="og:image" content="img/1.jpg" />
+  <title>WISDOM</title>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+  <!-- Semantic UI for Dropdown -->
+
+  <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css" />
+
+  <!-- Formantic ui  -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
+
+  <!-- favicon -->
+  <link rel="logo" sizes="180x180" href="img/favicon/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+
+
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&family=Nanum+Myeongjo:wght@400;700;800&display=swap"
+    rel="stylesheet">
+
+
+
+  <!-- import the webpage's stylesheet -->
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+
+
+<body class="d-flex flex-column h-100">
+  <main role="main" class="flex-shrink-0 mt-5">
+<nav>
+  <div class="ui fixed inverted menu">
+    <div class="ui container">
+      <a href="#" class="header item">
+        <img class="logo" src="img/favicon/logo.png">
+        WISDOM
+      </a>
+      <a href="#" class="item">Apps</a>
+      <a href="#" class="item">Dashboard</a>
+      <div class="ui simple dropdown item">
+        Dropdown <i class="dropdown icon"></i>
+        <div class="menu">
+          <a class="item" href="#">Link Item</a>
+          <a class="item" href="#">Link Item</a>
+          <div class="divider"></div>
+          <div class="header">Header Item</div>
+          <div class="item">
+            <i class="dropdown icon"></i>
+            Sub Menu
+            <div class="menu">
+              <a class="item" href="#">Link Item</a>
+              <a class="item" href="#">Link Item</a>
+            </div>
+          </div>
+          <a class="item" href="#">Link Item</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</nav>
+
+    <div class="container col-8 mt-4">
+      <h1 class="ui header ">Sequence Collector
+      </h1>
+      <section class="ui stacked segment" id="search step">
+        <div class="row">
+          <div class="ui form">
+            <div class="field">
+              <label>Task name</label>
+              <input type="text" maxlength="50" placeholder="Task Name under 50 characters">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row my-2">
+          
+          <div class="col-4">
+            <label>Database Source</label> 
+            <select class="ui fluid selection dropdown">
+              <option value="0"> Qualified seq (Recommend)</option>
+              <option value="1">All</option>
+              <option value="2"> Custom</option>
+            </select>
+      
+          </div>
+          <div class="col mt-4">
+            <div class="ui form">
+              <div class="inline fields">
+                <div class="field">
+                  <div class="ui  checkbox">
+                    <input type="checkbox" name="frequency" checked="checked">
+                    <label>Refseq</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" name="frequency">
+                    <label>Genome</label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" name="frequency">
+                    <label>Partial </label>
+                  </div>
+                </div>
+                <div class="field">
+                  <div class="ui checkbox">
+                    <input type="checkbox" name="frequency">
+                    <label>WGS only </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-3 mt-4">
+            <div class="ui slider checkbox">
+              <input type="checkbox" name="newsletter">
+              <label>Complete genome</label>
+            </div>
+
+            <i class="question circle icon myPopup" data-content="Complete genome only ( Complete / chromosome)"
+              data-position="right center"></i>
+
+          </div>
+        </div>
+        <h3 class="ui dividing header"> Features
+        </h3>
+        <div class = "row">
+          
+          
+        <div class="ui form">
+          <div class="three fields">
+            <div class="field">
+              <label>Feature key</label> 
+              <select class="ui search  dropdown" id="search-select">
+                <option value='CDS'>	CDS	</option>
+                <option value='3’UTR '>	3’UTR 	</option>
+                <option value='5’UTR '>	5’UTR 	</option>
+                <option value='gene '>	gene 	</option>
+                <option value='mat_peptide '>	mat_peptide 	</option>
+                <option value='rRNA '>	rRNA 	</option>
+                <option value='exon'>	exon	</option>
+                <option value='intron'>	intron	</option>
+                <option value='misc_binding'>	misc_binding	</option>
+                <option value='misc_feature'>	misc_feature	</option>
+                <option value='mobile_element'>	mobile_element	</option>
+                <option value='mRNA'>	mRNA	</option>
+                <option value='ncRNA'>	ncRNA	</option>
+                <option value='operon'>	operon	</option>
+                <option value='precursor_RNA'>	precursor_RNA	</option>
+                <option value='prim_transcript'>	prim_transcript	</option>
+                <option value='primer_bind'>	primer_bind	</option>
+                <option value='propeptide'>	propeptide	</option>
+                <option value='sig_peptide'>	sig_peptide	</option>
+                <option value='STS'>	STS	</option>
+                <option value='tmRNA'>	tmRNA	</option>
+                <option value='tRNA'>	tRNA	</option>
+                
+
+              </select>
+            </div>
+            <div class="field">
+              <label>Gene name (abbreviation)</label>
+              <div class="ui icon input">
+                <input type="text" placeholder="Maximum: 50 characters.">
+                <i class="search icon"></i>
+              </div>
+            </div>
+            <div class="field">
+           <label class = "text-white">Search</label>
+              <button class="ui button active mt-0">Search</button>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+
+        <h3 class="ui dividing header">Search results(synonyms)
+        </h3>
+ 
+        <select name="skills" multiple="" class="ui fluid dropdown">
+          <option value="">Skilllllllls</option>
+        <option value="angular">Angular</option>
+        <option value="css">CSS</option>
+        <option value="design">Graphic Design</option>
+        <option value="ember">Ember</option>
+        <option value="html">HTML</option>
+        <option value="ia">Information Architecture</option>
+        <option value="javascript">Javascript</option>
+        <option value="mech">Mechanical Engineering</option>
+        <option value="meteor">Meteor</option>
+        <option value="node">NodeJS</option>
+        <option value="plumbing">Plumbing</option>
+        <option value="python">Python</option>
+        <option value="rails">Rails</option>
+        <option value="react">React</option>
+        <option value="repair">Kitchen Repair</option>
+        <option value="ruby">Ruby</option>
+        <option value="ui">UI Design</option>
+        <option value="ux">User Experience</option>
+        </select>
+
+
+
+        <div class="ui input">
+          <input type="text" placeholder="Add personally">
+        </div>
+
+        <button class="ui basic button" style="border: 2px solid var(--main-color);">Add</button>
+        <button class="ui button" style="border: 2px solid var(--sub-color);">Undo</button>
+        <button class="ui button" style="border: 2px solid var(--text-color);">Clear All</button>
+
+        <hr>
+      </section>
+      <button class="ui button">Go to ‘Filtering’ step
+      </button>
+
+      <h3 class="ui dividing header">
+        Result
+        (Selecting & filtering seq.)
+
+      </h3>
+
+
+
+
+      <select name="skills" multiple="" class="ui fluid dropdown" id = "skills">
+        <option value="">Skills</option>
+      <option value="angular">Angular</option>
+      <option value="css">CSS</option>
+      <option value="design">Graphic Design</option>
+      <option value="ember">Ember</option>
+      <option value="html">HTML</option>
+      <option value="ia">Information Architecture</option>
+      <option value="javascript">Javascript</option>
+      <option value="mech">Mechanical Engineering</option>
+      <option value="meteor">Meteor</option>
+      <option value="node">NodeJS</option>
+      <option value="plumbing">Plumbing</option>
+      <option value="python">Python</option>
+      <option value="rails">Rails</option>
+      <option value="react">React</option>
+      <option value="repair">Kitchen Repair</option>
+      <option value="ruby">Ruby</option>
+      <option value="ui">UI Design</option>
+      <option value="ux">User Experience</option>
+      </select>
+
+
+
+  </main>
+
+
+  <div class="ui inverted vertical footer segment bg-here">
+    <div class="ui center aligned container">
+      <div class="ui stackable inverted divided grid">
+        <div class="three wide column">
+          <h4 class="ui inverted header">Group 1</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Link One</a>
+            <a href="#" class="item">Link Two</a>
+            <a href="#" class="item">Link Three</a>
+            <a href="#" class="item">Link Four</a>
+          </div>
+        </div>
+        <div class="three wide column">
+      
+        </div>
+        <div class="three wide column">
+      
+         
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header">Footer Header</h4>
+          <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+        </div>
+      </div>
+      <div class="ui inverted section divider"></div>
+      <img src="img/favicon/logo.png" class="ui centered mini image">
+      <div class="ui horizontal inverted small divided link list">
+        <a class="item" href="#">Site Map</a>
+        <a class="item" href="#">Contact Us</a>
+        <a class="item" href="#">Terms and Conditions</a>
+        <a class="item" href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+
+    
+
+
+
+    <script src="script.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+
+
+</body>
+
+</html>
