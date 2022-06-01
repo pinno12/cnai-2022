@@ -1,11 +1,3 @@
-# express-passport-sequelize-handlebars-example
-
-- Express
-- PassportJS
-- Express Session + Passport Session with Sequelize Store (Persisting session data in the SQL db)
-- Sequelize with MySQL (but can be easily switched to SQLite, PgSQL...)
-- Handlebars as views engine
-
-### Run
-
-npm start
+https://edusontest.glitch.me/login : 관리자 로그인 (아이디, 비밀번호 / 1 )  
+https://edusontest.glitch.me/level : 문제보기  
+https://edusontest.glitch.me/result : 지금까지 등록된 결과 보기  
