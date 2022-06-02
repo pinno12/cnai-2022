@@ -135,6 +135,10 @@ app.get('/company', (req,res) => {
   res.render('company');
 })
 
+app.get('/community', (req,res) => {
+  res.render('community');
+})
+
 
 // app.get("/", function (req, res) {
 //   res.redirect("login");
