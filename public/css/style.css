@@ -1,7 +1,53 @@
 
 
 html{
-  font-size: 16px
+  font-size: 16px;
+ 
+}
+
+.v-line{
+  border-left: 6px solid green;
+  height: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3px;
+  top: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+
+  background: #fff;
+  width: 80vw;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ui.header, h1, h2, h3, h4, h5, h6,html, body {
+  font-family: 'made-tommy';
 }
 
 .subTitle{
@@ -16,4 +62,15 @@ html{
 
 .gray1{
   color: #4E5968
+}
+
+
+@font-face {
+  font-family: made-tommy-outline;
+  src: url("/css/font/made-tommy-outline/webfonts/made-tommy-outline.woff") format("woff"),url("/css/font/made-tommy-outline/webfonts/made-tommy-outline.ttf")  format("truetype");
+}
+
+@font-face {
+  font-family: made-tommy;
+  src: url("/css/font/made-tommy/webfonts/made-tommy.woff") format("woff"),url("/css/font/made-tommy-outline/webfonts/made-tommy.ttf")  format("truetype");
 }
