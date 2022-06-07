@@ -1,27 +1,40 @@
 AOS.init();
 
-// $(".nav-link").hover(
-//   function () {
-//     $(this).addClass("line");
-//   },
-//   function () {
-//     $(this).removeClass("line");
-//   }
-// );
+console.log(`Welcome to 
+╭━━━┳━╮╱╭┳━━━┳━━╮
+┃╭━╮┃┃╰╮┃┃╭━╮┣┫┣╯
+┃┃╱╰┫╭╮╰╯┃┃╱┃┃┃┃
+┃┃╱╭┫┃╰╮┃┃╰━╯┃┃┃
+┃╰━╯┃┃╱┃┃┃╭━╮┣┫┣╮
+╰━━━┻╯╱╰━┻╯╱╰┻━━╯
+`)
 
 
-// $('.nav-link').each(function(){
-//   var item = $(this);
+  $("#scroller").simplyScroll({
+      customClass: "simply-scroll",
+      frameRate: 20,
+      speed: 1,
+      orientation: "horizontal",
+      auto: !0,
+      autoMode: "loop",
+      manualMode: "end",
+      direction: "forwards",
+      startOnLoad: !1,
+      initialOffset: 0
+  });
 
-//   item.mouseenter(function(){
-//      item.toggleClass('line');
-//   });
-
-//   item.mouseleave(function(){
-//      item.toggleClass('line');
-//   });
-// });
-
+  $("#scrollerBottom").simplyScroll({
+      customClass: "simply-scroll",
+      frameRate: 24,
+      speed: 1,
+      orientation: "horizontal",
+      auto: !0,
+      autoMode: "loop",
+      manualMode: "end",
+      direction: "backwards",
+      startOnLoad: !1,
+      initialOffset: 0
+  });
 
 
   // fix menu when passed

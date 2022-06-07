@@ -1,22 +1,41 @@
-<header class="bg-dark text-white">
+<header class="bg-dark Gray_5 menu py-2">
+
+
+
   <div class="container">
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-        <img class = "logo" src="./img/common/favicon.ico" width = "15%"> CNAI
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none">
+        <img class = "logo" src="./img/common/CNAI(white).png" width = "70px">
       </a>
 
-      <ul class="nav col-7 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="/company" class="nav-link px-2 text-secondary">COMPANY</a></li>
-        <li><a href="/community" class="nav-link px-2 text-white">COMMUNITY</a></li>
-        <li><a href="/career" class="nav-link px-2 text-white">CAREER</a></li>
-      </ul>
+      <div class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 " id = 'gnb-dark'>
+        <li class="my-auto px-5"><a href="/company" class="nav-link px-2 Gray_5 hover-underline-animation">COMPANY</a></li>
+        
+          <div class="ui compact menu my-auto pr-5" style="
+          background: none;
+      ">
+            <div class="ui simple dropdown item Gray_5" id = 'moveArrow'>
+         COMMUNITY
+         <i class="angle down icon" id = 'myArrow'></i>
+              <div class="menu">
+                <div class="item"><a href = '/community'>Publications</a></div>
+                <div class="item">Tech Blog<i class="external alternate icon"></i></div>
+           
+              </div>
+            </div>
+          </div>
+        
+        
+        
+        
+        <li class = 'my-auto'><a href="/career" class="nav-link px-2 text-white">CAREER</a></li>
+        </div>
 
 
-      <div class="">
-        <a href = '/en' ><i class="globe icon" class = 'mx-5'></i></a>
-        <button type="button" class="btn btn-outline-light me-2">CONTACT US</button>
+      <div class="text-end">
+        <a href = '/en' class  = 'nav-link hover-underline-animation'><i class="globe icon px-5 text-white"></i></a>
+        <button type="button" class="btn btn-outline-light me-2 ">CONTACT US</button>
       </div>
     </div>
   </div>
 </header>
-

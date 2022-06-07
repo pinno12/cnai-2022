@@ -1,12 +1,21 @@
 const express = require("express");
 const path = require("path");
 const sqlite3 = require("sqlite3").verbose();
+var livereload = require("livereload");
+var connectLiveReload = require("connect-livereload");
 
-// Création du serveur Express
 
 var passport = require('passport');
 var Strategy = require('passport-local').Strategy;
 var db2 = require('./models');
+
+
+const liveReloadServer = livereload.createServer();
+liveReloadServer.server.once("connection", () => {
+  setTimeout(() => {
+    liveReloadServer.refresh("/");
+  }, 100);
+});
 
 
 
@@ -36,6 +45,7 @@ passport.deserializeUser(function(id, cb) {
 
 const app = express();
 
+app.use(connectLiveReload());
 
 app.use(require('morgan')('combined'));
 app.use(require('body-parser').urlencoded({ extended: true }));

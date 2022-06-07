@@ -93,6 +93,16 @@
   </script>
 
 
+<script type="text/javascript" src="./src/simplyScroll/jquery.simplyscroll.js"></script>
+<link rel="stylesheet" href="./src/simplyScroll/jquery.simplyscroll.css" media="all" 
+type="text/css">
+<script type="text/javascript">
+  (function($) {
+    $(function() {
+      $("#scroller").simplyScroll();
+    });
+  })(jQuery);
+</script>
 
 
   <!-- import the webpage's stylesheet -->
@@ -130,6 +140,8 @@
           </div>
         </div>
       </header>
+
+      <%- include('_header_dark'); -%>
       
 
      
