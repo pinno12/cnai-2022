@@ -2,8 +2,76 @@
 
 html{
   font-size: 16px;
- 
+ }
+
+
+
+  .hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: white;
+  }
+  
+#moveArrow:hover #myArrow{
+  transform: rotate(180deg);
+  transition: all 0.4s ease;
+
+
 }
+
+  .hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+  }
+
+
+
+.btn-1{
+  color: #BDBDBD;
+  background-color: #F2F5F8;
+}
+
+.Gray_0{
+  color: #363D47 !important;
+}
+
+.Gray_1{
+  color: #4E5968 !important;
+}
+
+.Gray_2{
+  color: #929AA4 !important;
+}
+
+.Gray_3{
+  color: #bdbdbd !important;
+}
+
+.Gray_4{
+  color: #eeeeee !important;
+}
+
+
+.Gray_5{
+  color: #f2f5f8 !important;
+}
+
+
+
+
 
 .v-line{
   border-left: 6px solid green;

@@ -1,13 +1,52 @@
 AOS.init();
 
+// $(".nav-link").hover(
+//   function () {
+//     $(this).addClass("line");
+//   },
+//   function () {
+//     $(this).removeClass("line");
+//   }
+// );
 
+
+// $('.nav-link').each(function(){
+//   var item = $(this);
+
+//   item.mouseenter(function(){
+//      item.toggleClass('line');
+//   });
+
+//   item.mouseleave(function(){
+//      item.toggleClass('line');
+//   });
+// });
+
+
+
+  // fix menu when passed
+  $('.masthead')
+    .visibility({
+      once: false,
+      onBottomPassed: function() {
+        $('.fixed.menu').transition('fade in');
+      },
+      onBottomPassedReverse: function() {
+        $('.fixed.menu').transition('fade out');
+      }
+    })
+  ;
 
 var myCarousel = document.querySelector('#myCarousel')
 var carousel = new bootstrap.Carousel(myCarousel, {
   interval: 0
 })
 
-
+$('.ui.sticky')
+  .sticky({
+    context: '#example1'
+  })
+;
 
 // ellipse and circle
 $('.ui.sticky')
@@ -30,18 +69,14 @@ $('.ui.modal')
 
 $('.tool-tip').popup();
 
-function uncheck() {
-document.getElementById("red").checked = false;
-}
+
 $('.ui.dropdown')
   .dropdown()
 ;
 $('.ui.checkbox')
 .checkbox()
 ;
-$('.menu .item')
-.tab()
-;
+
 
 $('.accordion')
 .accordion({
@@ -51,38 +86,5 @@ $('.accordion')
 })
 ;
 
-$('#diacriticsexample')
-    .search({
-        ignoreDiacritics: true,
-        fullTextSearch:'exact',
-        source: [
-            { title: 'André'},
-            { title: 'Bokmål'},
-            { title: 'café'},
-            { title: 'cafetería'},
-            { title: 'château'},
-            { title: 'décolleté'},
-            { title: 'Élysée'},
-            { title: 'Fräulein'},
-            { title: 'garçon'},
-            { title: 'háček'},
-            { title: 'inrō'},
-            { title: 'jūjutsu'},
-            { title: 'kroužek'},
-            { title: 'La Niña'},
-            { title: 'Māori'},
-            { title: 'négligée'},
-            { title: 'pączki'},
-            { title: 'Québec'},
-            { title: 'ragoût'},
-            { title: 'Škoda'},
-            { title: 'takahē'},
-            { title: 'über'},
-            { title: 'voilà'},
-            { title: 'whekī'},
-            { title: 'c Zoë'}
-        ]
-    })
-;
 
 

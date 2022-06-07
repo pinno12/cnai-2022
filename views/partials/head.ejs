@@ -46,7 +46,7 @@
 
   <!-- Formantic ui  -->
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script> -->
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -97,7 +97,41 @@
 
   <!-- import the webpage's stylesheet -->
   <link rel="stylesheet" href="./css/style.css" />
+
 </head>
-<body class="d-flex flex-column h-100">
+<body class="d-flex flex-column h-100 ">
+
+<!-- Following Menu -->
+
+
+
     <main role="main" class="flex-shrink-0 ">
-      <%- include('_header_dark'); -%>
+
+
+      <!-- <header class="bg-light ui large top fixed hidden menu"> -->
+        <header class="bg-light ui large top fixed menu transition hidden">
+        <div class="container ">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+            <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+              <img class = "logo" src="./img/common/CNAI(white).png" width = "15%"> CNAI
+            </a>
+      
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="/company" class="nav-link px-2 text-secondary">COMPANY</a></li>
+              <li><a href="/community" class="nav-link px-2 text-white">COMMUNITY</a></li>
+              <li><a href="/career" class="nav-link px-2 text-white">CAREER</a></li>
+            </ul>
+      
+      
+            <div class="text-end">
+              <a><i class="globe icon"></i></a>
+              <button type="button" class="btn btn-outline-light me-2">CONTACT US</button>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+
+     
+      
+      

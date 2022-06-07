@@ -1,7 +1,53 @@
 <%- include('partials/head'); -%>
 
-    <div class="container col-8 mt-4">
-      <section class="py-5 text-center container mt-5" style = "height: 100vh">
+<header class="bg-dark Gray_5 menu py-2">
+
+
+
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none">
+        <img class = "logo" src="./img/common/CNAI(white).png" width = "70px">
+      </a>
+
+      <div class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 " id = 'gnb-dark'>
+        <li class="my-auto px-5"><a href="/company" class="nav-link px-2 Gray_5 hover-underline-animation">COMPANY</a></li>
+        
+          <div class="ui compact menu my-auto pr-5" style="
+          background: none;
+      ">
+            <div class="ui simple dropdown item Gray_5" id = 'moveArrow'>
+         COMMUNITY
+         <i class="angle down icon" id = 'myArrow'></i>
+              <div class="menu">
+                <div class="item"><a href = '/community'>Publications</a></div>
+                <div class="item">Tech Blog<i class="external alternate icon"></i></div>
+           
+              </div>
+            </div>
+          </div>
+        
+        
+        
+        
+        <li class = 'my-auto'><a href="/career" class="nav-link px-2 text-white">CAREER</a></li>
+        </div>
+
+
+      <div class="text-end">
+        <a href = '/en' class  = 'nav-link hover-underline-animation'><i class="globe icon px-5 text-white"></i></a>
+        <button type="button" class="btn btn-outline-light me-2 ">CONTACT US</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <div class="container col-8 mt-4" data-bs-spy="scroll" data-bs-target="#myScroll" data-bs-offset="50">
+
+
+ 
+      <section class="py-5 text-center container mt-5 masthead " style = "height: 100vh">
         <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
             <h1 class="fw-light">CODE NEW AI</h1>
@@ -10,11 +56,18 @@
         </div>
       </section>
 
+
+     
+
+      
+      
+
       <section class="py-5 text-center container">
         <div class="row py-lg-5 mt-5">
           <div class="col-lg-6 col-md-8 mx-auto">
             <h1 class="fw-light" data-aos="fade-up">BETTER DATA, FUTURE FOR AI</h1> <br />
             <p class="lead text-muted"data-aos="fade-up">데이터가 주도하는 인공지능의 미래</p>
+            <a href = '#home-tech'><i class="angle down icon"></i></a>
           </div>
         </div>
       </section>
@@ -90,13 +143,13 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="images/photos/1.png" class="d-block w-100">
+              <img src="img/1.jpeg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-              <img src="images/photos/2.png" class="d-block w-100">
+              <img src="img/1.jpeg" class="d-block w-100">
             </div>
             <div class="carousel-item">
-              <img src="images/photos/3.png" class="d-block w-100">
+              <img src="img/1.jpeg" class="d-block w-100">
             </div>
           </div>
           <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-target="#myCarousel" data-bs-slide="prev">

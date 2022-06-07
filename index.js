@@ -143,7 +143,9 @@ app.get('/career', (req,res) => {
   res.render('career');
 })
 
-
+app.get('/test', (req,res) => {
+  res.render('test');
+})
 
 // app.get("/", function (req, res) {
 //   res.redirect("login");
