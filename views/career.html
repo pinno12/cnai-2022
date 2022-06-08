@@ -1,4 +1,6 @@
-<%- include('partials/head'); -%>
+{% extends 'base.html' %}
+
+{% block content %}
 <!-- 1회성 -->
 <style> 
 .outline{
@@ -193,7 +195,7 @@
   </section>
 
   <section id = 'btn-career' class = 'container-fluid'>
-    <section class="py-5 text-center container-flujid mb-5 bg-dark text-light" style="height: 100vh">
+    <section class="py-5 text-center container-fluid mb-5 bg-dark text-light" style="height: 100vh">
       <div style="margin-top: 40vh;" data-aos="fade-up">
           <h1>CNAI의 개발팀의 일상 엿보기</h1>
           <div class = 'ui button'>Tech Blog 바로가기</div>
@@ -235,5 +237,4 @@
   </button>
 </div>  -->
 
-  <%- include('partials/_footer_dark'); -%>
-
+{% endblock %}

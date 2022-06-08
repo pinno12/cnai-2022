@@ -1,0 +1,412 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+</style>
+
+<section class="py-5 text-center container-flujid mb-5 bg-dark text-light" style="height: 100vh">
+  <div style="margin-top: 40vh;" data-aos="fade-up">
+    <h1>합성 데이터로 새로운 패러다임을 만듭니다.</h1>
+  </div>
+</section>
+
+
+
+<div class="container mt-4">
+
+
+  <section class="py-5 text-center container my-5 " style="height: 100vh; background-color:
+      #4E5968 ;">
+    <div class="row py-lg-5">
+      <small class="subTitle">Our Numbers</small>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h1 data-aos="fade-up">1 st</h1>
+        <p>국내 최초
+          합성 데이터 활용 기업</p>
+      </div>
+      <div class="col">
+        <h1>10,000,000 +</h1>
+        <p>합성 데이터를 위해
+          수집한 원천 데이터 수</p>
+
+      </div>
+      <div class="col">
+        <h1>92 +</h1>
+        <p>프로젝트를 위해 보유한
+          AI 모델의 수(2022.2월 기준)
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 text-center container my-5 bg-dark" style="height: 100vh">
+    <div class="row pt-lg-5 text-light">
+      <small>Our Core Value </small>
+      <h2 data-aos="fade-right">코드를 넘어, 더 나은 미래를 설계합니다.</h2>
+
+    </div>
+
+  </section>
+
+  <section id="description" class="gray1">
+    <div class="row">
+      <div class="col" data-aos="fade-up" id="d1">
+        <h3>진정성 있는</h3>
+        <p>‘진정성’있게, 서로에 대한 신뢰를
+          바탕으로 끊임없이 소통합니다. </p>
+      </div>
+      <div class="col" data-aos="fade-up" id='d2' data-aos-delay="200">
+        <h1>함께 성장하는</h1>
+        <p>잠재력이 가득한 최고의 팀원들이
+          함께 멋진 미래를 만들어 나갑니다.</p>
+
+      </div>
+      <div class="col" data-aos="fade-up" data-aos-delay="400">
+        <h1>끊임없이 도전하는</h1>
+        <p>최선의 결과를 위해 고민하고 도전하며,
+          질문에 대한 해답을 찾아냅니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+
+<section id="journey" class="container-fluid" style = 'position: relative;'>
+  <div class="row">Our Journey</div>
+  <div class="row">
+    <p class="col-3">
+      대한민국 최고의 합성 데이터
+      기업으로 거듭나겠습니다.
+    </p>
+  </div>
+
+
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><div class="card" >
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div></div>
+      <div class="swiper-slide"><div class="card" >
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div></div>
+      <div class="swiper-slide"><div class="card" >
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div></div>
+      <div class="swiper-slide">Slide 3</div>
+
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+
+
+</section>
+
+<section class='container'>
+  <section id='ourLeaders'>
+    <h5>Our Leaders</h5>
+    <h2>AI의 미래를 그리는 사람들</h2>
+    <div class="row g-3">
+
+{# var i = [{name: 'WonSeop Lee', position: 'CEO', etc: ["aaa","bbb","ccc"] }, ]#}
+
+      <div class='col-lg-6'>
+        <div class="card">
+
+          <div class="content">
+            <div class="header">WonSeop Lee <span> CEO </span></div>
+            <div class="meta">
+              <a>Friends</a>
+            </div>
+            <div class="description">
+              <ul>
+                <li>삼성전자 메모리사업부 SW개발팀 SW엔지니어 (삼성전자 SCSA수료)</li>
+                <li>카이스트, 기술경영 석사</li>
+                미국 인디아나 대학교 경제학 학사
+              </ul>
+
+            </div>
+          </div>
+          <div class="image">
+            <img src="/img/1.jpeg">
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3 col-lg-6">
+        <div class="row g-0">
+
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <img src="/img/1.jpeg" class="img-fluid rounded-start" alt="...">
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3  col-lg-6">
+        <div class="row g-0">
+
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <img src="/img/1.jpeg" class="img-fluid rounded-start" alt="...">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section id='ourTeam'>
+    <div class="card mb-3 border-0" style="
+    height: 80vh;
+" >
+      <div class="row g-0">
+
+        <div class="col-md-6">
+          <div class="">
+            <p class="SubTitle_1 Gray_3">Our Team</p>
+            <p class="card-text kr Title_1 Gray_1">함께이기에 <br />
+              빛이 나는 사람들</p>
+            <p class="card-text position-absolute bottom-0 start-0 Gray_1 Title_2">그들의 이야기가 궁금하다면
+              <a href="/career" class="ms-3 text-dark "><i class="bi bi-arrow-right-circle"></i></a></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="img/1.jpeg" class="img-fluid rounded-start w-100 h-100" alt="함께 더빛남">
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<img src='/img/1.jpeg' class='w-100'>
+
+<section id='welfare' class = 'container '>
+  <p class="SubTitle_1 Gray_3">Our Welfare</p>
+  <p class="card-text kr Title_1 Gray_1 col-5">아낌없는 지원으로 업무 몰입 뿐 아니라, 
+    팀원들의 성장과 자아실현까지 이끌어갑니다.
+    <div class="swiper ourWelfare" style = "margin-top: 20vh; ">
+      <div class="swiper-wrapper" style="height:50vh;">
+        <div class="swiper-slide">
+
+          <div class="mb-3">
+            <div class="row align-items-end">
+              <div class="col-md-4">
+                <img src="img/1.jpeg" class="img-fluid rounded-start" alt="...">
+              </div>
+              <div class="col-md-8 ">
+               
+                  <p class=" Title_3">사내 동아리 활동 운영</h5>
+                  <p class="Body_2 text-start">골프 , 싸이클, 풋살, 클라이밍 등 동료들과 함께 즐기는 사내 동아리</p>
+            
+               
+              </div>
+            </div>
+          </div>     
+      
+      </div>
+        <div class="swiper-slide"><div class="card" >
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div></div>
+        <div class="swiper-slide"><div class="card" >
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div></div>
+        <div class="swiper-slide">Slide 3</div>
+  
+      </div>
+      <span class= 'welfare-prev'><i class="bi bi-arrow-left-circle"></i></span>
+      <span class= 'welfare-next'><i class="bi bi-arrow-right-circle"></i></span>
+
+      
+      <div class="swiper-pagination"></div>
+    </div>
+  
+
+
+
+</section>
+
+
+
+
+
+<section id='story' class='row' style = 'background: linear-gradient(96.7deg, rgba(255, 255, 255, 0) -7.21%, #FFFFFF 138.74%), #5A54F5;'>
+  <div class='col-4 text-center position-relative text-white'>
+  <p class = 'SubTitle_1 mt-5 '>Our Story</p>
+  <p class = 'position-absolute start-50 translate-middle-x Title_2_eng' style = 'bottom:7vh;'>More   
+    <button class = 'ui icon button ' id = 'goYoutube'><span class= 'ms-3'><i class="bi bi-arrow-right-circle"></i></span></button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Launch demo modal
+    </button>
+    
+
+
+  </p>
+
+  <button class="ui button yellow create_btn" type="button" id="test">Create</button>
+</div>
+  <div class='col-8'>
+    <img src="/img/1.jpeg" class="img-fluid w-100" alt="...">
+  </div>
+</section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}
+
+{% block localScript %}
+
+<script>
+
+
+      var swiper = new Swiper(".mySwiper", {
+ 
+        slidesPerView: 5,
+        spaceBetween: 30,
+        centeredSlides: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+
+let welfare = new Swiper(".ourWelfare", {
+  centeredSlides: true,
+ slidesPerView: 3,
+ spaceBetween: 30,
+ centeredSlides: true,
+ initialSlide : 1,
+ 
+ navigation: {
+         nextEl: ".welfare-next",
+         prevEl: ".welfare-prev",
+       },
+
+});
+</script>
+
+{% endblock %}

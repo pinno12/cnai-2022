@@ -1,3 +1,7 @@
+{% include "partials/_header.html" %}
+
+{% block content %} {% endblock %}
+
 </main>
 
 <footer class="ui inverted vertical footer mt-auto segment bg-here">
@@ -48,7 +52,8 @@
         </div>
         <div class=" column">
           <h4 class="ui inverted header">Channel</h4>
-          <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+          <h4 class="ui inverted header">Media Kit</h4>
+        
         </div>
       </div>
       <div class="ui inverted section divider"></div>
@@ -65,27 +70,17 @@
    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
    <!-- Initialize Swiper -->
-   <script>
-     var swiper = new Swiper(".mySwiper", {
-       slidesPerView: 2,
-       spaceBetween: 30,
-       centeredSlides: true,
-       pagination: {
-         el: ".swiper-pagination",
-         clickable: true,
-       },
-       navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-     });
-   </script>
 
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.js"></script>
   <script src="script.js"></script>
+
+
+  {% block localScript %}
+  
+  {% endblock %}
 
 
 </body>

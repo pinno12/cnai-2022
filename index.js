@@ -3,8 +3,7 @@ const path = require("path");
 const sqlite3 = require("sqlite3").verbose();
 var livereload = require("livereload");
 var connectLiveReload = require("connect-livereload");
-
-
+const nunjucks = require('nunjucks');
 var passport = require('passport');
 var Strategy = require('passport-local').Strategy;
 var db2 = require('./models');
@@ -44,6 +43,17 @@ passport.deserializeUser(function(id, cb) {
 
 
 const app = express();
+app.engine('html', nunjucks.render);
+app.set('view engine', 'html');
+nunjucks.configure('views', {
+  autoescape: true,
+  express: app
+});
+app.set("views", path.join(__dirname, "views"));
+app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded({ extended: false }));
+
+
 
 app.use(connectLiveReload());
 
@@ -117,11 +127,6 @@ app.get('/profile',
 
 
 
-// Server
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
-app.use(express.static(path.join(__dirname, "public")));
-app.use(express.urlencoded({ extended: false }));
 
 // Connection to SQLite
 const db_name = path.join(__dirname, "data", "apptest.db");

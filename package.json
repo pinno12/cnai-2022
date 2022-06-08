@@ -1,12 +1,12 @@
 {
-  "name": "CNAI",
+  "name": "cnai",
   "version": "1.1.0",
   "description": "2022",
   "main": "index.js",
   "scripts": {
     "start": "node index",
     "dev": "nodemon -e ejs,js,html app.js",
-    "watch": "nodemon -e ejs,js,html"
+    "watch": "nodemon -e ejs,js,html,css"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +24,7 @@
     "express": "^4.16.4",
     "express-handlebars": "^3.1.0",
     "express-session": "^1.16.1",
+    "font-applesdgothicneo": "^1.0.3",
     "helmet": "^3.16.0",
     "jquery-simplyscroll": "^2.1.1",
     "morgan": "^1.10.0",

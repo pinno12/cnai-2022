@@ -1,5 +1,6 @@
-<%- include('partials/head'); -%>
+{% extends 'base.html' %}
 
+{% block content %}
 
 
 
@@ -9,7 +10,7 @@
         <div class="row py-lg-5">
           <div class="col-lg-6 col-md-8 mx-auto">
             <h1 class="fw-light">CODE NEW AI</h1>
-            <p class="lead text-muted">당신이 원하는 모든 것, AI로 이루어 드립니다</p>
+            <p class="lead text-muted kr">당신이 원하는 모든 것, AI로 이루어 드립니다</p>
           </div>
         </div>
       </section>
@@ -140,9 +141,72 @@
 
     </section>
 
+    {% endblock %}
+
+    {% block localScript %}
+  
+    <script>
+        $("#scroller").simplyScroll({
+      customClass: "simply-scroll",
+      frameRate: 20,
+      speed: 1,
+      orientation: "horizontal",
+      auto: !0,
+      autoMode: "loop",
+      manualMode: "end",
+      direction: "forwards",
+      startOnLoad: !1,
+      initialOffset: 0
+  });
+
+  $("#scrollerBottom").simplyScroll({
+      customClass: "simply-scroll",
+      frameRate: 24,
+      speed: 1,
+      orientation: "horizontal",
+      auto: !0,
+      autoMode: "loop",
+      manualMode: "end",
+      direction: "backwards",
+      startOnLoad: !1,
+      initialOffset: 0
+  });
 
 
-  <%- include('partials/_footer_dark'); -%>
+  // fix menu when passed
+  $('.masthead')
+    .visibility({
+      once: false,
+      onBottomPassed: function() {
+        $('.fixed.menu').transition('fade in');
+      },
+      onBottomPassedReverse: function() {
+        $('.fixed.menu').transition('fade out');
+      }
+    })
+  ;
+
+    </script>
+  {% endblock %}
 
 
+  {% block localScript %}
+
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 2,
+      spaceBetween: 30,
+      centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+         nextEl: ".swiper-button-next",
+         prevEl: ".swiper-button-prev",
+       },
+    });
+  </script>
+
+  {% endblock %}
 

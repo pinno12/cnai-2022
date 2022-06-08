@@ -2,9 +2,16 @@
 
 html{
   font-size: 16px;
+  font-family: 'AppleSDGothicNeo', 'made-tommy', sans-serif;
  }
 
-
+ .kr, html[lang=kr]{
+  font-family: 'AppleSDGothicNeo' !important;
+ }
+ @import "//cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/all.min.css";
+.en{
+  font-family: 'made-tommy'
+}
 
   .hover-underline-animation {
     display: inline-block;
@@ -37,6 +44,62 @@ html{
     transform-origin: bottom center;
   }
 
+/*  */
+
+.SubTitle_1{
+font-family: 'MADE TOMMY';
+font-size: 26px;
+font-weight: 500;
+line-height: 33px;
+letter-spacing: 0em;
+}
+
+.Title_1{
+font-family: 'Apple SD Gothic Neo';
+font-style: normal;
+font-weight: 800;
+font-size: 2.25rem;
+line-height: 56px;
+}
+
+.Title_2{
+font-family: 'Apple SD Gothic Neo';
+font-style: normal;
+font-weight: 600;
+font-size: 1.875rem;
+/* line-height: 45px; */
+}
+
+.Title_2_eng{
+font-family: 'MADE TOMMY';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 45px;
+}
+
+
+
+.Title_3{
+font-family: 'Apple SD Gothic Neo';
+font-size: 26px;
+font-weight: 600;
+line-height: 42px;
+letter-spacing: -0.02em;
+text-align: left;
+}
+
+/*  */
+.Body_2{
+font-family: 'Apple SD Gothic Neo';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 36px;
+/* or 180% */
+
+letter-spacing: -0.02em;
+}
 
 
 .btn-1{
@@ -82,40 +145,15 @@ html{
   top: 0;
 }
 
-.swiper {
-  width: 100%;
-  height: 100%;
-}
+/*  */
 
-.swiper-slide {
-
-  background: #fff;
-  width: 80vw;
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.ui.header, h1, h2, h3, h4, h5, h6,html, body {
+.ui.header[lang=en], h1[lang=en], h2[lang=en], h3, h4, h5, h6, html[lang=en], body[lang=en] {
   font-family: 'made-tommy';
+}
+
+
+.ui.header[lang=kr], h1[lang=kr], h2[lang=kr], h3, h4, h5, h6, html[lang=kr], body[lang=kr] {
+  font-family: 'AppleSDGothicNeo';
 }
 
 .subTitle{
