@@ -101,6 +101,15 @@ line-height: 36px;
 letter-spacing: -0.02em;
 }
 
+.Title_1_eng{
+font-family: MADE TOMMY;
+font-size: 38px;
+font-weight: 500;
+line-height: 56px;
+letter-spacing: 0em;
+/* text-align: left; */
+}
+
 
 .btn-1{
   color: #BDBDBD;
