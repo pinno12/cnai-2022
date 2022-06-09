@@ -129,6 +129,8 @@ button{
   letter-spacing: 0%;
 }
 
+
+
 .Body_1_eng {
 
   font-family: 'made-tommy';
@@ -230,8 +232,14 @@ padding-left: 1rem; */
   color: #f2f5f8 !important;
 }
 
+.Gray_5_bg {
+  background-color: #f2f5f8 !important;
+}
 
 
+.card{
+  border-radius: 0;
+}
 
 
 .v-line {

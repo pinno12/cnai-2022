@@ -42,9 +42,7 @@ $('.ui.modal')
 .modal('show')
 ;
 
-$('.menu .item')
-  .tab()
-;
+
 $('.tool-tip').popup();
 
 

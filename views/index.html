@@ -146,31 +146,7 @@
     {% block localScript %}
   
     <script>
-        $("#scroller").simplyScroll({
-      customClass: "simply-scroll",
-      frameRate: 20,
-      speed: 1,
-      orientation: "horizontal",
-      auto: !0,
-      autoMode: "loop",
-      manualMode: "end",
-      direction: "forwards",
-      startOnLoad: !1,
-      initialOffset: 0
-  });
-
-  $("#scrollerBottom").simplyScroll({
-      customClass: "simply-scroll",
-      frameRate: 24,
-      speed: 1,
-      orientation: "horizontal",
-      auto: !0,
-      autoMode: "loop",
-      manualMode: "end",
-      direction: "backwards",
-      startOnLoad: !1,
-      initialOffset: 0
-  });
+  
 
 
   // fix menu when passed
@@ -200,6 +176,32 @@
          prevEl: ".swiper-button-prev",
        },
     });
+
+  //   $("#scroller").simplyScroll({
+  //     customClass: "simply-scroll",
+  //     frameRate: 20,
+  //     speed: 1,
+  //     orientation: "horizontal",
+  //     auto: !0,
+  //     autoMode: "loop",
+  //     manualMode: "end",
+  //     direction: "forwards",
+  //     startOnLoad: !1,
+  //     initialOffset: 0
+  // });
+
+  // $("#scrollerBottom").simplyScroll({
+  //     customClass: "simply-scroll",
+  //     frameRate: 24,
+  //     speed: 1,
+  //     orientation: "horizontal",
+  //     auto: !0,
+  //     autoMode: "loop",
+  //     manualMode: "end",
+  //     direction: "backwards",
+  //     startOnLoad: !1,
+  //     initialOffset: 0
+  // });
   </script>
 
   {% endblock %}
