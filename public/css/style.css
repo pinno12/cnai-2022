@@ -1,143 +1,232 @@
-
-
-html{
+html {
   font-size: 16px;
   font-family: 'AppleSDGothicNeo', 'made-tommy', sans-serif;
- }
+}
 
- .kr, html[lang=kr]{
+.kr{
   font-family: 'AppleSDGothicNeo' !important;
- }
- @import "//cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/all.min.css";
-.en{
+}
+
+@import "//cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/all.min.css";
+
+.en {
   font-family: 'made-tommy'
 }
 
-  .hover-underline-animation {
-    display: inline-block;
-    position: relative;
-    color: white;
-  }
-  
-#moveArrow:hover #myArrow{
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: white;
+}
+
+#moveArrow:hover #myArrow {
   transform: rotate(180deg);
   transition: all 0.4s ease;
 
 
 }
 
-  .hover-underline-animation:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    transform-origin: bottom center;
-    transition: transform 0.25s ease-out;
-  }
-  
-  .hover-underline-animation:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom center;
-  }
-
-/*  */
-
-.SubTitle_1{
-font-family: 'MADE TOMMY';
-font-size: 26px;
-font-weight: 500;
-line-height: 33px;
-letter-spacing: 0em;
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom center;
+  transition: transform 0.25s ease-out;
 }
 
-.Title_1{
-font-family: 'Apple SD Gothic Neo';
-font-style: normal;
-font-weight: 800;
-font-size: 2.25rem;
-line-height: 56px;
-}
-
-.Title_2{
-font-family: 'Apple SD Gothic Neo';
-font-style: normal;
-font-weight: 600;
-font-size: 1.875rem;
-/* line-height: 45px; */
-}
-
-.Title_2_eng{
-font-family: 'MADE TOMMY';
-font-style: normal;
-font-weight: 400;
-font-size: 32px;
-line-height: 45px;
-}
-
-
-
-.Title_3{
-font-family: 'Apple SD Gothic Neo';
-font-size: 26px;
-font-weight: 600;
-line-height: 42px;
-letter-spacing: -0.02em;
-text-align: left;
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom center;
 }
 
 /*  */
-.Body_2{
-font-family: 'Apple SD Gothic Neo';
-font-style: normal;
-font-weight: 500;
-font-size: 20px;
-line-height: 36px;
-/* or 180% */
-
-letter-spacing: -0.02em;
+button{
+  font-family: 'made-tommy';
+}
+.SubTitle_1 {
+  font-family: 'made-tommy';
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 33px;
+  letter-spacing: 0em;
 }
 
-.Title_1_eng{
-font-family: MADE TOMMY;
-font-size: 38px;
-font-weight: 500;
-line-height: 56px;
-letter-spacing: 0em;
-/* text-align: left; */
+.Title_1 {
+  font-family: 'Apple SD Gothic Neo';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2.25rem;
+  line-height: 3.5rem;
+  /* Extra bold */
+  letter-spacing: 0%;
+}
+
+.Title_2 {
+  /* Apple SD Gothic Neo / Semi Bold / 1.875rem / line height 2.813rem / letter spacing -2%  */
+  font-family: 'Apple SD Gothic Neo';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.875rem;
+  line-height: 2.813rem;
+  letter-spacing: -2%;
+}
+
+.Title_3 {
+  /* Apple SD Gothic Neo / Semi Bold / 1.625rem / line height 2.5rem / letter spacing -2%  */
+  font-family: 'Apple SD Gothic Neo';
+  font-weight: 600;
+  font-size: 1.625rem;
+  line-height: 2.5rem;
+  letter-spacing: -2%;
+}
+
+.Body_1 {
+  /* Apple SD Gothic Neo / Medium / 1.25rem / line height 2.25rem / letter spacing -2%  */
+  font-family: 'Apple SD Gothic Neo';
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+  /* or 180% */
+  letter-spacing: -2%;
+}
+
+.Body_2 {
+  font-family: 'Apple SD Gothic Neo';
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  letter-spacing: -2%;
 }
 
 
-.btn-1{
+.Title_1_eng {
+  font-family: made-tommy;
+  font-size: 2.375rem;
+  font-weight: 500;
+  line-height: 3.5rem;
+  letter-spacing: 0%;
+}
+
+.Title_2_eng {
+  font-family: 'made-tommy';
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.813rem;
+  letter-spacing: 0%;
+}
+
+
+.Title_3_eng {
+  font-family: 'made-tommy';
+  font-weight: 400;
+  font-size: 1.75rem;
+  line-height: 2.625rem;
+  letter-spacing: 0%;
+}
+
+.Body_1_eng {
+
+  font-family: 'made-tommy';
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+  /* or 180% */
+  letter-spacing: 0%;
+}
+
+.Body_2_eng {
+  font-family: 'made-tommy';
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  letter-spacing: 0%;
+}
+
+.Btn_1{
+  font-family: 'made-tommy';
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0%;
+}
+
+.Btn_2{
+  font-family: 'made-tommy';
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  letter-spacing: 0%;
+}
+
+.Tab{
+  font-family: 'made-tommy';
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  letter-spacing: 0%;
+}
+
+.Point_1{
+  color: #5A54F5;
+
+}
+.Label{
+  font-family: 'made-tommy';
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 'auto';
+  letter-spacing: 0%;
+}
+
+.btn-blue-tab.is-checked, .btn-blue-tab:hover{
+  border : none;
+  color: #5A54F5;
+  height: 3rem;
+  font-family: 'made-tommy';
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2rem;
+  letter-spacing: 0%;
+  background: #F0F0FF !important;
+border-radius: 5px;
+/* padding-right: 1rem;
+padding-left: 1rem; */
+}
+
+
+
+.btn-1 {
   color: #BDBDBD;
   background-color: #F2F5F8;
 }
 
-.Gray_0{
+.Gray_0 {
   color: #363D47 !important;
 }
 
-.Gray_1{
+.Gray_1 {
   color: #4E5968 !important;
 }
 
-.Gray_2{
+.Gray_2 {
   color: #929AA4 !important;
 }
 
-.Gray_3{
+.Gray_3 {
   color: #bdbdbd !important;
 }
 
-.Gray_4{
+.Gray_4 {
   color: #eeeeee !important;
 }
 
 
-.Gray_5{
+.Gray_5 {
   color: #f2f5f8 !important;
 }
 
@@ -145,7 +234,7 @@ letter-spacing: 0em;
 
 
 
-.v-line{
+.v-line {
   border-left: 6px solid green;
   height: 500px;
   position: absolute;
@@ -156,36 +245,52 @@ letter-spacing: 0em;
 
 /*  */
 
-.ui.header[lang=en], h1[lang=en], h2[lang=en], h3, h4, h5, h6, html[lang=en], body[lang=en] {
+.ui.header[lang=en],
+h1[lang=en],
+h2[lang=en],
+h3,
+h4,
+h5,
+h6,
+html[lang=en],
+body[lang=en] {
   font-family: 'made-tommy';
 }
 
 
-.ui.header[lang=kr], h1[lang=kr], h2[lang=kr], h3, h4, h5, h6, html[lang=kr], body[lang=kr] {
+.ui.header[lang=kr],
+h1[lang=kr],
+h2[lang=kr],
+h3,
+h4,
+h5,
+h6,
+html[lang=kr],
+body[lang=kr] {
   font-family: 'AppleSDGothicNeo';
 }
 
-.subTitle{
-  font-size: 1.6rem; 
+.subTitle {
+  font-size: 1.6rem;
   /* 26px */
 }
 
-.gray2{
- color: #BDBDBD;
+.gray2 {
+  color: #BDBDBD;
 
 }
 
-.gray1{
+.gray1 {
   color: #4E5968
 }
 
 
 @font-face {
   font-family: made-tommy-outline;
-  src: url("/css/font/made-tommy-outline/webfonts/made-tommy-outline.woff") format("woff"),url("/css/font/made-tommy-outline/webfonts/made-tommy-outline.ttf")  format("truetype");
+  src: url("/css/font/made-tommy-outline/webfonts/made-tommy-outline.woff") format("woff"), url("/css/font/made-tommy-outline/webfonts/made-tommy-outline.ttf") format("truetype");
 }
 
 @font-face {
   font-family: made-tommy;
-  src: url("/css/font/made-tommy/webfonts/made-tommy.woff") format("woff"),url("/css/font/made-tommy-outline/webfonts/made-tommy.ttf")  format("truetype");
+  src: url("/css/font/made-tommy/webfonts/made-tommy.woff") format("woff"), url("/css/font/made-tommy-outline/webfonts/made-tommy.ttf") format("truetype");
 }

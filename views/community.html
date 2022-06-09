@@ -1,6 +1,30 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<style>
+
+
+/* ---- button ---- */
+
+.element-item{
+  width: 100%;
+}
+#load-more{
+  float:right;
+  margin:5px;
+}
+.hidden{visibility:hidden;
+  width:0px!important;
+  height:0px!important;
+  margin:0px!important;
+  padding:0px!important;
+  }
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+</style>
 
 <section class="py-5 text-center container-flujid mb-5 bg-dark text-light" style="height: 100vh">
   <div style="margin-top: 40vh;" data-aos="fade-up">
@@ -9,7 +33,142 @@
 </section>
 
 <section id = 'news' class= 'container'>
-  <h1 class = 'my-5'>한발 빠르게 받아보는 소식</h1>
+  <p class = 'my-5 Title_1 Gray_1'>한발 빠르게 받아보는 소식</p>
+  <div class="ui pointing secondary menu border-0">
+    <a class="item Tab " data-tab="first">Recent News</a>
+    <a class="item active" data-tab="second">Publications</a>
+
+  </div>
+
+
+  <div class="ui bottom attached tab segment border-0" data-tab="first">
+
+    <div class = 'row'>
+    <div class='col-4 position-relative text-white'>
+      <p class = 'Label Gray_1 mt-5 '>Synthetic Data</p>
+      <p class = 'Title_2 text-dark  '>더 싸게, 더 많이, 더 빨리 <br />
+        ‘With AI’ 시대 앞당길 ‘가짜’의 힘</p>
+      <p class = 'position-absolute start-50 translate-middle-x Label Gray_1' style = 'bottom:7vh;'>2022.05.18   
+  
+      </p>
+    </div>
+      <div class='col-8'>
+        <img src="/img/1.jpeg" class="img-fluid w-100" alt="...">
+      </div>
+    </div>
+
+
+
+<section class = 'board'>
+  
+  
+  <div id="filters" class="button-group">  
+    <button class="btn-blue-tab is-checked bg-transparent border-0 mx-3 px-3 is-checked px-3" data-filter="*">All</button>
+    <button class="btn-blue-tab bg-transparent border-0 mx-3 px-3 bg-transparent border-0 mx-3 px-3" data-filter=".investment">Investment</button>
+    <button class="btn-blue-tab bg-transparent border-0 mx-3 px-3" data-filter=".ai">AI</button>
+    <button class="btn-blue-tab bg-transparent border-0 mx-3 px-3" data-filter=".medical">Medical</button>
+    <button class="btn-blue-tab bg-transparent border-0 mx-3 px-3" data-filter=".synthetic-Data">Synthetic Data</button>
+  </div>
+
+
+  <section class = 'isotope'>
+    <div class = 'row element-item investment' data-category="Investment">
+      <div class='col-4 position-relative text-white'>
+        <p class = 'Label Gray_1 mt-5 '>Synthetic Data</p>
+        <p class = 'Title_2 text-dark  '>더 싸게, 더 많이, 더 빨리 <br />
+          ‘With AI’ 시대 앞당길 ‘가짜’의 힘</p>
+        <p class = 'position-absolute start-50 translate-middle-x Label Gray_1' style = 'bottom:7vh;'>2022.05.18   
+    
+        </p>
+      </div>
+        <div class='col-8'>
+          <img src="/img/1.jpeg" class="img-fluid w-100" alt="...">
+        </div>
+      </div>
+
+  <div class = 'row element-item investment' data-category="Investment">
+      <div class='col-4 position-relative text-white'>
+        <p class = 'Label Gray_1 mt-5 '>Synthetic Data</p>
+        <p class = 'Title_2 text-dark  '>더 싸게, 더 많이, 더 빨리 <br />
+          ‘With AI’ 시대 앞당길 ‘가짜’의 힘</p>
+        <p class = 'position-absolute start-50 translate-middle-x Label Gray_1' style = 'bottom:7vh;'>2022.05.18   
+    
+        </p>
+      </div>
+        <div class='col-8'>
+          <img src="/img/1.jpeg" class="img-fluid w-100" alt="...">
+        </div>
+      </div>
+      
+
+      <div class = 'row element-item medical' data-category="Medical">
+        <div class='col-4 position-relative text-white'>
+          <p class = 'Label Gray_1 mt-5 '>Medical</p>
+          <p class = 'Title_2 text-dark  '>더 싸게, 더 많이, 더 빨리 <br />
+            ‘With AI’ 시대 앞당길 ‘가짜’의 힘</p>
+          <p class = 'position-absolute start-50 translate-middle-x Label Gray_1' style = 'bottom:7vh;'>2022.05.18         
+          </p>
+        </div>
+          <div class='col-8'>
+            <img src="/img/1.jpeg" class="img-fluid w-100" alt="...">
+          </div>
+        </div>
+        <div class = 'row element-item medical' data-category="Medical">
+          <div class='col-4 position-relative text-white'>
+            <p class = 'Label Gray_1 mt-5 '>Medical</p>
+            <p class = 'Title_2 text-dark  '>더 싸게, 더 많이, 더 빨리 <br />
+              ‘With AI’ 시대 앞당길 ‘가짜’의 힘</p>
+            <p class = 'position-absolute start-50 translate-middle-x Label Gray_1' style = 'bottom:7vh;'>2022.05.18         
+            </p>
+          </div>
+            <div class='col-8'>
+              <img src="/img/1.jpeg" class="img-fluid w-100" alt="...">
+            </div>
+          </div>
+          <div class = 'row element-item medical' data-category="Medical">
+            <div class='col-4 position-relative text-white'>
+              <p class = 'Label Gray_1 mt-5 '>Medical</p>
+              <p class = 'Title_2 text-dark  '>더 싸게, 더 많이, 더 빨리 <br />
+                ‘With AI’ 시대 앞당길 ‘가짜’의 힘</p>
+              <p class = 'position-absolute start-50 translate-middle-x Label Gray_1' style = 'bottom:7vh;'>2022.05.18         
+              </p>
+            </div>
+              <div class='col-8'>
+                <img src="/img/1.jpeg" class="img-fluid w-100" alt="...">
+              </div>
+            </div>    
+            <div class = 'row element-item medical' data-category="Medical">
+              <div class='col-4 position-relative text-white'>
+                <p class = 'Label Gray_1 mt-5 '>Medical</p>
+                <p class = 'Title_2 text-dark  '>더 싸게, 더 많이, 더 빨리 <br />
+                  ‘With AI’ 시대 앞당길 ‘가짜’의 힘</p>
+                <p class = 'position-absolute start-50 translate-middle-x Label Gray_1' style = 'bottom:7vh;'>2022.05.18         
+                </p>
+              </div>
+                <div class='col-8'>
+                  <img src="/img/1.jpeg" class="img-fluid w-100" alt="...">
+                </div>
+              </div>    
+    </section>
+
+</section>
+
+
+
+
+
+  </div>
+
+
+  
+
+
+  <div class="ui bottom attached tab segment" data-tab="second">
+
+  
+  </div>
+
+
 </section>
 <section id = 'investment' class = 'bg-light'>
 
@@ -42,15 +201,17 @@
 
 </section>
 
-<section id = 'channel' class = 'container'>
+<section id = 'channel' class = 'position-relative' style = "height: 120vh;">
   
-  <h5>Official Channel</h5>
-  <h1>CN.AI의 다양한 채널을 만나보세요.</h1>
+
+
+  <div id = 'c-box-1' class = 'position-absolute top-50 start-50 translate-middle container'>
+  <p class= 'SubTitle_1 Gray_2 mb-5'>Official Channel</h5>
+  <p class = 'Gray_1 Title_1'>CN.AI의 다양한 채널을 만나보세요.</h1>
 
   <div class = 'row'>
     <div class = 'col'>
       <div class = 'col-12'>
-
         <div class="d-flex position-relative">
           <!-- https://icons.getbootstrap.com/icons/arrow-right-circle/ -->
           <div>
@@ -60,8 +221,6 @@
           </div>
           <img src="/img/1.jpeg" class="flex-shrink-0 me-3" alt="...">
         </div>
-
-
       </div>
       <div class = 'col-12'>
         <div class="row g-0 bg-light position-relative">
@@ -72,26 +231,180 @@
           <a href="#" class="stretched-link"><i class="bi bi-arrow-right-circle"></i></a>
         </div>
         <div class="col-md-6 mb-md-0 p-md-4">
-          <img src="..." class="w-100" alt="...">
+          <img src= "img/1.jpeg" class="w-100" alt="...">
         </div>
       </div>
     </div>
     </div>
-    <div class = 'col'>Tech blog</div>
+    <div class = 'col'>
+      <div class="row g-0 bg-light position-relative">     
+        <div class="col-md-6 p-4">
+          <p class = 'Label Gray_2 mt-5 '>GitHub.io</p>
+          <p class = 'Title_2_eng Gray_1  '>Tech blog</p>
+            
+          <a href="#" class = 'position-absolute start-0 Gray_2' style = 'bottom:7vh;'><i class="bi bi-arrow-right-circle"></i></a>
+        </div>
+        <div class="col-md-6 mb-md-0 p-md-4">
+          <img src= "img/1.jpeg" class="w-100" alt="...">
+        </div>
+      </div>
+
+      <!-- <div class = 'row g-0 bg-light position-relative'>
+        <div class='"col-md-6 p-4 ps-md-0'>
+          <p class = 'Label Gray_2 mt-5 '>GitHub.io</p>
+          <p class = 'Title_2_eng Gray_1  '>Tech blog</p>
+            
+          <p class = 'position-absolute start-50 translate-middle-x Label Gray_1' style = 'bottom:7vh;'><i class="bi bi-arrow-right-circle"></i> 
+      
+          </p>
+        </div>
+          <div class='col-md-6 mb-md-0 p-md-4'>
+            <img src="/img/1.jpeg" class="img-fluid w-100" alt="...">
+          </div>
+        </div> -->
+    </div>
     <div class = 'col'>CNAI</div>
   </div>
+</div>
 
 </section>
 
 
-<section id = 'btn-career' class = 'container-fluid'>
-  <section class="py-5 text-center container-flujid mb-5 bg-dark text-light" style="height: 100vh">
+
+  <section class="py-5 text-center container-fluid mb-5 text-light" id = 'btn-career'  style="height: 100vh;background: linear-gradient(180deg, #7E53FF -8.57%, rgba(126, 83, 255, 0) 46.58%), #5A54F5;">
     <div style="margin-top: 40vh;" data-aos="fade-up">
         <h1>CN.AI 팀원들의 이야기가 궁금하다면 </h1>
         <div class = 'ui button'>CAREER</div>
     </div>
   </section>
-</section>
+
 
  
   {% endblock %}
+ {% block localScript %} 
+ <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/6.0.0/shuffle.min.js"></script>
+ 
+<script>
+// external js: isotope.pkgd.js
+
+$(document).ready(function() {
+
+// init Isotope
+var $container = $('.isotope').isotope({
+  itemSelector: '.element-item',
+  layoutMode: 'fitRows',
+  getSortData: {
+    name: '.name',
+    symbol: '.symbol',
+    number: '.number parseInt',
+    category: '[data-category]',
+    weight: function(itemElem) {
+      var weight = $(itemElem).find('.weight').text();
+      return parseFloat(weight.replace(/[\(\)]/g, ''));
+    }
+  }
+});
+
+// filter functions
+var filterFns = {
+  // show if number is greater than 50
+  numberGreaterThan50: function() {
+    var number = $(this).find('.number').text();
+    return parseInt(number, 10) > 50;
+  },
+  // show if name ends with -ium
+  ium: function() {
+    var name = $(this).find('.name').text();
+    return name.match(/ium$/);
+  }
+};
+
+// bind filter button click
+$('#filters').on('click', 'button', function() {
+  var filterValue = $(this).attr('data-filter');
+  // use filterFn if matches value
+  filterValue = filterFns[filterValue] || filterValue;
+  $container.isotope({
+    filter: filterValue
+  });
+});
+
+// bind sort button click
+$('#sorts').on('click', 'button', function() {
+  var sortByValue = $(this).attr('data-sort-by');
+  $container.isotope({
+    sortBy: sortByValue
+  });
+});
+
+// change is-checked class on buttons
+$('.button-group').each(function(i, buttonGroup) {
+  var $buttonGroup = $(buttonGroup);
+  $buttonGroup.on('click', 'button', function() {
+    $buttonGroup.find('.is-checked').removeClass('is-checked');
+    $(this).addClass('is-checked');
+  });
+});
+
+//****************************
+// Isotope Load more button
+//****************************
+var initShow = 3; //number of items loaded on init & onclick load more button
+var counter = initShow; //counter for load more button
+var iso = $container.data('isotope'); // get Isotope instance
+
+loadMore(initShow); //execute function onload
+
+function loadMore(toShow) {
+  $container.find(".hidden").removeClass("hidden");
+
+  var hiddenElems = iso.filteredItems.slice(toShow, iso.filteredItems.length).map(function(item) {
+    return item.element;
+  });
+  $(hiddenElems).addClass('hidden');
+  $container.isotope('layout');
+
+  //when no more to load, hide show more button
+  if (hiddenElems.length == 0) {
+    jQuery("#load-more").hide();
+  } else {
+    jQuery("#load-more").show();
+  };
+
+}
+
+//append load more button
+$container.after(`<h4 class="ui horizontal divider header">
+  <button id = "load-more" class = 'text-dark border-0 bg-transparent' ><i class="bi bi-plus-circle"></i></button>
+</h4>`);
+
+//when load more button clicked
+$("#load-more").click(function() {
+  if ($('#filters').data('clicked')) {
+    //when filter button clicked, set initial value for counter
+    counter = initShow;
+    $('#filters').data('clicked', false);
+  } else {
+    counter = counter;
+  };
+
+  counter = counter + initShow;
+
+  loadMore(counter);
+});
+
+//when filter button clicked
+$("#filters").click(function() {
+  $(this).data('clicked', true);
+
+  loadMore(initShow);
+});
+
+
+
+});
+
+</script>
+    
+    {% endblock %}
