@@ -273,17 +273,14 @@
 
 {% block localScript %} 
 <script>
-   AOS.init({
-    	once: true,
-  		easing: 'ease-in-out'
-    });
-    var iconButton = $("button");
+    var iconButton = $("show1");
 	iconButton.on("click", function() {
 		$(iconButton).removeClass('aos-animate');
 		setTimeout(function() {
 			$(iconButton).addClass('aos-animate');
 		}, 400);
 	});
+
 showUp = (myId) => {
   document.getElementById("select_hour").textContent  = document.getElementById(myId).innerText;
   document.getElementById("show_seat").classList.remove("d-none"); 
