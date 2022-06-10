@@ -2,207 +2,272 @@
 
 {% block content %}
 <!-- 1회성 -->
-<style> 
-.outline{
-  color: black;
-  -webkit-text-fill-color: white; /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+<style>
+
+
+  .text-c {
+    font-family: 'Apple SD Gothic Neo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 5.5rem;
+    line-height: 129%;
+    /* or 129% */
+
+
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 56.58%), linear-gradient(270deg, #7E53FF 24.94%, rgba(126, 83, 255, 0) 80.15%), #5A54F5;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+.swiper{
+  height: 50vh;
 }
+  .swiper-slide{
+    width: 60vw;
+  }
+
+  .swiper-button-next::after, .swiper-button-prev::after {
+    content: "";
+}
+
+.swiper-button-prev,.swiper-button-next {
+    color: #BDBDBD;
+}
+
+
+.swiper-button-prev{
+  left: 16vw;
+}
+.swiper-button-next{
+  right: 16vw;
+}
+
 </style>
 
-<img src = 'img/1.jpeg' class = 'w-100'>
-<section id = 'banner' class = 'container'>
-  <div class = 'row'>
-  <div class = 'col'>
-<h1>함께이기에  <br />
-  더 빛이 나는 사람들,</h1>
-  </div>
-  <div class = 'col'>
-    <h1 class = 'outline made-tommy-outline' >CN.TEAMS</h1>
-  </div>
-</div>
-  <div class = 'row'>
-    <h5>How we work</h5>
-    <h3>우리가 성장하는 방식 </h3>
+<img src='img/1.jpeg' class='w-100'>
+<section id='banner' class='container'>
+  <div class='row'>
+    <div class='col-8'>
+      <h1 class='text-c'>함께이기에 <br />
+        더 빛이 나는 사람들,</h1>
+    </div>
+    <div class='col-4 d-flex '>
+      <h1 class='Point_1 mt-auto' style='font-family: made-tommy-outline; font-size: 5.93rem;'>CN.TEAMS</h1>
+    </div>
   </div>
 </section>
 
 
-<section id = 'cards' class = 'bg-dark'>
- <!-- Swiper -->
- <div class="swiper mySwiper">
-  <div class="swiper-wrapper">
-    <div class="swiper-slide">     
-       <div class="card w-100">
-         
-      <img src="img/1.jpeg" class="card-img" alt="...">
-      <div class="card-img-overlay">
- 
-        <h5 class="card-title col-2">시행착오의 
-          가치를 믿어요.</h5>
-          <div class="w-100 "></div>
-<div class = 'row align-items-end'>
-        <p class="card-text col-5">실패는 잘못이 아니에요. 넘어지는 것을 두려워하지 않고, 다시 일어나 두 걸음 더 앞으로 나아가요.</p>
-        <p class="card-text col-5 float-end"><i class="bi bi-plus-circle"></i></p>
-      </div>
-      </div>
-    </div>
-  </div>
+<section class = 'isBg' style = 'background: linear-gradient(180deg, rgba(248, 248, 255, 0) 0%, #F8F8FF 64.22%); height: 120vh; '>
   
-    <div class="swiper-slide">
-      <div class="card w-100">
-         
-        <img src="img/1.jpeg" class="card-img" alt="...">
-        <div class="card-img-overlay container">
-   
-          <h5 class="card-title col-2">시행착오의 
-            가치를 믿어요.</h5>
-            <div class=""></div>
-  <div class="ml-3">
-          <p class="card-text position-absolute bottom-0 start-3 col-5 ">실패는 잘못이 아니에요. 넘어지는 것을 두려워하지 않고, 다시 일어나 두 걸음 더 앞으로 나아가요.</p>
-          <p class="card-text position-absolute " style="right: 3vw;bottom: 1vw;"><i class="bi bi-plus-circle"></i></p>
-        </div>
-        </div>
-      </div>
+ 
+  
 
+  <section class="box d-flex" style="height: 60vh;">
+    <div class="text-center align-self-center mx-auto">
+      <h5 class="SubTitle_1 Gray_2 ">How we work</h5>
+      <h3 class="mt-3 Gray_1 Title_2">우리가 성장하는 방식 </h3>
     </div>
-    <div class="swiper-slide">Slide 3</div>
-    <div class="swiper-slide">Slide 4</div>
-    <div class="swiper-slide">Slide 5</div>
-    <div class="swiper-slide">Slide 6</div>
-    <div class="swiper-slide">Slide 7</div>
-    <div class="swiper-slide">Slide 8</div>
-    <div class="swiper-slide">Slide 9</div>
-  </div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-</div>
+  </section>
+
+
+
+  <section id='cards' class=''>
+    <!-- Swiper -->
+    <div class="swiper career-slide">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="card w-100">  
+            <img src="img/1.jpeg" class="card-img" alt="...">
+            <div class="card-img-overlay container">  
+              <h5 class="card-title col-2">시행착오의
+                가치를 믿어요.</h5>
+              <div class=""></div>
+              <div class="ml-3">
+                <p class="card-text position-absolute bottom-0 start-3 col-5 ">실패는 잘못이 아니에요. 넘어지는 것을 두려워하지 않고, 다시 일어나 두 걸음
+                  더 앞으로 나아가요.</p>
+                <p class="card-text position-absolute " style="right: 3vw;bottom: 1vw;"><i class="bi bi-plus-circle"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+  
+        <div class="swiper-slide">
+          <div class="card w-100">  
+            <img src="img/1.jpeg" class="card-img" alt="...">
+            <div class="card-img-overlay container">  
+              <h5 class="card-title col-2">시행착오의
+                가치를 믿어요.</h5>
+              <div class=""></div>
+              <div class="ml-3">
+                <p class="card-text position-absolute bottom-0 start-3 col-5 ">실패는 잘못이 아니에요. 넘어지는 것을 두려워하지 않고, 다시 일어나 두 걸음
+                  더 앞으로 나아가요.</p>
+                <p class="card-text position-absolute " style="right: 3vw;bottom: 1vw;"><i class="bi bi-plus-circle"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+        <div class="swiper-slide">
+
+          <div class="card bg-dark text-white">
+            <img src="img/1.jpeg" class="card-img" alt="...">
+            <div class="card-img-overlay">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <p class="card-text">Last updated 3 mins ago</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">Slide 4</div>
+        <div class="swiper-slide">Slide 5</div>
+
+      </div>
+      <!-- <span class= 'prev  '><i class="angle left icon"></i></span>
+      <span class= 'next '><i class="angle right icon"></i></span> -->
+      <div class="swiper-button-next"><i class="angle right icon"></i></div>
+      <div class="swiper-button-prev"><i class="angle left icon"></i></div>
+    </div>
+  </section>
+  
+
 </section>
 
-<section id = 'teamIntroduction'>
-  <div class = 'text-center'>
-    <span class= 'team-intro'>씨앤에이아이 팀을 소개합니다!</span>
+<section id='teamIntroduction'>
+  <div class='text-center'>
+    <span class='team-intro'>씨앤에이아이 팀을 소개합니다!</span>
 
 
     <div class="ui secondary pointing menu mb-3" id="pills-tab" role="tablist">
-  
-        <a class="item active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
-        <a class="item" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
-        <a class="item" id="pills-3-tab" data-bs-toggle="pill" data-bs-target="#pills-3" type="" role="tab" aria-controls="pills-profile" aria-selected="false">3</a>
-        <a class="item" id="pills-4-tab" data-bs-toggle="pill" data-bs-target="#pills-4" type="" role="tab" aria-controls="pills-profile" aria-selected="false">4</a>
-   
+
+      <a class="item active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="" role="tab"
+        aria-controls="pills-home" aria-selected="true">Home</a>
+      <a class="item" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="" role="tab"
+        aria-controls="pills-profile" aria-selected="false">Profile</a>
+      <a class="item" id="pills-3-tab" data-bs-toggle="pill" data-bs-target="#pills-3" type="" role="tab"
+        aria-controls="pills-profile" aria-selected="false">3</a>
+      <a class="item" id="pills-4-tab" data-bs-toggle="pill" data-bs-target="#pills-4" type="" role="tab"
+        aria-controls="pills-profile" aria-selected="false">4</a>
+
 
     </div>
     <div class="tab-content" id="pills-tabContent">
-      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">.ccc..</div>
-      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">.aa..</div>
+      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+        tabindex="0">.ccc..</div>
+      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        .aa..</div>
       <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab" tabindex="0">.3..</div>
       <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab" tabindex="0">.4..</div>
     </div>
 
   </div>
-  
-  </section>
 
-  <section id = 'welfare' class = 'container'>
-    
-    <div class = 'text-center'>
-      <h5>Our Welfare
-      </h5>
-      <h4 class = 'col-5'>아낌없는 지원으로 업무 몰입 뿐 아니라,
-        팀원들의 성장과 자아실현까지 이끌어갑니다.</h4>
-        </div>
-    
-    <img class = 'w-100' src = 'img/1.jpeg'>
+</section>
 
-    <div class = 'row g-5'>
-      <div class = 'col'>
-        <img src= 'img/1.jpeg'>
-        <h4>식대 및 차대 제공</h4>
-        <h5>전문 케이터링 업체에서 제공하는 
-          점심식사는 물론 커피, 간식과 야근
-          식대까지 든든하게 보장</h5>
-      </div>
-      <div class = 'col'>
+<section id='welfare' class='container'>
 
-        <img src= 'img/1.jpeg'>
-        <h4>사내 동아리 활동 운영</h4>
-        <h5>팀원들의 건강과 행복을 위해
-          골프, 싸이클, 풋살, 클라이밍 등
-          함께 즐기는 사내 동아리</h5>
-      </div>
-      <div class = 'col'>업무 몰입 및 역량 개발 지원</div>
-      <div class = 'w-100'>
+  <div class='text-center'>
+    <h5>Our Welfare
+    </h5>
+    <h4 class='col-5'>아낌없는 지원으로 업무 몰입 뿐 아니라,
+      팀원들의 성장과 자아실현까지 이끌어갑니다.</h4>
+  </div>
 
-      </div>
+  <img class='w-100' src='img/1.jpeg'>
+
+  <div class='row g-5'>
+    <div class='col'>
+      <img src='img/1.jpeg'>
+      <h4>식대 및 차대 제공</h4>
+      <h5>전문 케이터링 업체에서 제공하는
+        점심식사는 물론 커피, 간식과 야근
+        식대까지 든든하게 보장</h5>
+    </div>
+    <div class='col'>
+
+      <img src='img/1.jpeg'>
+      <h4>사내 동아리 활동 운영</h4>
+      <h5>팀원들의 건강과 행복을 위해
+        골프, 싸이클, 풋살, 클라이밍 등
+        함께 즐기는 사내 동아리</h5>
+    </div>
+    <div class='col'>업무 몰입 및 역량 개발 지원</div>
+    <div class='w-100'>
 
     </div>
 
-  </section>
+  </div>
 
-  <section id = 'progress' class = 'bg-light'>
-    <h1 class = 'text-center'>영입 절차 </h1>
-    <p class = 'text-center'>지원 후 2주 내 최종 발표 진행</p>
-    <div class="card bg-dark text-white">
-      <img src="/img/process.png" class="card-img" alt="...">
-      <div class="card-img-overlay">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text">Last updated 3 mins ago</p>
-      </div>
+</section>
+
+<section id='progress' class='bg-light'>
+  <h1 class='text-center'>영입 절차 </h1>
+  <p class='text-center'>지원 후 2주 내 최종 발표 진행</p>
+  <div class="card bg-dark text-white">
+    <img src="/img/process.png" class="card-img" alt="...">
+    <div class="card-img-overlay">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
+        This content is a little bit longer.</p>
+      <p class="card-text">Last updated 3 mins ago</p>
     </div>
+  </div>
 
 
-    <div class = 'row'>
-      <div class = 'v-line'></div>
-      <div class = 'col-offset-2 col-2'>지원자의 역량을 확인하기 위한
-        인적성 적합도 평가 과정</div>
-   
-    
-    <div class = 'v-line'></div>
-    <div class = 'col-offset-2 col-2'>3개월간의 수습 기간 동안
+  <div class='row'>
+
+    <div class='col-offset-2 col-2'>지원자의 역량을 확인하기 위한
+      인적성 적합도 평가 과정</div>
+
+
+
+    <div class='col-offset-2 col-2'>3개월간의 수습 기간 동안
       적합도 평가를 통해 정직원 전환 진행</div>
   </div>
 
-    <div class = 'container'>
-      <div class="ui circular segment">
-        <h2 class="ui header">
-          01
-          <div class="sub header">서류 평가</div>
-        </h2>
-      </div>
-      <div class="ui inverted circular segment">
-        <h2 class="ui inverted header">
+  <div class='container'>
+    <div class="ui circular segment">
+      <h2 class="ui header">
+        01
+        <div class="sub header">서류 평가</div>
+      </h2>
+    </div>
+    <div class="ui inverted circular segment">
+      <h2 class="ui inverted header">
         02
-          <div class="sub header"> 인적성 검사</div>
-        </h2>
-      </div>
-      <div class="ui circular segment">
-        <h2 class="ui header">
-   03
-          <div class="sub header">역량 / 문화 <br />
-            인터뷰</div>
-        </h2>
-      </div>
-      <div class="ui inverted circular segment">
-        <h2 class="ui inverted header">
-    04
-          <div class="sub header">정직원 채용</div>
-        </h2>
-      </div>
+        <div class="sub header"> 인적성 검사</div>
+      </h2>
+    </div>
+    <div class="ui circular segment">
+      <h2 class="ui header">
+        03
+        <div class="sub header">역량 / 문화 <br />
+          인터뷰</div>
+      </h2>
+    </div>
+    <div class="ui inverted circular segment">
+      <h2 class="ui inverted header">
+        04
+        <div class="sub header">정직원 채용</div>
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section id='btn-career' class='container-fluid'>
+  <section class="py-5 text-center container-fluid mb-5 bg-dark text-light" style="height: 100vh">
+    <div style="margin-top: 40vh;" data-aos="fade-up">
+      <h1>CNAI의 개발팀의 일상 엿보기</h1>
+      <div class='ui button'>Tech Blog 바로가기</div>
     </div>
   </section>
+</section>
 
-  <section id = 'btn-career' class = 'container-fluid'>
-    <section class="py-5 text-center container-fluid mb-5 bg-dark text-light" style="height: 100vh">
-      <div style="margin-top: 40vh;" data-aos="fade-up">
-          <h1>CNAI의 개발팀의 일상 엿보기</h1>
-          <div class = 'ui button'>Tech Blog 바로가기</div>
-      </div>
-    </section>
-  </section>
-  
 
 
 
@@ -237,4 +302,27 @@
   </button>
 </div>  -->
 
+{% endblock %}
+
+{% block localScript %} 
+<script>
+
+
+var swiper = new Swiper(".career-slide", {
+        slidesPerView: 'auto',
+        centeredSlides: true,
+        spaceBetween: 90,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        initialSlide : 1,
+        navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  }
+
+
+      });
+</script>
 {% endblock %}

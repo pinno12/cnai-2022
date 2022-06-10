@@ -1,3 +1,33 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  /* -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center; */
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 html {
   font-size: 16px;
   font-family: 'AppleSDGothicNeo', 'made-tommy', sans-serif;
@@ -48,11 +78,13 @@ html {
 button{
   font-family: 'made-tommy';
 }
+
+/* eng so far */
 .SubTitle_1 {
   font-family: 'made-tommy';
-  font-size: 26px;
+  font-size: 1.625rem;
   font-weight: 500;
-  line-height: 33px;
+  line-height: 2rem;
   letter-spacing: 0em;
 }
 
@@ -295,10 +327,10 @@ body[lang=kr] {
 
 @font-face {
   font-family: made-tommy-outline;
-  src: url("/css/font/made-tommy-outline/webfonts/made-tommy-outline.woff") format("woff"), url("/css/font/made-tommy-outline/webfonts/made-tommy-outline.ttf") format("truetype");
+  src: url("/css/font/made-tommy-outline/webfonts/made-tommy-outline.woff") format("woff")
 }
 
 @font-face {
   font-family: made-tommy;
-  src: url("/css/font/made-tommy/webfonts/made-tommy.woff") format("woff"), url("/css/font/made-tommy-outline/webfonts/made-tommy.ttf") format("truetype");
+  src: url("/css/font/made-tommy/webfonts/made-tommy.woff") format("woff")
 }
