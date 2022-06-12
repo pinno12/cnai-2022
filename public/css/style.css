@@ -165,10 +165,10 @@ button{
 
 .Body_1_eng {
 
-  font-family: 'made-tommy';
-  font-weight: 500;
-  font-size: 1.25rem;
-  line-height: 2.25rem;
+  font-family: 'made-tommy' !important;
+  font-weight: 500 !important;
+  font-size: 1.25rem !important;
+  line-height: 2.25rem ;
   /* or 180% */
   letter-spacing: 0%;
 }
@@ -205,6 +205,17 @@ button{
   letter-spacing: 0%;
 }
 
+.member-Tab{
+  font-family: 'Apple SD Gothic Neo';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 32px;
+/* or 160% */
+
+letter-spacing: -0.02em;
+}
+
 .Point_1{
   color: #5A54F5;
 
@@ -232,7 +243,10 @@ border-radius: 5px;
 padding-left: 1rem; */
 }
 
-
+::selection {
+  color: white;
+  background: #5A54F5;
+}
 
 .btn-1 {
   color: #BDBDBD;
@@ -267,6 +281,7 @@ padding-left: 1rem; */
 .Gray_5_bg {
   background-color: #f2f5f8 !important;
 }
+
 
 
 .card{

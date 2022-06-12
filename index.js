@@ -83,15 +83,7 @@ app.post("/level", (req, res) => {
   });
 });
 
-app.get("/result", require('connect-ensure-login').ensureLoggedIn(), (req, res) => {
-  const sql = "SELECT * FROM level ORDER BY id DESC";
-  db.all(sql, [], (err, rows) => {
-    if (err) {
-      return console.error(err.message);
-    }
-    res.render("result", { model: rows });
-  });
-});
+
 
 app.get('/login',
   function(req, res){
@@ -154,10 +146,19 @@ app.get('/community', (req,res) => {
   res.render('community');
 })
 
-app.get('/career', (req,res) => {
-  res.render('career');
-})
+// app.get('/career', (req,res) => {
+//   res.render('career');
+// })
 
+app.get("/career", (req, res) => {
+  const sql = "SELECT * FROM career";
+  db.all(sql, [], (err, rows) => {
+    if (err) {
+      return console.error(err.message);
+    }
+    res.render("career", { data: rows });
+  });
+});
 app.get('/test', (req,res) => {
   res.render('test');
 })

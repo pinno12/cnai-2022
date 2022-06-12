@@ -3,8 +3,6 @@
 {% block content %}
 <!-- 1회성 -->
 <style>
-
-
   .text-c {
     font-family: 'Apple SD Gothic Neo';
     font-style: normal;
@@ -20,32 +18,103 @@
     background-clip: text;
   }
 
-.swiper{
-  height: 50vh;
-}
-  .swiper-slide{
+  .btn-down {
+    transform: rotate(45deg);
+  }
+
+  .c-btn:hover,
+  .c-btn-active {
+    transform: rotate(45deg);
+  }
+
+  .c-btn {
+    transition: 0.5s;
+  }
+
+  .member:hover {
+    top: -2rem;
+  }
+
+  .member {
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+  }
+
+  .btn-up {
+    transform: rotate(-45deg);
+  }
+
+  .btn-sm-member:hover {
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    -ms-transition: -ms-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+  }
+
+  .btn-sm-member:hover,
+  .btn-sm-member-active {
+    transform: rotate(-180deg);
+  }
+
+  .swiper {
+    height: 50vh;
+  }
+
+
+  .w-60 {
     width: 60vw;
   }
 
-  .swiper-button-next::after, .swiper-button-prev::after {
+  .w1 {
+    width: 17vw;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
     content: "";
-}
+  }
 
-.swiper-button-prev,.swiper-button-next {
+  .swiper-button-prev,
+  .swiper-button-next {
     color: #BDBDBD;
+  }
+
+  .swiper-button-prev {
+    left: 16vw;
+  }
+
+  .swiper-button-next {
+    right: 16vw;
+  }
+
+  .bg-blur {
+    background: rgba(255, 255, 255, 0.5);
+  }
+
+/* .m-2:hover > div{
+  opacity: 0.6
+} */
+.m-2 > .card:hover{
+  color: #363D47 !important;
 }
 
+.m-font{
+  font-family: 'Apple SD Gothic Neo';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 36px;
+/* or 180% */
 
-.swiper-button-prev{
-  left: 16vw;
-}
-.swiper-button-next{
-  right: 16vw;
+letter-spacing: -0.02em;
 }
 
+.w3{
+  width:24% !important;
+}
 </style>
 
-<img src='img/1.jpeg' class='w-100'>
+<img src='img/career/banner.png' class='w-100'>
 <section id='banner' class='container'>
   <div class='row'>
     <div class='col-8'>
@@ -59,11 +128,11 @@
 </section>
 
 
-<section class = 'isBg' style = 'background: linear-gradient(180deg, rgba(248, 248, 255, 0) 0%, #F8F8FF 64.22%); height: 120vh; '>
-  
- 
-  
 
+
+<section class='isBg' style='background: linear-gradient(180deg, rgba(90, 84, 245, 0) 0%, rgba(90, 84, 245, 0.05) 100%), #F8F8FF; '>
+  
+  <!-- linear-gradient(180deg, rgba(248, 248, 255, 0) 0%, #F8F8FF 64.22%); -->
   <section class="box d-flex" style="height: 60vh;">
     <div class="text-center align-self-center mx-auto">
       <h5 class="SubTitle_1 Gray_2 ">How we work</h5>
@@ -75,59 +144,43 @@
 
   <section id='cards' class=''>
     <!-- Swiper -->
+
     <div class="swiper career-slide">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="card w-100">  
-            <img src="img/1.jpeg" class="card-img" alt="...">
-            <div class="card-img-overlay container">  
-              <h5 class="card-title col-2">시행착오의
-                가치를 믿어요.</h5>
-              <div class=""></div>
-              <div class="ml-3">
-                
-                <button onClick = "showUp($(this).attr('id'))" id = 'c1' class="ui icon button card-text position-absolute " style="right: 3vw;bottom: 1vw;"><i class="bi bi-plus-circle"></i>
-                </button>
 
-                <p class="card-text position-absolute bottom-0 start-3 col-5 c1 d-none" >실패는 잘못이 아니에요. 넘어지는 것을 두려워하지 않고, 다시 일어나 두 걸음
-                  더 앞으로 나아가요.</p>
+        {% set say1 = [{ title: "시행착오의\n 가치를 믿어요.", id: 1, description: "실패는 잘못이 아니에요. 넘어지는 것을 두려워하지 않고, 다시 일어나 두 걸음 더
+        앞으로 나아가요." },
+        { title: "함께 성장하는 \n 힘을 믿어요.", id: 2, description: "혼자보다 함께할 때 더 큰 변화를 만들 수 있음을 믿고, 신뢰를 기반으로 소통하며 하나의 목표를 위해 협력해
+        나가요."} ,
+        {title: "스스로 업무를\n 정의해나가요.", id: 3, description: "주체적으로 롤을 정의하고 업무를 선택하며 깊이 몰입해요. 끊임없이 역량을 쌓으며 더 나은 미래를 만들어
+        나가요."},
+        {title: "솔직함과 자유로움으로\n 성과를 만들어 나가요.", id:4, description: "의견 충돌을 두려워하지 않고 피드백을 나누며 서로가 더 건강하게 성장해요. 치열한 논의와
+        소통을 통해, 최고의 결과를 도출해요."}]
+        %}
+
+        {% for item in say1 %}
+        <div class="swiper-slide w-60">
+          <div class="card w-100 border-0 rounded-0 ">
+            <img src="img/career/howWeWork/{{ item.id }}.png" class="card-img" alt="{{ item.title   }}">
+            <div class="card-img-overlay container c{{loop.index}}-img d-flex flex-column h-100 p-5">
+              <div class='row g-0 h-100'>
+                <div class='col-4 d-flex flex-column '>
+                  <h5 class="card-title ">{{ item.title | striptags(true) | escape | nl2br}}</h5>
+                  <div class='mt-auto '>
+                    <p class="card-text  c{{ loop.index }} transition hidden">{{ item.description }} </p>
+                  </div>
+                </div>
+                <div class='col align-self-end'>
+                  <button onClick="showUp($(this).attr('id'))" id='c{{ loop.index }}'
+                    class="align-items-baseline border-0 card-text bg-transparent float-end c-btn c{{ loop.index }}-btn"><i
+                      class="bi bi-plus-circle text-white "></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-
-
         </div>
-  
-        <div class="swiper-slide">
-          <div class="card w-100">  
-            <img src="img/1.jpeg" class="card-img" alt="...">
-            <div class="card-img-overlay container">  
-              <h5 class="card-title col-2">시행착오의
-                가치를 믿어요.</h5>
-              <div class=""></div>
-              <div class="ml-3">
-                <p class="card-text position-absolute bottom-0 start-3 col-5 ">실패는 잘못이 아니에요. 넘어지는 것을 두려워하지 않고, 다시 일어나 두 걸음
-                  더 앞으로 나아가요.</p>
-                <p class="card-text position-absolute " style="right: 3vw;bottom: 1vw;"><i class="bi bi-plus-circle"></i>
-                </p>
-              </div>
-            </div>
-          </div>
-  
-        </div>
-        <div class="swiper-slide">
-
-          <div class="card bg-dark text-white">
-            <img src="img/1.jpeg" class="card-img" alt="...">
-            <div class="card-img-overlay">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text">Last updated 3 mins ago</p>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
+        {% endfor %}
 
       </div>
       <!-- <span class= 'prev  '><i class="angle left icon"></i></span>
@@ -136,172 +189,273 @@
       <div class="swiper-button-prev"><i class="angle left icon"></i></div>
     </div>
   </section>
-  
-
-</section>
-
-<section id='teamIntroduction'>
-  <div class='text-center'>
-    <span class='team-intro'>씨앤에이아이 팀을 소개합니다!</span>
 
 
-    <div class="ui secondary pointing menu mb-3" id="pills-tab" role="tablist">
-
-      <a class="item active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="" role="tab"
-        aria-controls="pills-home" aria-selected="true">Home</a>
-      <a class="item" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="" role="tab"
-        aria-controls="pills-profile" aria-selected="false">Profile</a>
-      <a class="item" id="pills-3-tab" data-bs-toggle="pill" data-bs-target="#pills-3" type="" role="tab"
-        aria-controls="pills-profile" aria-selected="false">3</a>
-      <a class="item" id="pills-4-tab" data-bs-toggle="pill" data-bs-target="#pills-4" type="" role="tab"
-        aria-controls="pills-profile" aria-selected="false">4</a>
 
 
-    </div>
-    <div class="tab-content" id="pills-tabContent">
-      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
-        tabindex="0">.ccc..</div>
-      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-        .aa..</div>
-      <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-3-tab" tabindex="0">.3..</div>
-      <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-4-tab" tabindex="0">.4..</div>
+  <section id='teamIntroduction'>
+    <div class='text-center' style='margin-top:30vh; margin-bottom:20vh;'>
+      <span class='team-intro Title_1 Gray_3'><span class='Point_1'>씨</span>앤에이아이 <span class='Point_1'>팀</span>을 <span
+          class='Point_1'>소</span>개합니다!</span>
     </div>
 
-  </div>
 
-</section>
+    <div class="offset-lg-2">
+      <div class="border-0 ui attached tab segment bg-transparent" data-tab="first">
+     
+        <div class='my-5 '>    <span class="ui large label Body_1_eng text-white align-text-top me-2" style="background: #929AA4; bottom: 0.4rem;position: relative;">
+          Q1
+        </span><span class = 'Title_1 Gray_1'>CN.AI에서 나는 어떤 사람? </span></div>
 
-<section id='welfare' class='container'>
+        <div class="swiper mySwiper1">
+          <div class="swiper-wrapper">
+            {% for s in data %}
+            {% if s.question == 1 %}
+            <div class="swiper-slide w1">
+              <div class="card border-0 mb-3 shadow member mt-5 w-100 p-4 rounded-4">
+                <p class="Title_2 ">나는 CN.AI의 <br /><span class='Title_1' style="color: #{{ s.color }} ">{{ s.title
+                    }}</span></p>
+                <button class="mini ui circular icon button col-1 btn-sm-member m{{ loop.index }}-btn"
+                  style='width:1.5rem; height: 1.5rem;' onclick="showUp2($(this).attr('id')) " id="m{{ loop.index }}"><i
+                    class="angle down icon"></i></button>
+                <div class="card-body Gray_2 m{{ loop.index }} d-none">
+                  <p class="card-text">{{ s.content | striptags(true) | escape | nl2br}}</p>
+                </div>
+                <div class="card-footer mt-auto bg-transparent border-0 Gray_1 member-Tab">{{ s.writer }}</div>
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
 
-  <div class='text-center'>
-    <h5>Our Welfare
-    </h5>
-    <h4 class='col-5'>아낌없는 지원으로 업무 몰입 뿐 아니라,
-      팀원들의 성장과 자아실현까지 이끌어갑니다.</h4>
-  </div>
-
-  <img class='w-100' src='img/1.jpeg'>
-
-  <div class='row g-5'>
-    <div class='col'>
-      <img src='img/1.jpeg'>
-      <h4>식대 및 차대 제공</h4>
-      <h5>전문 케이터링 업체에서 제공하는
-        점심식사는 물론 커피, 간식과 야근
-        식대까지 든든하게 보장</h5>
-    </div>
-    <div class='col'>
-
-      <img src='img/1.jpeg'>
-      <h4>사내 동아리 활동 운영</h4>
-      <h5>팀원들의 건강과 행복을 위해
-        골프, 싸이클, 풋살, 클라이밍 등
-        함께 즐기는 사내 동아리</h5>
-    </div>
-    <div class='col'>업무 몰입 및 역량 개발 지원</div>
-    <div class='w-100'>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section id='progress' class='bg-light'>
-  <h1 class='text-center'>영입 절차 </h1>
-  <p class='text-center'>지원 후 2주 내 최종 발표 진행</p>
-  <div class="card bg-dark text-white">
-    <img src="/img/process.png" class="card-img" alt="...">
-    <div class="card-img-overlay">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-        This content is a little bit longer.</p>
-      <p class="card-text">Last updated 3 mins ago</p>
-    </div>
-  </div>
-
-
-  <div class='row'>
-
-    <div class='col-offset-2 col-2'>지원자의 역량을 확인하기 위한
-      인적성 적합도 평가 과정</div>
+      
+{% for i in range(2,6) %}
+      <div class="border-0 ui attached tab segment bg-transparent" data-tab="member-{{ i }}">
+        <div class="swiper mySwiper{{ i }}">
+          <div class="swiper-wrapper m-{{ i }}">
+            {% for s in data %}
+            {% if s.question == i %}
+            
+            <div class="swiper-slide w1 " id = "">
+              <div class="card border-0 mb-3 shadow member mt-5 w-100 p-4 rounded-3">
+             
+                <div class="card-body Gray_3  ">
+                  <p class="">{{ s.content | striptags(true) | escape | nl2br }}</p>
+                </div>
+                <div class="card-footer mt-auto bg-transparent border-0 Gray_1 member-Tab">{{ s.writer }}</div>
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}        
+          </div>
+        </div>
+      </div>
+  {% endfor %}
 
 
+      <div class="ui pointing secondary menu border-0">
+        <a class="item active" data-tab="first"></a>
+        <a class="item" data-tab="member-2"></a>
+        <a class="item" data-tab="member-3"></a>
+        <a class="item" data-tab="member-4"></a>
+        <a class="item" data-tab="member-5"></a>
+      </div>
 
-    <div class='col-offset-2 col-2'>3개월간의 수습 기간 동안
-      적합도 평가를 통해 정직원 전환 진행</div>
-  </div>
-
-  <div class='container'>
-    <div class="ui circular segment">
-      <h2 class="ui header">
-        01
-        <div class="sub header">서류 평가</div>
-      </h2>
-    </div>
-    <div class="ui inverted circular segment">
-      <h2 class="ui inverted header">
-        02
-        <div class="sub header"> 인적성 검사</div>
-      </h2>
-    </div>
-    <div class="ui circular segment">
-      <h2 class="ui header">
-        03
-        <div class="sub header">역량 / 문화 <br />
-          인터뷰</div>
-      </h2>
-    </div>
-    <div class="ui inverted circular segment">
-      <h2 class="ui inverted header">
-        04
-        <div class="sub header">정직원 채용</div>
-      </h2>
-    </div>
-  </div>
-</section>
-
-<section id='btn-career' class='container-fluid'>
-  <section class="py-5 text-center container-fluid mb-5 bg-dark text-light" style="height: 100vh">
-    <div style="margin-top: 40vh;" data-aos="fade-up">
-      <h1>CNAI의 개발팀의 일상 엿보기</h1>
-      <div class='ui button'>Tech Blog 바로가기</div>
     </div>
   </section>
 </section>
+
+
+<section id='welfare' class='container'>
+
+  <div class=' row justify-content-center' style = "margin-top: 30vh;" >
+    <h5 class = 'Gray_2 SubTitle_1 text-center'>Our Welfare
+    </h5>
+    <h4 class='col-5 Title_2 Gray_1'>아낌없는 지원으로 업무 몰입 뿐 아니라,
+      팀원들의 성장과 자아실현까지 이끌어갑니다.</h4>
+  </div>
+
+  <img class='w-100 my-3' src='img/career/5.png'>
+
+  <div class='row g-5' style = 'margin-top: 30vh; margin-bottom: 30vh'>
+{% for s in data %}
+{% if s.question == 6 %}
+
+    <div class='col-3 offset-lg-1 my-5 py-5'>
+      <img src='img/career/{{ s.color }}.svg' alt = '{{ s.title }} ' class= 'col-2' >
+      <h4 class = 'mt-3 Gray_1 Title_3'>{{ s.title }}</h4>
+      <h5 class = 'Body_1' style = 'color:#7E7E7E; '>{{ s.content }}</h5>
+    </div>
+  {% endif %}
+  {% endfor %}
+
+
+  </div>
+
+</section>
+
+<section id='progress' style = 'background-color: #F2F5F8;'>
+  <h1 class='text-center Title_1 Gray_1' style  = 'padding-top:12vh; '>영입 절차 </h1>
+  <p class='text-center Point_1 Body_1'>지원 후 2주 내 최종 발표 진행</p>
+  <div class="card bg-transparent border-0">
+    <img src="/img/process.png" class="card-img mx-auto" alt="..." style="
+    width: 70vw;
+">
+    <div class="card-img-overlay">
+    <div class = 'row'>
+      <div class='col-offset-2 col-2'>지원자의 역량을 확인하기 위한
+        인적성 적합도 평가 과정</div>
+
+        <div class='col-offset-2 col-2'>3개월간의 수습 기간 동안
+          적합도 평가를 통해 정직원 전환 진행</div>
+    </div>
+
+    <div class = 'row'>
+      <div class = 'col'>
+        <h2 class="ui header">
+          01
+          <div class="sub header">서류 평가</div>
+        </h2>
+      </div>
+
+      <div class = 'col'>
+        <h2 class="ui inverted header">
+          02
+          <div class="sub header"> 인적성 검사</div>
+        </h2>
+      </div>
+
+      <div class = 'col'>
+        <h2 class="ui header">
+          03
+          <div class="sub header">역량 / 문화 <br />
+            인터뷰</div>
+        </h2>
+      </div>
+
+      <div class = 'col'>
+        <h2 class="ui inverted header">
+          04
+          <div class="sub header">정직원 채용</div>
+        </h2>
+      </div>
+    </div>
+
+    <div class = 'row'>
+      <div class='col-offset-1 col-2'>실무진들의 면밀한 검토를 
+        통한 서류 평가 과정 </div>
+
+        <div class='col-offset-2 col-2'>역량, 컬쳐핏이 CN과 부합하는지 
+          알아보기 위한 역량/문화 인터뷰</div>
+    </div>
+
+    </div>
+  </div>
+
+
+
+</section>
+
+
 {% endblock %}
 
-{% block localScript %} 
+{% block title %}CNAI의 개발팀의 일상 엿보기 {% endblock %}
+{% block btn %} Tech Blog 바로가기 {% endblock %}
+
+{% block localScript %}
 <script>
-    var iconButton = $("show1");
-	iconButton.on("click", function() {
-		$(iconButton).removeClass('aos-animate');
-		setTimeout(function() {
-			$(iconButton).addClass('aos-animate');
-		}, 400);
-	});
+  var swiper = new Swiper(".mySwiper1", {
+    slidesPerView: 'auto',
+    // centeredSlides: true,
+    spaceBetween: 30,
+    grabCursor: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
 
-showUp = (myId) => {
-  document.getElementById("select_hour").textContent  = document.getElementById(myId).innerText;
-  document.getElementById("show_seat").classList.remove("d-none"); 
-}
+  let swiper2 = new Swiper(".mySwiper2", {
+    slidesPerView: 'auto',
+    // centeredSlides: true,
+    spaceBetween: 30,
+    grabCursor: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
 
+  let swiper3 = new Swiper(".mySwiper3", {
+    slidesPerView: 'auto',
+    // centeredSlides: true,
+    spaceBetween: 30,
+    grabCursor: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
 
-var swiper = new Swiper(".career-slide", {
-        slidesPerView: 'auto',
-        centeredSlides: true,
-        spaceBetween: 90,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        initialSlide : 1,
-        navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+  let swiper4 = new Swiper(".mySwiper4", {
+    slidesPerView: 'auto',
+    // centeredSlides: true,
+    spaceBetween: 30,
+    grabCursor: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  let swiper5 = new Swiper(".mySwiper5", {
+    slidesPerView: 'auto',
+    // centeredSlides: true,
+    spaceBetween: 30,
+    grabCursor: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+
+  $('.menu .item')
+    .tab()
+    ;
+  showUp = (myId) => {
+    let blur = myId + '-img';
+    let say = '.' + myId;
+    let btn = myId + '-btn';
+    document.getElementsByClassName(blur)[0].classList.toggle("bg-blur");
+    document.getElementsByClassName(btn)[0].classList.toggle("c-btn-active");
+    $(say)
+      .transition('fade up')
+      ;
   }
 
+  showUp2 = (myId) => {
+    let memberBtn = myId + '-btn'
+    document.getElementsByClassName(myId)[0].classList.toggle("d-none");
+    document.getElementsByClassName(memberBtn)[0].classList.toggle("btn-sm-member-active");
+  }
 
-      });
+  var swiper = new Swiper(".career-slide", {
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    spaceBetween: 90,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    initialSlide: 1,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    }
+
+
+  });
 </script>
 {% endblock %}
