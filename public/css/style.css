@@ -117,6 +117,19 @@ button{
   letter-spacing: -2%;
 }
 
+.footer-text{
+font-family: 'Apple SD Gothic Neo';
+font-style: normal;
+font-weight: 600;
+font-size: 0.9rem;
+line-height: 210%;
+/* or 31px */
+letter-spacing: -0.02em;
+
+/* CNAI/Gray_1 */
+color: #4E5968;
+
+}
 .Body_1 {
   /* Apple SD Gothic Neo / Medium / 1.25rem / line height 2.25rem / letter spacing -2%  */
   font-family: 'Apple SD Gothic Neo';
@@ -161,7 +174,9 @@ button{
   letter-spacing: 0%;
 }
 
-
+footer .ui.link.list .item, .ui.link.list .item a:not(.ui), .ui.link.list a.item{
+  color: #4E5968;
+}
 
 .Body_1_eng {
 
@@ -349,3 +364,4 @@ body[lang=kr] {
   font-family: made-tommy;
   src: url("/css/font/made-tommy/webfonts/made-tommy.woff") format("woff")
 }
+
