@@ -10,26 +10,49 @@ console.log(`Welcome to
 `)
 
 
-
-
-
 var myCarousel = document.querySelector('#myCarousel')
-// var carousel = new bootstrap.Carousel(myCarousel, {
-//   interval: 0
-// })
+showUp = (myId, category) => {
+  let blur = myId + '-img';
+  let title = myId + '-title';
+  let btn = myId + '-btn';
+  let say = '.' + myId;
+  
+  document.getElementsByClassName(blur)[0].classList.toggle("bg-blur");
+  document.getElementsByClassName(btn)[0].classList.toggle("c-btn-active");
+  $(say)
+    .transition('fade up')
+    ;
+  if (category == 'home'){
+    document.getElementsByClassName(title)[0].classList.toggle("text-white");
+  }
+}
 
-$('.ui.sticky')
-  .sticky({
-    context: '#example1'
-  })
+homeShow = (myId) =>{
+  let blur = myId + '-img';
+  let title = myId + '-title';
+  let btn = myId + '-btn';
+  
+  let say = '.' + myId;
+
+  
+  $(say)
+    .transition('fade up')
+    ;
+}
+
+
+$('.masthead')
+.visibility({
+  once: false,
+  onBottomPassed: function() {
+    $('.fixed.menu').transition('fade in');
+  },
+  onBottomPassedReverse: function() {
+    $('.fixed.menu').transition('fade out');
+  }
+})
 ;
 
-// ellipse and circle
-$('.ui.sticky')
-  .sticky({
-    context: '#content'
-  })
-;
 
 $('.ui.sidebar')
   .sidebar('setting', 'transition', 'overlay')
@@ -42,7 +65,6 @@ $('.ui.modal')
 .modal('show')
 ;
 
-
 $('.tool-tip').popup();
 
 
@@ -53,14 +75,10 @@ $('.ui.checkbox')
 .checkbox()
 ;
 
-
-$('.accordion')
-.accordion({
-  selector: {
-    trigger: '.title'
-  }
-})
-;
-
-
-
+// $('.accordion')
+// .accordion({
+//   selector: {
+//     trigger: '.title'
+//   }
+// })
+// ;

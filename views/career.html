@@ -22,14 +22,7 @@
     transform: rotate(45deg);
   }
 
-  .c-btn:hover,
-  .c-btn-active {
-    transform: rotate(45deg);
-  }
 
-  .c-btn {
-    transition: 0.5s;
-  }
 
   .member:hover {
     top: -2rem;
@@ -422,7 +415,7 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(248,248,255,1) 7
       <p class = 'Title_3'>역량 / 문화 <br />
         인터뷰</p>
     </div>
-    <div class="d-flex position-absolute bottom-0 start-50 translate-middle-x" style="">
+    <div class="d-flex position-absolute bottom-0 start-50 translate-middle-x" >
       <div class="v1-down mx-auto" style = 'height: 7rem;'></div>
     </div>
 
@@ -528,16 +521,6 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(248,248,255,1) 7
   $('.menu .item')
     .tab()
     ;
-  showUp = (myId) => {
-    let blur = myId + '-img';
-    let say = '.' + myId;
-    let btn = myId + '-btn';
-    document.getElementsByClassName(blur)[0].classList.toggle("bg-blur");
-    document.getElementsByClassName(btn)[0].classList.toggle("c-btn-active");
-    $(say)
-      .transition('fade up')
-      ;
-  }
 
   showUp2 = (myId) => {
     let memberBtn = myId + '-btn'

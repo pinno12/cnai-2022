@@ -59,11 +59,12 @@ html {
 .hover-underline-animation:after {
   content: '';
   position: absolute;
-  width: 100%;
+  width: 4rem;
   transform: scaleX(0);
   height: 2px;
-  bottom: 0;
-  left: 0;
+  bottom: 0rem;;
+  top: 120%;
+  left: 30%;
   background-color: white;
   transform-origin: bottom center;
   transition: transform 0.25s ease-out;
@@ -153,7 +154,7 @@ color: #4E5968;
   font-family: made-tommy;
   font-size: 2.375rem;
   font-weight: 500;
-  line-height: 3.5rem;
+  /* line-height: 3.5rem; */
   letter-spacing: 0%;
 }
 
@@ -161,7 +162,7 @@ color: #4E5968;
   font-family: 'made-tommy';
   font-weight: 400;
   font-size: 2rem;
-  line-height: 2.813rem;
+  /* line-height: 2.813rem; */
   letter-spacing: 0%;
 }
 
@@ -192,16 +193,16 @@ footer .ui.link.list .item, .ui.link.list .item a:not(.ui), .ui.link.list a.item
   font-family: 'made-tommy';
   font-weight: 500;
   font-size: 1rem;
-  line-height: 1.25rem;
-  letter-spacing: 0%;
+  /* line-height: 1.25rem; */
+  /* letter-spacing: 0%; */
 }
 
 .Btn_1{
   font-family: 'made-tommy';
   font-weight: 400;
   font-size: 1.5rem;
-  line-height: 2.5rem;
-  letter-spacing: 0%;
+  /* line-height: 2.5rem; */
+  /* letter-spacing: 0%; */
 }
 
 .Btn_2{
@@ -267,9 +268,22 @@ padding-left: 1rem; */
   color: #BDBDBD;
   background-color: #F2F5F8;
 }
+.btn-sm-1{
+  width: 48px;
+}
 
+.c-btn:hover,.c-btn-active {
+  transform: rotate(45deg);
+}
+
+.c-btn {
+  transition: 0.5s;
+}
 .Gray_0 {
   color: #363D47 !important;
+}
+.gray_0 {
+  color: #363D47;
 }
 
 .Gray_1 {
@@ -365,3 +379,19 @@ body[lang=kr] {
   src: url("/css/font/made-tommy/webfonts/made-tommy.woff") format("woff")
 }
 
+  .better{
+    font-family: 'MADE TOMMY';
+font-style: normal;
+font-weight: 500;
+font-size: 4rem;
+line-height: 5rem;
+/* identical to box height */
+
+text-align: center;
+
+background: linear-gradient(92.05deg, rgba(96, 255, 217, 0.8) 22.66%, rgba(50, 255, 206, 0) 86.02%), linear-gradient(90deg, rgba(126, 83, 255, 0.8) 35.05%, rgba(126, 83, 255, 0) 68.16%), #5A54F5;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+  }

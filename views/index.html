@@ -1,48 +1,67 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<!-- data-bs-spy="scroll"  data-bs-offset="50" -->
+<style>
+  html {
+  scroll-behavior: smooth;
+ }
+
+ .bg-purple{
+
+background: linear-gradient(0deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), linear-gradient(0deg, #7E53FF, #7E53FF);
+
+ }
 
 
 
-    <div class="container col-8 mt-4" data-bs-spy="scroll" data-bs-target="#myScroll" data-bs-offset="50">
-
-      <section class="py-5 text-center container mt-5 masthead " style = "height: 100vh">
-        <div class="row py-lg-5">
-          <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light">CODE NEW AI</h1>
-            <p class="lead text-muted kr">당신이 원하는 모든 것, AI로 이루어 드립니다</p>
-          </div>
-        </div>
-      </section>
-
-
-     
-
+</style>
+<div class = 'isBg-1 card rounded-0 border-0'>
+<img class = 'card-img' style = 'background: linear-gradient(147.1deg, #CBBAFF 5.67%, rgba(203, 186, 255, 0) 52.89%);
+transform: rotate(-180deg); height: 500vh'></div>
+<div class=  'card-img-overlay'>
+    <div class="container col-8 mt-4" >       
+      <section class="card bg-transparent border-0 rounded-0 masthead">
+ 영상
+    </section>
       
-      
-
-      <section class="py-5 text-center container">
+      <section class="py-5 text-center container navbar-example" style = 'height:100vh;'>
         <div class="row py-lg-5 mt-5">
-          <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light" data-aos="fade-up">BETTER DATA, FUTURE FOR AI</h1> <br />
-            <p class="lead text-muted"data-aos="fade-up">데이터가 주도하는 인공지능의 미래</p>
-            <a href = '#home-tech'><i class="angle down icon"></i></a>
+          <div class="mx-auto">
+            <p class="better" data-aos="fade-up">BETTER DATA, FUTURE FOR AI</p> <br />
+            <p class="lead text-muted"data-aos="fade-up" style = 'margin-bottom: 8vw;'>데이터가 주도하는 인공지능의 미래</p>
+            <a href = '#down' id ='goDown2'><i class="angle down icon"></i></a>
           </div>
         </div>
       </section>
 
-      <section id = "home-tech">
-        <div class = "row ">
-          <small class = "text-center">Our Technology  </small>         
+      <section id = "">
+        <div class = "row" id = ''>
+          <div class = "text-center Gray_2 SubTitle_1 pb-5 mb-5" id = 'down'>Our Technology  </div>         
         </div>
+ 
+<div class ='row'>
 
-        <div class="p-4 p-md-5 mb-4 text-white bg-dark">
-          <div class="col-md-6 px-0">
-            <h1 class="display-4 fst-italic">Data Warehouse</h1>
-            <p class="lead mb-0"><a href="#" class="text-white fw-bold">더 알아보기 <i class="angle right icon"></i></a></p>
-          </div>
+        <div class="bg-purple mb-4 " id = 'tech' style = 'height: 70vh;'>            
+            <div class="container c1-img d-flex flex-column h-100 p-5">
+              <div class='row g-0 h-100'>
+                <div class='col-6 d-flex flex-column '>
+                  <p class=" c1-title Title_1_eng mb-0 gray_0">Data Warehouse</p>
+                  <a href="/coretech" class="Body_1 Gray_1 text-mute">더 알아보기 <i class="angle right icon"></i></a>
+                  <div class='mt-auto '>
+                    <p class="card-text c1 transition hidden">관련 설명이 들어갈 예정입니다. 관련 설명이 들어갈 예정입니다. 관련 설명이 들어갈 예정입니다. 관련 설명이 들어갈 예정입니다. 관련 설명이 들어갈 예정입니다.</p>
+                  </div>
+                </div>
+                <div class='col align-self-end'>
+                  <button onClick="showUp($(this).attr('id'),'home')" id='c1'
+                    class="align-items-baseline border-0 card-text bg-transparent float-end c-btn c1-btn">
+                    <img class = 'btn-sm-1' src = 'img/icon/00 more-dark.png' >
+                  </button>
+                </div>
+              </div>
+            </div> 
         </div>
-
+      </div>
         <div class = "row">
           <div class = "col-6">
             <div class="p-4 p-md-5 mb-4 text-white bg-dark">
@@ -123,6 +142,8 @@
 
       </section>
     </div>
+  </div>
+    </div>
 
     <section id = 'partners'>
       <div class = 'container'>
@@ -134,9 +155,6 @@
         <li><img src="img/1.jpeg" width="290" height="200" alt="Firehouse"></li>
         <li><img src="img/1.jpeg" width="290" height="200" alt="Chloe nightclub"></li>
         <li><img src="http://logicbox.net/jquery/simplyscroll/assets/20080513_VPJWVQRW_tb.jpg" width="290" height="200" alt="Firehouse bar"></li>
-      
-  
-  
   </ul></div></div>
 
     </section>
@@ -144,23 +162,18 @@
     {% endblock %}
 
     {% block localScript %}
-  
     <script>
-  
+
+$("#goDown").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#tech").offset().top-200},
+        'fast');
+});
+
 
 
   // fix menu when passed
-  $('.masthead')
-    .visibility({
-      once: false,
-      onBottomPassed: function() {
-        $('.fixed.menu').transition('fade in');
-      },
-      onBottomPassedReverse: function() {
-        $('.fixed.menu').transition('fade out');
-      }
-    })
-  ;
+
 
 
     var swiper = new Swiper(".mySwiper", {

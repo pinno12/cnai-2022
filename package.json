@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index",
     "dev": "nodemon -e ejs,js,html app.js",
-    "watch": "nodemon -e ejs,js,html,css"
+    "watch": "nodemon -e ejs,js,html,css, nj, njk, nunjucks"
   },
   "author": "",
   "license": "ISC",

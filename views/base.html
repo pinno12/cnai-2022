@@ -106,7 +106,7 @@ type="text/css">
   <link rel="stylesheet" href="./css/style.css" />
 
 </head>
-<body class="d-flex flex-column h-100 ">
+<body class="d-flex flex-column h-100 " >
 
 <!-- Following Menu -->
 
@@ -114,9 +114,7 @@ type="text/css">
 
     <main role="main" class="flex-shrink-0 ">
 
-
-      <!-- <header class="bg-light ui large top fixed hidden menu"> -->
-        <header class="bg-light ui large top fixed menu transition hidden">
+        <section class="bg-light ui large top fixed menu transition hidden" id="header_light" >
         <div class="container ">
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
@@ -136,52 +134,45 @@ type="text/css">
             </div>
           </div>
         </div>
-      </header>
+      </section>
 
 
-<header class="bg-dark Gray_5 menu py-2">
+<!-- 최상단 헤더 -->
+<header class="bg-dark Gray_5 menu py-2" id = 'headr_dark' style = 'height:4vw;'>
 
-
-
-  <div class="container">
+  <div class="container ">
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
       <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none">
         <img class = "logo" src="./img/common/CNAI(white).png" width = "70px">
       </a>
-
-      <div class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 " id = 'gnb-dark'>
+      <div class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 Body_2_eng" id = 'gnb-dark'>
         <li class="my-auto px-5"><a href="/company" class="nav-link px-2 Gray_5 hover-underline-animation">COMPANY</a></li>
         
           <div class="ui compact menu my-auto pr-5" style="
           background: none;
       ">
-            <div class="ui simple dropdown item Gray_5" id = 'moveArrow'>
+            <div class="ui simple dropdown item Gray_5 Body_2_eng" id = 'moveArrow'>
          COMMUNITY
          <i class="angle down icon" id = 'myArrow'></i>
               <div class="menu">
                 <div class="item"><a href = '/community'>Publications</a></div>
-                <div class="item">Tech Blog<i class="external alternate icon"></i></div>
-           
+                <div class="item">Tech Blog<i class="external alternate icon"></i></div>           
               </div>
             </div>
-          </div>
-        
-        
-        
-        
-        <li class = 'my-auto'><a href="/career" class="nav-link px-2 text-white">CAREER</a></li>
+          </div>             
+        <li class = 'my-auto'><a href="/career" class="nav-link px-2 Gray_5 Body_2_eng">CAREER</a></li>
         </div>
-
-
       <div class="text-end">
         <a href = '/en' class  = 'nav-link hover-underline-animation'><i class="globe icon px-5 text-white"></i></a>
-        <button type="button" class="btn btn-outline-light me-2 ">CONTACT US</button>
+        <button type="button" class="btn btn-outline-light me-2 Gray_5 ">CONTACT US</button>
       </div>
     </div>
   </div>
 </header>
 
 {% block content %} {% endblock %}
+
+
 <section class="py-5 text-center container-fluid text-light" id="btn-career"
   style="height: 38vh;background: linear-gradient(180deg, #7E53FF -8.57%, rgba(126, 83, 255, 0) 46.58%), #5A54F5;">
   <div style="margin-top:5vh" data-aos="fade-up" class="aos-init aos-animate">
