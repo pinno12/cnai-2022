@@ -10,7 +10,6 @@ console.log(`Welcome to
 `)
 
 
-var myCarousel = document.querySelector('#myCarousel')
 showUp = (myId, category) => {
   let blur = myId + '-img';
   let title = myId + '-title';
