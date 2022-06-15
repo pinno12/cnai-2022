@@ -13,11 +13,79 @@
 
   }
 
+
+
+/* Container DIV - automatically generated */
+.simply-scroll-container { 
+	position: relative;
+}
+
+/* Clip DIV - automatically generated */
+.simply-scroll-clip { 
+	position: relative;
+	overflow: hidden;
+}
+
+/* UL/OL/DIV - the element that simplyScroll is inited on
+Class name automatically added to element */
+.simply-scroll-list { 
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+	
+.simply-scroll-list li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+	
+.simply-scroll-list li img {
+	border: none;
+	display: block;
+}
+
+/* Custom class modifications - adds to / overrides above
+
+.simply-scroll is default base class */
+
+/* Container DIV */
+.simply-scroll { 
+	width: 100vw;
+	height: 200px;
+	margin-bottom: 1em;
+}
+
+/* Clip DIV */
+.simply-scroll .simply-scroll-clip {
+	/* width: 576px; */
+  width:100vw;
+	height: 200px;
+}
+	
+/* Explicitly set height/width of each list item */	
+.simply-scroll .simply-scroll-list li {
+	float: left; /* Horizontal scroll only */
+	width: 10vw;
+	height: 200px;
+}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
 </style>
 <div class='isBg-1 card rounded-0 border-0'>
   <img class='card-img' style='background: linear-gradient(147.1deg, #CBBAFF 5.67%, rgba(203, 186, 255, 0) 52.89%);
 transform: rotate(-180deg); height: 500vh'>
-</div>
+
+
+
 <div class='card-img-overlay'>
   <div class="container col-8 mt-4">
     <section class="card bg-transparent border-0 rounded-0 masthead">
@@ -104,7 +172,7 @@ transform: rotate(-180deg); height: 500vh'>
                     </div>
                   </div>
                   <div class="col align-self-end">
-                    <button onclick="showUp($(this).attr('id'),'home')" id="c3"
+                    <button onclick="showUp($(this).attr('id'),'1')" id="c3"
                       class="align-items-baseline border-0 Title_3 bg-transparent float-end c-btn c3-btn">
                       <img class="btn-sm-1" src="img/icon/00 more-dark.png">
                     </button>
@@ -139,15 +207,15 @@ transform: rotate(-180deg); height: 500vh'>
 
 
     <section class="ourUseCases">
-      <div class="subTitle Gray_3" style='margin-top: 30vh;'>
+      <div class="subTitle_1 Gray_3" style='margin-top: 30vh;'>
         Our Use Cases
       </div>
 
       <p class=' Title_2 my-4 pb-4 Gray_1'>
         데이터 합성 솔루션이 가져올 변화
       </p>
-    </div>
-      <div class="swiper mySwiper ">
+  
+      <div class="swiper mySwiper full-width">
         <div class="swiper-wrapper">
 
           {% set say1 = [{ title: "Medical 의료 분야.", title2: "일반적으로 구하기 어려운 희귀 병변 데이터를 생성하고 정밀하게 탐지합니다.",
@@ -185,9 +253,11 @@ transform: rotate(-180deg); height: 500vh'>
     </section>
 
 </div>
-</div>
 
-<section id='partners' style="margin-top: 30vh">
+
+  
+<section id='partners' class='' >
+
   <div class='container'>
     <h5 class = 'Gray_2 SubTitle_1'>Our Partners </h5>
     <h3 class = 'Gray_1 Title_1_eng'>CN.AI의 성장과 함께하는 파트너사</h3>
@@ -195,16 +265,52 @@ transform: rotate(-180deg); height: 500vh'>
 
   <div class="simply-scroll simply-scroll-container">
     <div class="simply-scroll-clip">
-      <ul id="scroller" class="simply-scroll-list w-100" >
-        <li><img src="img/1.jpeg" width="290" height="200" alt="Firehouse"></li>
-        <li><img src="img/1.jpeg" width="290" height="200" alt="Chloe nightclub"></li>
-        <li><img src="http://logicbox.net/jquery/simplyscroll/assets/20080513_VPJWVQRW_tb.jpg" width="290" height="200"
-            alt="Firehouse bar"></li>
+      <ul id="scrollerTop" class="simply-scroll-list" >
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Chloe nightclub"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Chloe nightclub"></li>
+
       </ul>
     </div>
   </div>
 
+  <div class="simply-scroll simply-scroll-container">
+    <div class="simply-scroll-clip">
+      <ul id="scrollerBottom" class="simply-scroll-list" >
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Chloe nightclub"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Firehouse"></li>
+        <li><img src="img/1.jpeg" alt="Chloe nightclub"></li>
+
+      </ul>
+    </div>
+  </div>
+
+
 </section>
+</div>
+
 
 {% endblock %}
 
@@ -234,31 +340,33 @@ transform: rotate(-180deg); height: 500vh'>
     },
   });
 
-  //   $("#scroller").simplyScroll({
-  //     customClass: "simply-scroll",
-  //     frameRate: 20,
-  //     speed: 1,
-  //     orientation: "horizontal",
-  //     auto: !0,
-  //     autoMode: "loop",
-  //     manualMode: "end",
-  //     direction: "forwards",
-  //     startOnLoad: !1,
-  //     initialOffset: 0
-  // });
+        $("#scrollerTop").simplyScroll({
+            customClass: "simply-scroll",
+            frameRate: 20,
+            speed: 1,
+            orientation: "horizontal",
+            auto: !0,
+            autoMode: "loop",
+            manualMode: "end",
+            direction: "forwards",
+            startOnLoad: !1,
+            initialOffset: 0
+        });
 
-  // $("#scrollerBottom").simplyScroll({
-  //     customClass: "simply-scroll",
-  //     frameRate: 24,
-  //     speed: 1,
-  //     orientation: "horizontal",
-  //     auto: !0,
-  //     autoMode: "loop",
-  //     manualMode: "end",
-  //     direction: "backwards",
-  //     startOnLoad: !1,
-  //     initialOffset: 0
-  // });
+        $("#scrollerBottom").simplyScroll({
+            customClass: "simply-scroll",
+            frameRate: 20,
+            speed: 1,
+            orientation: "horizontal",
+            auto: !0,
+            autoMode: "loop",
+            manualMode: "end",
+            direction: "backwards",
+            startOnLoad: !1,
+            initialOffset: 0
+        });
+  
+
 </script>
 
 {% endblock %}

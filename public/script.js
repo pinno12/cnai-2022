@@ -16,13 +16,15 @@ showUp = (myId, category) => {
   let btn = myId + '-btn';
   let say = '.' + myId;
   
-  document.getElementsByClassName(blur)[0].classList.toggle("bg-blur");
   document.getElementsByClassName(btn)[0].classList.toggle("c-btn-active");
   $(say)
-    .transition('fade up')
-    ;
+  .transition('fade up')
+  ;
   if (category == 'home'){
     document.getElementsByClassName(title)[0].classList.toggle("text-white");
+  }else{
+    document.getElementsByClassName(blur)[0].classList.toggle("bg-blur");
+
   }
 }
 

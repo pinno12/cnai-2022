@@ -311,6 +311,9 @@ padding-left: 1rem; */
   background-color: #f2f5f8 !important;
 }
 
+.Gray_6{
+  color: #FAFBFC !important;
+}
 
 
 .card{
@@ -354,10 +357,7 @@ body[lang=kr] {
   font-family: 'AppleSDGothicNeo';
 }
 
-.subTitle {
-  font-size: 1.6rem;
-  /* 26px */
-}
+
 
 .gray2 {
   color: #BDBDBD;
@@ -393,5 +393,9 @@ background: linear-gradient(92.05deg, rgba(96, 255, 217, 0.8) 22.66%, rgba(50, 2
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 background-clip: text;
-text-fill-color: transparent;
+/* text-fill-color: transparent; */
+  }
+
+  .bg-blur {
+    background: rgba(255, 255, 255, 0.5);
   }
