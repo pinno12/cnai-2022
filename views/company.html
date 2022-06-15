@@ -44,35 +44,35 @@
 
 
 
-<div class=" mt-4">
 
+  <section class="text-center d-flex align-content-center flex-wrap justify-content-center" style="height: 100vh; background-color:
+  #4E5968 ;">
 
-  <section class="text-center" style="height: 100vh; background-color:
-      #4E5968 ;">
-    <div class="row py-lg-5">
-      <p class="subTitle_1 Gray_2">Our Numbers </p>
-    </div>
-    <div class="row">
-      <div class="col">
-        <h1 data-aos="fade-up" class='cn2Title Gray_6 mb-5'> 1 st</h1>
-        <p class='Gray_4 Body_1'>국내 최초
-          합성 데이터 활용 기업</p>
-      </div>
-      <div class="col-5">
-        <h1 data-aos="fade-up" class='cn2Title Gray_6 mb-5' data-aos-delay="200">10,000,000 +</h1>
-        <p class='Gray_4 Body_1'>합성 데이터를 위해
-          수집한 원천 데이터 수</p>
+<div class="w-100">
+  <p class="SubTitle_1 Gray_2">Our Numbers </p>
+</div>
+<div class="row mt-5 gx-5 w-75">
+  <div class="col">
+    <h1 data-aos="fade-up" class="cn2Title Gray_6 mb-5 aos-init aos-animate"> 1 st</h1>
+    <p class="Gray_4 Body_1">국내 최초 <br>
 
-      </div>
-      <div class="col">
-        <h1 data-aos="fade-up" class='cn2Title Gray_6 mb-5' data-aos-delay="400">92 +</h1>
-        <p class='Gray_4 Body_1'>프로젝트를 위해 보유한
-          AI 모델의 수(2022.2월 기준)
-        </p>
-      </div>
-    </div>
-  </section>
+      합성 데이터 활용 기업</p>
+  </div>
+  <div class="col-7">
+    <h1 data-aos="fade-up" class="cn2Title Gray_6 mb-5 aos-init aos-animate" data-aos-delay="200">10,000,000 <span><i class="plus icon fs-3"></i></span></h1>
+    <p class="Gray_4 Body_1">합성 데이터를 위해 <br />
+      수집한 원천 데이터 수</p>
 
+  </div>
+  <div class="col">
+    <h1 data-aos="fade-up" class="cn2Title Gray_6 mb-5 aos-init aos-animate" data-aos-delay="400">92 <span><i class="plus icon fs-3"></i></span></h1>
+    <p class="Gray_4 Body_1">프로젝트를 위해 보유한 <br />
+      AI 모델의 수(2022.2월 기준)
+    </p>
+  </div>
+</div>
+
+</section>
 
   <!-- masthead  -->
 
@@ -271,77 +271,64 @@
       <div class="card mb-3 border-0" style="
     height: 80vh;
 ">
-        <div class="row g-0">
+<div class="row g-0 my-5">
 
-          <div class="col-md-6">
-            <div class="">
-              <p class="SubTitle_1 Gray_3">Our Team</p>
-              <p class="card-text kr Title_1 Gray_1">함께이기에 <br />
-                빛이 나는 사람들</p>
-              <p class="card-text position-absolute bottom-0 start-0 Gray_1 Title_2">그들의 이야기가 궁금하다면
-                <a href="/career" class="ms-3 text-dark "><i class="bi bi-arrow-right-circle"></i></a>
-              </p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <img src="img/2/2.png" class="img-fluid rounded-start w-100 h-100" alt="함께 더빛남">
-          </div>
-        </div>
+  <div class="col-md-6 d-flex flex-column h-100 card-body">
+    
+      <p class="SubTitle_1 Gray_3">Our Team</p>
+      <p class="card-text kr Title_1 Gray_1">함께이기에 <br>
+        빛이 나는 사람들</p>
+      <p class="Gray_1 Title_2 mt-auto">그들의 이야기가 궁금하다면
+        <a href="/career" class="ms-3 text-dark "><i class="bi bi-arrow-right-circle"></i></a>
+      </p>
+   
+  </div>
+  <div class="col-md-6">
+    <img src="img/2/2.png" class="img-fluid rounded-start w-100" alt="함께 더빛남">
+  </div>
+</div>
       </div>
     </section>
   </section>
 
   <img src='/img/2/3.png' class='w-100'>
 
-  <section id='welfare' class='container '>
+  <section id='welfare' class='container ' style = 'margin-top: 16vh'>
     <p class="SubTitle_1 Gray_3">Our Welfare</p>
     <p class="card-text kr Title_1 Gray_1 col-5">아낌없는 지원으로 업무 몰입 뿐 아니라,
       팀원들의 성장과 자아실현까지 이끌어갑니다.
     <div class="swiper ourWelfare" style="margin-top: 20vh; ">
       <div class="swiper-wrapper" style="height:50vh;">
-        <div class="swiper-slide">
 
-          <div class="mb-3">
-            <div class="row align-items-end">
-              <div class="col-md-4">
-                <img src="img/2/4.png" class="img-fluid rounded-start" alt="...">
+        {% set say1 = [{ title: "사내 동아리 활동 운영",
+        description: "골프 , 싸이클, 풋살, 클라이밍 등
+        동료들과 함께 즐기는 사내 동아리" },
+        { title: "업무 몰입 및 역량 개발 지원",
+        description: "업무용 최신 장비 지원 및
+        세미나, 도서 구입 등 자기개발비 지원" } ,
+       {title: "식대 및 차대 제공 ",description: "점심식사와 커피 한잔은 물론, 간식과 
+       야근식대까지 든든하게 보장"},
+       {title: "리프레쉬 휴가(3, 5, 7주년)",description: "회사의 성장을 이끌어준 팀원들을 
+       위해 리프레시 휴가 지급(2주)"}]
+       %}
+       {% for i in say1 %}
+
+        <div class="swiper-slide">  
+            <div class="row g-0 h-100">
+              <div class="col-4">
+                <img src="img/2/{{loop.index + 3}}.png" class="img-fluid" alt="{{ i.title }}">
               </div>
-              <div class="col-md-8 ">
-
-                <p class=" Title_3">사내 동아리 활동 운영</h5>
-                <p class="Body_2 text-start">골프 , 싸이클, 풋살, 클라이밍 등 동료들과 함께 즐기는 사내 동아리</p>
-
-
+              <div class="col-7 offset-1 d-flex flex-column">
+                <p class=" Title_3 mt-auto Gray_0">{{ i.title }}
+                </p>
+                <p class="Body_2 col-8 Gray_1">{{ i.description }}</p>
               </div>
             </div>
-          </div>
+        </div>
 
-        </div>
-        <div class="swiper-slide">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-slide">Slide 3</div>
+        {% endfor %}
+
+  
 
       </div>
       <span class='welfare-prev'><i class="bi bi-arrow-left-circle"></i></span>
@@ -401,7 +388,7 @@
           Media Kit
         </p>
         <div class="ui special cards">
-          <div class="card" style="
+          <div class="card rounded-0" style="
     height: fit-content;
 ">
             <div class="blurring dimmable image">
@@ -416,7 +403,7 @@
             </div>
 
           </div>
-          <div class="card" style="
+          <div class="card rounded-0" style="
     height: fit-content;
 ">
             <div class="blurring dimmable image">
@@ -463,13 +450,13 @@
 
     </div>
   </div>
-
-
-
-
-
-
   {% endblock %}
+
+
+
+
+  {% block title %}CN.AI의 핵심 기술이 궁금하다면 {% endblock %}
+  {% block btn %} CORE TECH {% endblock %}
 
   {% block localScript %}
 
@@ -494,7 +481,7 @@
 
     let welfare = new Swiper(".ourWelfare", {
       centeredSlides: true,
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 30,
       centeredSlides: true,
       initialSlide: 1,
