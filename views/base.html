@@ -157,20 +157,28 @@
             <li class="nav-item my-auto lineOn">
               <a class="nav-link text-uppercase Gray_5" href="/community">COMMUNITY</a>
             </li> 
-            <div class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-            </div>
+            <div class="ui compact menu nav-item my-auto" onmouseover="showList(this)" style="
+            background: none;
+        ">
+              <div class="ui simple dropdown item Gray_5 " id = 'moveArrow'>
+           COMMUNITY
+           <i class="angle down icon" id = 'myArrow'></i>
+                <div class="menu" style = "margin-top: 0.5rem !important;">
+                  
+                  <div class="item"><a href = '/community'>Publications</a></div>
+                  <div class="item">Tech Blog<i class="external alternate icon"></i></div>           
+                </div>
+              </div>
+            </div>  
 
             <li class="nav-item my-auto lineOn">
               <a class="nav-link text-uppercase Gray_5" aria-current="page" href="/career">career</a>
             </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-bs-toggle="dropdown"
-                aria-expanded="false">Dropdown</a>
-              <ul class="dropdown-menu dropdown-menu dropdown-content" aria-labelledby="dropdown07">
+            <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" href="#" id="drop-1" data-bs-toggle="dropdown"
+                aria-expanded="false" onmouseover= 'showList(this)'>Dropdown</a>
+              <ul class="dropdown-menu dropdown-content d-none drop-1-box" aria-labelledby="dropdown07">
                 <li><a class="dropdown-item" href="/community">Action</a></li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
                 <li><a class="dropdown-item" href="#">Something else here</a></li>

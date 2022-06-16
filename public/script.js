@@ -28,6 +28,14 @@ showUp = (myId, category) => {
   }
 }
 
+showList = (Id) => {
+  console.log(Id)
+  let myId = this.id;
+  let listBlock = myId + '-box'
+  document.getElementsByClassName(listBlock)[0].classList.toggle("d-none");
+}
+
+
 homeShow = (myId) =>{
   let blur = myId + '-img';
   let title = myId + '-title';
@@ -53,8 +61,6 @@ $('.masthead')
   }
 })
 ;
-
-
 $('.ui.sidebar')
   .sidebar('setting', 'transition', 'overlay')
   // .sidebar('toggle')
@@ -75,11 +81,3 @@ $('.ui.dropdown')
 $('.ui.checkbox')
 .checkbox()
 ;
-
-// $('.accordion')
-// .accordion({
-//   selector: {
-//     trigger: '.title'
-//   }
-// })
-// ;
