@@ -1,3 +1,14 @@
-https://edusontest.glitch.me/login : 관리자 로그인 (아이디, 비밀번호 / 1 )  
-https://edusontest.glitch.me/level : 문제보기  
-https://edusontest.glitch.me/result : 지금까지 등록된 결과 보기  
+## 사용 방법
+
+- npm run dev
+- npm watch
+
+## 작업안
+
+ㄴ /views : html, nunjucks, ejs 등 view template
+
+ㄴ /public : 이미지, js
+
+ㄴ /data : SQLite DB 
+
+ㄴ .index.js : 백엔드 서버 연결

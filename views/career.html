@@ -166,9 +166,14 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 
   border-left : 1px dashed #4E5968;
   transform: rotate(180deg);
     transform-origin: 0% 0%;
+}
 
+.pBtn{
+  background: linear-gradient(92.14deg, #7E53FF 9.69%, rgba(126, 83, 255, 0) 73.88%), #5A54F5 !important;
+box-shadow: 0px 0px 40px rgba(52, 79, 255, 0.2), 6px 6px 20px rgba(0, 0, 0, 0.2) !important;
 }
 </style>
+
 
 <img src='img/career/banner.png' class='w-100'>
 <div class="float-end" style="
@@ -178,7 +183,7 @@ background: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 
     z-index:2;
     
 ">
-  <button class="ui button shadow-lg">
+  <button class="ui button shadow-lg pBtn Gray_4">
     채용공고 보러가기
   </button>
 </div>
@@ -230,19 +235,19 @@ background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(248,248,255,1) 7
         {% for item in say1 %}
         <div class="swiper-slide w-60">
           <div class="card w-100 border-0 rounded-0 ">
-            <img src="img/career/howWeWork/{{ item.id }}.png" class="card-img" alt="{{ item.title   }}">
-            <div class="card-img-overlay container c{{loop.index}}-img d-flex flex-column h-100 p-5">
+            <img src="img/career/howWeWork/{{ item.id }}.png" alt="{{ item.title   }}">card-img-overlay member2-img p-5
+            <div class="card-img-overlay member{{ loop.index }}-img p-5">
               <div class='row g-0 h-100'>
                 <div class='col-4 d-flex flex-column '>
-                  <h5 class="card-title ">{{ item.title | striptags(true) | escape | nl2br}}</h5>
+                  <h5 class="Title_1 Gray_1">{{ item.title | striptags(true) | escape | nl2br}}</h5>
                   <div class='mt-auto '>
-                    <p class="card-text  c{{ loop.index }} transition hidden">{{ item.description }} </p>
+                    <p class="Title_3 Gray_0  member{{ loop.index }} transition hidden">{{ item.description }} </p>
                   </div>
                 </div>
                 <div class='col align-self-end'>
-                  <button onClick="showUp($(this).attr('id'))" id='c{{ loop.index }}'
-                    class="align-items-baseline border-0 card-text bg-transparent float-end c-btn c{{ loop.index }}-btn"><i
-                      class="bi bi-plus-circle text-white "></i>
+                  <button onClick="showUp($(this).attr('id'))" id='member{{ loop.index }}'
+                    class="align-items-baseline border-0 card-text bg-transparent float-end c-btn member{{ loop.index }}-btn">
+                    <i class="bi bi-plus-circle text-white fs-1"></i>
                   </button>
                 </div>
               </div>

@@ -130,25 +130,21 @@ const db = new sqlite3.Database(db_name, err => {
 });
 
 
-
 app.listen(8080, () => {
     console.log("다음 주소에 연결되었어요( http://localhost:8080/ ) !");
 });
 app.get("/", function (req, res) {
-  res.render('index');
+  res.render('index',{title: ''});
  });
 
 app.get('/company', (req,res) => {
-  res.render('company');
+  res.render('company',{title: '회사-'});
 })
 
 app.get('/community', (req,res) => {
-  res.render('community');
+  res.render('community', {title: '커뮤니티-'});
 })
 
-// app.get('/career', (req,res) => {
-//   res.render('career');
-// })
 
 app.get("/career", (req, res) => {
   const sql = "SELECT * FROM career";
@@ -156,11 +152,11 @@ app.get("/career", (req, res) => {
     if (err) {
       return console.error(err.message);
     }
-    res.render("career", { data: rows });
+    res.render("career", { data: rows, title: '채용-' });
   });
 });
 app.get('/test', (req,res) => {
-  res.render('test');
+  res.render('test', {title: 'test'});
 })
 
 // app.get("/", function (req, res) {

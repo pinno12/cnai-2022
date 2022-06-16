@@ -3,6 +3,42 @@
   height: 100%;
 }
 
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.full-width {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
 .swiper-slide {
 
 
@@ -43,7 +79,7 @@ html {
   font-family: 'made-tommy'
 }
 
-.hover-underline-animation {
+.lineOn {
   display: inline-block;
   position: relative;
   color: white;
@@ -56,21 +92,21 @@ html {
 
 }
 
-.hover-underline-animation:after {
+.lineOn:after {
   content: '';
   position: absolute;
-  width: 4rem;
+  width: 100%;
   transform: scaleX(0);
   height: 2px;
-  bottom: 0rem;;
-  top: 120%;
-  left: 30%;
+  bottom: -0.9rem;
+  /* top: 120%; */
+  left: 0;
   background-color: white;
-  transform-origin: bottom center;
+  transform-origin: bottom;
   transition: transform 0.25s ease-out;
 }
 
-.hover-underline-animation:hover:after {
+.lineOn:hover:after {
   transform: scaleX(1);
   transform-origin: bottom center;
 }
@@ -272,6 +308,10 @@ padding-left: 1rem; */
   width: 48px;
 }
 
+.bgGray5{
+  background: #F2F5F8 !important;
+}
+
 .c-btn:hover,.c-btn-active {
   transform: rotate(45deg);
 }
@@ -289,6 +329,21 @@ padding-left: 1rem; */
 .Gray_1 {
   color: #4E5968 !important;
 }
+
+
+.gray2 {
+  color: #BDBDBD;
+
+}
+
+.gray1 {
+  color: #4E5968
+}
+
+.bgGray1{
+  background-color: #4E5968 ;
+}
+
 
 .Gray_2 {
   color: #929AA4 !important;
@@ -340,9 +395,10 @@ h4,
 h5,
 h6,
 html[lang=en],
-body[lang=en] {
-  font-family: 'made-tommy';
+body[lang=en], .engFont {
+  font-family: 'made-tommy' !important;
 }
+
 
 
 .ui.header[lang=kr],
@@ -359,14 +415,6 @@ body[lang=kr] {
 
 
 
-.gray2 {
-  color: #BDBDBD;
-
-}
-
-.gray1 {
-  color: #4E5968
-}
 
 
 @font-face {

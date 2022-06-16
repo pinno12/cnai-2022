@@ -29,16 +29,16 @@
 </style>
 
 
+{% import 'partials/banner.nj' as box %}
+{{ box.banner('/img/4/1.png', "CN.AI의 소식을 알려드립니다.") }}
 
 
 <section id='news' class='container'>
-  <p class='my-5 Title_1 Gray_1'>한발 빠르게 받아보는 소식</p>
+  <p class='my-5 Title_1 Gray_1'>{% block e1 %}한발 빠르게 받아보는 소식 {% endblock%}</p>
   <div class="ui pointing secondary menu border-0">
     <a class="item active " data-tab="first">Recent News</a>
     <a class="item " data-tab="second">Publications</a>
-
   </div>
-
 
   <div class="ui bottom attached tab segment border-0" data-tab="first">
     <div class='row'>
@@ -160,17 +160,18 @@
 
 
   <div class="ui bottom attached tab segment" data-tab="second">
-
-
+<img src = '/img/community-temp.png' class = 'w-100'>
   </div>
 
 
 </section>
-<section id='investment' class='bg-light'>
+<section id='investment' class='bgGray1 text-white py-5'>
+  <div class = 'container'>
+<p class = 'Title_1_eng my-5 py-5'>Investment</p>
 
-  <table class="ui very basic table">
+  <table class="ui very basic table text-light w-100">
     <thead>
-      <tr>
+      <tr class ='text-whtie'>
         <th>Name</th>
         <th>Status</th>
         <th>Noll;;tes</th>
@@ -194,6 +195,7 @@
       </tr>
     </tbody>
   </table>
+</div>
 
 </section>
 
@@ -291,23 +293,12 @@
       </div>
     </div>
   </div>
-
 </section>
-
-
-
-<section class="py-5 text-center container-fluid text-light" id="btn-career"
-  style="height: 38vh;background: linear-gradient(180deg, #7E53FF -8.57%, rgba(126, 83, 255, 0) 46.58%), #5A54F5;">
-  <div style="margin-top:5vh" data-aos="fade-up" class="aos-init aos-animate">
-    <!-- position-absolute 쓰면 fade up 불가 -->
-    <h1>CN.AI 팀원들의 이야기가 궁금하다면 </h1>
-    <div class="ui button">CAREER</div>
-  </div>
-</section>
-
-
-
 {% endblock %}
+
+{% block title %}CN.AI 팀원들의 이야기가 궁금하다면 {% endblock %}
+{% block btn %} CAREER {% endblock %}
+
 {% block localScript %}
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/6.0.0/shuffle.min.js"></script>
@@ -434,3 +425,4 @@ $('.menu .item')
 </script>
 
 {% endblock %}
+
