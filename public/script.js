@@ -28,9 +28,8 @@ showUp = (myId, category) => {
   }
 }
 
-showList = (Id) => {
-  console.log(Id)
-  let myId = this.id;
+showList = (item) => {
+  let myId = item.id;
   let listBlock = myId + '-box'
   document.getElementsByClassName(listBlock)[0].classList.toggle("d-none");
 }
