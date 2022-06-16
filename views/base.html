@@ -140,54 +140,52 @@
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="최상단 메뉴">
-      <div class="container">
-        <a class="navbar-brand col-1 mb-2" href="/"> <img class="" src="./img/common/CNAI(white).png" width = '80px'></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#gnb"
-          aria-controls="gnb" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0" aria-label="최상단 메뉴" style="height:4.3rem;">
+      <div class="container h-100">
+        <a class="navbar-brand col-1 mb-2" href="/"> <img class="" src="./img/common/CNAI(white).png" width="80px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#gnb" aria-controls="gnb"
+          aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="gnb">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0 Body_2_eng">
+        <div class="collapse navbar-collapse h-100" id="gnb">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 Body_2_eng h-100">
             <li class="nav-item my-auto lineOn">
-              <a class="nav-link text-uppercase Gray_5" href="/company">company</a>
+              <a class="nav-link text-uppercase Gray_5 h-100 py-0 " href="/company">company</a>
             </li>
-            
-            <li class="nav-item my-auto lineOn">
-              <a class="nav-link text-uppercase Gray_5" href="/community">COMMUNITY</a>
-            </li> 
-            <div class="ui compact menu nav-item my-auto" onmouseover="showList(this)" style="
-            background: none;
-        ">
-              <div class="ui simple dropdown item Gray_5 " id = 'moveArrow'>
-           COMMUNITY
-           <i class="angle down icon" id = 'myArrow'></i>
-                <div class="menu" style = "margin-top: 0.5rem !important;">
-                  
-                  <div class="item"><a href = '/community'>Publications</a></div>
-                  <div class="item">Tech Blog<i class="external alternate icon"></i></div>           
+
+            <!-- <li class="nav-item my-auto lineOn">
+              <a class="nav-link text-uppercase Gray_5 " href="/community">COMMUNITY</a>
+            </li>  -->
+            <li class="ui compact menu nav-item my-auto h-100" style="background: none;">
+              <div class="ui simple dropdown item Gray_5 en " id="moveArrow" tabindex="0">
+                COMMUNITY
+                <i class="angle down icon" id="myArrow"></i>
+                <div class="menu bgGray0" tabindex="-1">
+                  <div class="item"><a class='Gray_5' href="/community">Publications</a></div>
+                  <div class="item"><a class='Gray_5' href="/community">Tech Blog<i
+                        class="external alternate icon"></i></a></div>
                 </div>
               </div>
-            </div>  
-
-            <li class="nav-item my-auto lineOn">
-              <a class="nav-link text-uppercase Gray_5" aria-current="page" href="/career">career</a>
             </li>
 
-            <li class="nav-item dropdown ">
-              <a class="nav-link dropdown-toggle" href="#" id="drop-1" data-bs-toggle="dropdown"
-                aria-expanded="false" onmouseover= 'showList(this)'>Dropdown</a>
-              <ul class="dropdown-menu dropdown-content d-none drop-1-box" aria-labelledby="dropdown07">
-                <li><a class="dropdown-item" href="/community">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
+            <div class="ui compact menu nav-item my-auto h-100" style="background: none;">
+              <div class="ui simple dropdown item Gray_5 en text-uppercase" id="moveArrow" tabindex="0">
+                career
+                <i class="angle down icon" id="myArrow"></i>
+                <div class="menu bgGray0" tabindex="-1">
+                  <div class="item"><a class='Gray_5' href="/career">CN.AI Team</a></div>
+                  <div class="item"><a class='Gray_5' href="/community">Recruit<i
+                        class="external alternate icon"></i></a></div>
+                </div>
+              </div>
+            </div>
+
           </ul>
-          
-          <li class="nav-item my-auto lineOn navbar-nav"> <a href='/en' class='nav-link'><i class="globe icon text-white"></i></a> </li>
-          
+
+          <li class="nav-item my-auto lineOn navbar-nav"> <a href="/en" class="nav-link"><i
+                class="globe icon text-white"></i></a> </li>
+
           <button type="button" class="nav-item btn btn-outline-light me-2 Gray_5 ms-5">CONTACT US</button>
         </div>
       </div>

@@ -27,13 +27,24 @@ showUp = (myId, category) => {
 
   }
 }
+// var $gnbList = $("#gnb > ul");
 
-showList = (item) => {
-  let myId = item.id;
-  let listBlock = myId + '-box'
-  document.getElementsByClassName(listBlock)[0].classList.toggle("d-none");
-}
+// showList = () => {
+//   document.getElementsByClassName('drop-1-box')[0].classList.add("open");
+//   console.log('in')
+// }
 
+// $gnbList.mouseenter(function(){  document.getElementsByClassName('drop-1-box')[0].classList.add("open");
+// console.log('in')});
+// $gnbList.mouseleave(function(){
+  
+//   document.getElementsByClassName('drop-1-box')[0].classList.remove("open"); console.log('out')
+// });
+
+
+// gnb_return = () => {
+//   document.getElementsByClassName('drop-1-box')[0].classList.remove("open");
+// }
 
 homeShow = (myId) =>{
   let blur = myId + '-img';
