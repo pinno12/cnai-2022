@@ -20,7 +20,26 @@
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 82.97%, #FFFFFF 95.16%, #FFFFFF 109.27%), linear-gradient(147.1deg, rgba(126, 83, 255, 0.2) 5.67%, rgba(126, 83, 255, 0) 52.89%), #F8FAFF;
     transform: rotate(-180deg);
   }
+
+  .lBody{
+    font-family: 'Apple SD Gothic Neo';
+font-style: normal;
+font-weight: 400;
+font-size: 0.875rem;
+line-height: 150%;
+  }
+
+  .swiper-slide {
+        width: 140%;
+      }
+
+      .swiper-slide img{
+        width: auto
+      }
+
 </style>
+
+
 
 <!-- <section class="py-5 text-center container-flujid mb-5 bg-dark text-light" style = "height:100vh;">
   <div style="margin-top: 40vh;" data-aos="fade-up">
@@ -30,19 +49,20 @@
 
 
 
-<section class="card bg-transparent border-0 rounded-0 masthead">
-  <img src="img/2/1.png" class="card-img">
-  <div class="card-img-overlay">
-    <div class="py-5 text-center container-flujid mb-5 text-light" style="height: 100vh">
-      <div style="margin-top: 40vh;" data-aos="fade-up">
-        합성 데이터로 새로운 패러다임을 만듭니다.
+<div class='isBg-1 card rounded-0 border-0'>
+  <video autoplay muted loop id="myVideo">
+    <source src="img/2/1.mp4" type="video/mp4">
+  </video>
+  <div class="card-img-overlay h-100">
+    <div class="container h-100 justify-content-center text-center align-items-center d-flex" >
+      <div  data-aos="fade-up" >
+        <!-- position-absolute 쓰면 fade up 불가 -->
+        <h1 class="Title_1 text-white">합성 데이터로 새로운 패러다임을 만듭니다.</h1>
+
       </div>
     </div>
   </div>
-</section>
-
-
-
+</div>
 
 
 
@@ -136,52 +156,28 @@
 
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
+    {% for i in range(2020,2023) | reverse %} 
       <div class="swiper-slide">
         <div class="card border-0">
-          <div class="card-body">
-            <h5 class="better ">2022</h5>
+          <div class="card-body">  
+            <h5 class="better ">{{ i }}</h5>
             <div class="ui list Body_1 ">
+              {% for s in data %}
+            {% if s.name == i %}
               <div class="item Gray_3 Body_1">
-                <div class="header Gray_0 Body_1">합성데이터 기반 서비스 활용 </div>
-                대기업/정부 프로젝트 진행
+                <div class="header Gray_0 Body_1">{{ s.title }}</div>
+                {{ s.content }}
               </div>
-              <div class="item Gray_3 Body_1">
-                <div class="header Gray_0 Body_1">합성데이터 기반 서비스 활용 </div>
-                대기업/정부 프로젝트 진행
-              </div>
+              {% endif %}
+              {% endfor %}
             </div>
           </div>
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
           </div>
         </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-              content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
-        </div>
-      </div>
-      <div class="swiper-slide">Slide 3</div>
-
+        {% endfor %}
+      </div> 
     </div>
   
-
     <div class = 'container'>
     <span class='journeyPrev'><i class="bi bi-arrow-left-circle Gray_2 fs-1"></i></span>
     <span class='journeyNext'><i class="bi bi-arrow-right-circle Gray_2 fs-1"></i></span>
@@ -193,76 +189,44 @@
 </section>
 
 
-  <section id='ourLeaders'>
-    <h5>Our Leaders</h5>
-    <h2>AI의 미래를 그리는 사람들</h2>
-    <div class="row g-3">
+  <section id='ourLeaders' class = 'container' style = 'margin-top: 47vh;'>
 
-      {# var i = [{name: 'WonSeop Lee', position: 'CEO', etc: ["aaa","bbb","ccc"] }, ]#}
-
-      <div class='col-lg-6'>
-        <div class="card">
-          <div class="content">
-            <div class="header">WonSeop Lee <span> CEO </span></div>
-            <div class="meta">
-              <a>Friends</a>
+    
+    <h5 class = 'subTitle_1 Gray_3 my-3'>Our Leaders</h5>
+    <h2 class = 'Gray_1 Title_1 mb-5'>AI의 미래를 그리는 사람들</h2>
+    <div class="row row-cols-2 g-lg-4">
+      {% for s in data %}
+     {% if s.category == 'companyLeader' %}
+      <div class="card px-3   border-0 col" style="
+      height: ">
+        <div class="row g-0 h-100 justify-content-between Gray_5_bg">
+          <div class="col-md-6 d-flex flex-column">
+            <div class="card-body p-4">
+            
+              <div class="card-title Gray_0 Body_1_eng">{{ s.name }} <span class="Gray_2 Body_2_eng ms-2">{{ s.title }}</span></div>
             </div>
-            <div class="description">
-              <ul>
-                <li>삼성전자 메모리사업부 SW개발팀 SW엔지니어 (삼성전자 SCSA수료)</li>
-                <li>카이스트, 기술경영 석사</li>
-                미국 인디아나 대학교 경제학 학사
-              </ul>
-            </div>
+            <div class="card-footer mt-auto bg-transparent border-0">
+                <ul class="ps-3 mt-auto">
+                  <p class="Gray_1 lBody ps-0" class = 'lHistory-{{ loop.index-8 }}'>{{ s.content | striptags(true) | escape | nl2br}}</p>
+                  
+                </ul>
+                      
+              </div>
           </div>
-          <div class="image">
-            <img src="/img/1.jpeg">
+          <div class="col-md-5 d-flex align-items-end">
+            <img src="/img/2/leaders/{{ loop.index -8}}.png" class="img-fluid" alt="{{ s.name }}">
           </div>
         </div>
       </div>
-
-      <div class="card mb-3 col-lg-6">
-        <div class="row g-0">
-
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <img src="/img/1.jpeg" class="img-fluid rounded-start" alt="...">
-          </div>
-        </div>
-      </div>
-
-      <div class="card mb-3  col-lg-6">
-        <div class="row g-0">
-
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-
-          <div class="col-md-4">
-            <img src="/img/1.jpeg" class="img-fluid rounded-start" alt="...">
-          </div>
-        </div>
-      </div>
+{% endif %}
+{% endfor %}
 
     </div>
 
   </section>
 
 
-  <section id='ourTeam'>
+  <section id='ourTeam' class = 'container'>
     <div class="card mb-3 border-0 h-100">
       <div class="row g-0 my-5">
 
@@ -284,12 +248,12 @@
 
   <img src='/img/2/3.png' class='w-100'>
 
-  <section id='welfare' class='container ' style='margin-top: 16vh'>
+  <section id='welfare' class='ms-5 ps-5' style='margin-top: 16vh'>
     <p class="SubTitle_1 Gray_3">Our Welfare</p>
-    <p class="card-text kr Title_1 Gray_1 col-5">아낌없는 지원으로 업무 몰입 뿐 아니라,
+    <p class="card-text kr Title_2 Gray_1 col-6">아낌없는 지원으로 업무 몰입 뿐 아니라,
       팀원들의 성장과 자아실현까지 이끌어갑니다.
     <div class="swiper ourWelfare" style="margin-top: 20vh; ">
-      <div class="swiper-wrapper" style="height:50vh;">
+      <div class="swiper-wrapper" >
 
         {% set say1 = [{ title: "사내 동아리 활동 운영",
         description: "골프 , 싸이클, 풋살, 클라이밍 등
@@ -305,8 +269,8 @@
         {% for i in say1 %}
 
         <div class="swiper-slide">
-          <div class="row g-0 h-100">
-            <div class="col-4">
+          <div class="row g-0 h-75">
+            <div class="col-4 h-100">
               <img src="img/2/{{loop.index + 3}}.png" class="img-fluid" alt="{{ i.title }}">
             </div>
             <div class="col-7 offset-1 d-flex flex-column">
@@ -321,7 +285,7 @@
       </div>
 
       <div class = 'mt-5'>
-      <span class='welfare-prev'><i class="bi bi-arrow-left-circle Gray_2 fs-1"></i></span>
+      <span class='welfare-prev me-3'><i class="bi bi-arrow-left-circle Gray_2 fs-1"></i></span>
       <span class='welfare-next'><i class="bi bi-arrow-right-circle Gray_2 fs-1"></i></span>
     </div>
     </div>
@@ -332,7 +296,7 @@
 
 
   <section id='story' class='row g-0 '
-    style='background: linear-gradient(96.7deg, rgba(255, 255, 255, 0) -7.21%, #FFFFFF 138.74%), #5A54F5;'>
+    style='background: linear-gradient(96.7deg, rgba(255, 255, 255, 0) -7.21%, #FFFFFF 138.74%), #5A54F5; margin-top: 45vh;'>
     <div class='col-4 text-center position-relative text-white'>
       <p class='SubTitle_1 mt-5'>Our Story</p>
       <p class='position-absolute start-50 translate-middle-x Title_2_eng' style='bottom:7vh;'>More
@@ -379,11 +343,11 @@
               <div class="ui dimmer">
                 <div class="content">
                   <div class="center">
-                    <div class="ui inverted button">A TYPE 다운로드</div>
+                    <a class="ui inverted button" href = '/img/2/mediaKit/logo_A.png' download>A TYPE 다운로드</a>
                   </div>
                 </div>
               </div>
-              <img src="/img/1.jpeg">
+              <img src='/img/2/8.png' >
             </div>
 
           </div>
@@ -394,11 +358,11 @@
               <div class="ui dimmer">
                 <div class="content">
                   <div class="center">
-                    <div class="ui inverted button">B TYPE 다운로드</div>
+                    <a class="ui inverted button" href = '/img/2/mediaKit/logo_B.png' download>B TYPE 다운로드</a>
                   </div>
                 </div>
               </div>
-              <img src="/img/1.jpeg">
+              <img src='/img/2/9.png' >
             </div>
 
           </div>
@@ -410,12 +374,13 @@
           심플하게 형상화한 심볼과 로고타입 A, B TYPE입니다.
         </p>
 
-        <div class='ui button'>C.I 다운로드</div>
+        <a class="ui button" href = '/img/2/mediaKit/CNAI.zip' download>C.I 다운로드</a>
 
       </section>
 
-      <img src='img/1.jpeg' class='w-100'>
-      <div class="offset-lg-5 bg-white p-5" style="margin-top: -3vh">
+      <img src='img/2/10.png' class='w-100' style="margin-top: 45vh">
+      <div class="offset-lg-5">
+       <div class = "bg-white p-5" style="margin-top: -13vh; position:absolute">
         <p class="SubTitle_1 Gray_2">Contact</p>
         <p class="Title_1 col-7" style="margin-bottom: 5.5rem;">CN.AI에게 궁금한 점이 있다면, 
           언제든 문의 남겨주세요!</p>
@@ -442,7 +407,7 @@
             
         </div>
       </div>
-
+</div>
 
     </div>
   </div>
@@ -476,11 +441,12 @@
     });
 
     let welfare = new Swiper(".ourWelfare", {
-      centeredSlides: true,
+      // centeredSlides: true,
       slidesPerView: 2,
       spaceBetween: 30,
-      centeredSlides: true,
-      initialSlide: 1,
+      // slidesPerView: "auto",
+      // centeredSlides: true,
+      // initialSlide: 1,
 
       navigation: {
         nextEl: ".welfare-next",

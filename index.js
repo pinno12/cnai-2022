@@ -138,16 +138,46 @@ app.get("/", function (req, res) {
  });
 
 app.get('/company', (req,res) => {
-  res.render('company',{title: '회사-'});
+  let sql = "SELECT * FROM cnai WHERE category = 'companyHistory' OR category = 'companyLeader'";
+
+  db.all(sql,[],(err,history)=>{
+    if (err){
+      return console.error(err.message);
+    }
+    res.render('company',{title: '회사-', data:history});
+  })  
 })
 
 app.get('/community', (req,res) => {
-  res.render('community', {title: '커뮤니티-'});
+  let sql  ="SELECT * FROM cnai WHERE category = 'communityNews' OR category = 'communityInvestment'";
+  db.all(sql,[],(err,data)=>{
+    if (err){
+      return console.error(err.message);
+    }else{
+      console.log(data);
+    res.render('community', {title: '커뮤니티-', data:data});
+  }
+  })  
+
+})
+
+app.get('/community/20220405', (req,res) => {
+  let sql  ="SELECT * FROM cnai WHERE category = 'communityInvestment'";
+  db.all(sql,[],(err,data)=>{
+    if (err){
+      return console.error(err.message);
+    }else{
+      console.log(data);
+    res.render('community-board', {title: '투자-', data:data});
+  }
+  })  
+
 })
 
 
+
 app.get("/career", (req, res) => {
-  const sql = "SELECT * FROM career";
+  let sql = "SELECT * FROM career";
   db.all(sql, [], (err, rows) => {
     if (err) {
       return console.error(err.message);
@@ -155,6 +185,8 @@ app.get("/career", (req, res) => {
     res.render("career", { data: rows, title: '채용-' });
   });
 });
+
+
 app.get('/test', (req,res) => {
   res.render('test', {title: 'test'});
 })

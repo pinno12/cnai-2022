@@ -12,9 +12,25 @@
   margin-left: -50vw;
   margin-right: -50vw;
 }
+
+.gnbBtn:hover, .gnbBtn:active{
+  color: #5A54F5 !important;
+  background: transparent !important;
+}
+
+button.gnbBtn:hover, .gnbBtn:active{
+  border: 2px solid #5A54F5 !important;
+}
+
+.ui.menu .ui.dropdown .menu>.item{
+  color: #BDBDBD !important;
+}
+
+.ui.menu .ui.dropdown .menu>.item:hover{
+  color: #f2f5f8 !important;
+}
+
 .swiper-slide {
-
-
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -71,8 +87,7 @@ html {
   width: 100%;
   transform: scaleX(0);
   height: 2px;
-  /* bottom: -0.9rem; */
-  bottom: -117%;
+  bottom: -0.9rem;
   /* top: 120%; */
   left: 0;
   background-color: white;

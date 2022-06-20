@@ -27,7 +27,15 @@ showUp = (myId, category) => {
 
   }
 }
-// var $gnbList = $("#gnb > ul");
+changeColor = (item) =>{
+  let id = item.id ;  
+  document.getElementById(id).classList.add('Gray_5')
+}
+removeColor = (item) =>{
+  let id = item.id 
+  // + '1';  
+  document.getElementById(id).classList.remove('Gray_5')
+}
 
 // showList = () => {
 //   document.getElementsByClassName('drop-1-box')[0].classList.add("open");
@@ -36,6 +44,8 @@ showUp = (myId, category) => {
 
 // $gnbList.mouseenter(function(){  document.getElementsByClassName('drop-1-box')[0].classList.add("open");
 // console.log('in')});
+
+
 // $gnbList.mouseleave(function(){
   
 //   document.getElementsByClassName('drop-1-box')[0].classList.remove("open"); console.log('out')

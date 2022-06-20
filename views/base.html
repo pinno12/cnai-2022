@@ -10,11 +10,11 @@
   <meta property="og:title" content="(주)씨앤에이아이" />
   <meta property="og:description" content="Change for New Normal" />
   <meta property="og:image" content="img/common/og.jpeg" />
-  <meta name="twitter:image" content="./img/common/og.jpeg" />
+  <meta name="twitter:image" content="/img/common/og.jpeg" />
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="(주)씨앤에이아" />
   <meta name="twitter:description" content="(주)씨앤에이아이, Change for New Normal" />
-  <meta name="twitter:image" content="./img/common/og.jpeg" />
+  <meta name="twitter:image" content="/img/common/og.jpeg" />
 
 
 
@@ -53,8 +53,8 @@
 
 
   <!-- favicon -->
-  <link rel="shortcut icon" href="./img/common/favicon.ico" type="image/x-icon">
-  <link rel="favicon" href="./img/common/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/img/common/favicon.ico" type="image/x-icon">
+  <link rel="favicon" href="/img/common/favicon.ico" type="image/x-icon">
 
   <!-- font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -98,7 +98,7 @@
 
 
   <!-- import the webpage's stylesheet -->
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="/css/style.css" />
 
 </head>
 
@@ -114,7 +114,7 @@
       <div class="container ">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <img class="logo" src="./img/common/CNAI(white).png" width="15%"> CNAI
+            <img class="logo" src="/img/common/CNAI(white).png" width="15%"> CNAI
           </a>
 
           <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -140,37 +140,49 @@
 
 
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0" aria-label="최상단 메뉴" style="height:4.3rem;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0" aria-label="최상단 메뉴" style="">
       <div class="container h-100">
-        <a class="navbar-brand col-1 mb-2" href="/"> <img class="" src="./img/common/CNAI(white).png" width="80px"></a>
+        <a class="navbar-brand col-1 mb-2" href="/"> <img class="" src="/img/common/CNAI(white).png" width="80px"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#gnb" aria-controls="gnb"
           aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse h-100" id="gnb">
+        <div class="collapse navbar-collapse" id="gnb">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 Body_2_eng h-100">
             <li class="nav-item my-auto lineOn">
               <a class="nav-link text-uppercase Gray_5 h-100 py-0 " href="/company">company</a>
+            </li>
+
+            <li class="nav-item my-auto ">
+              <a class="nav-link text-uppercase Gray_5 h-100 py-0 d-block d-md-none" href="/company">community</a>
+            </li>
+
+            <li class="nav-item my-auto ">
+              <a class="nav-link text-uppercase Gray_5 h-100 py-0 d-block d-md-none" href="/career">career</a>
+            </li>
+
+            <li class="nav-item my-auto ">
+              <a class="nav-link text-uppercase Gray_5 h-100 py-0 d-block d-md-none" href="/career">career</a>
             </li>
 
             <!-- <li class="nav-item my-auto lineOn">
               <a class="nav-link text-uppercase Gray_5 " href="/community">COMMUNITY</a>
             </li>  -->
             <li class="ui compact menu nav-item my-auto h-100" style="background: none;">
-              <div class="ui simple dropdown item Gray_5 en " id="moveArrow" tabindex="0">
+              <div class="ui simple dropdown item Gray_5 en d-none d-md-block" id="moveArrow" tabindex="0">
                 COMMUNITY
                 <i class="angle down icon" id="myArrow"></i>
                 <div class="menu bgGray0" tabindex="-1">
-                  <div class="item"><a class='Gray_5' href="/community">Publications</a></div>
-                  <div class="item"><a class='Gray_5' href="/community">Tech Blog<i
-                        class="external alternate icon"></i></a></div>
+                  <a class = 'item'  href="/community">Publications</a>
+                  <a class="item " href="/community">Tech Blog
+                    <i class="external alternate icon"></i></a>
                 </div>
               </div>
             </li>
 
-            <div class="ui compact menu nav-item my-auto h-100" style="background: none;">
-              <div class="ui simple dropdown item Gray_5 en text-uppercase" id="moveArrow" tabindex="0">
+            <div class="ui compact menu nav-item my-auto h-100  d-none d-md-block" style="background: none;">
+              <div class="ui simple dropdown item Gray_5 en text-uppercase " id="moveArrow" tabindex="0">
                 career
                 <i class="angle down icon" id="myArrow"></i>
                 <div class="menu bgGray0" tabindex="-1">
@@ -183,10 +195,12 @@
 
           </ul>
 
-          <li class="nav-item my-auto lineOn navbar-nav"> <a href="/en" class="nav-link"><i
-                class="globe icon text-white"></i></a> </li>
+          <li class="nav-item my-auto  navbar-nav"> <a href="/en" class="nav-link">
+            <i class="globe icon text-white gnbBtn"></i></a> 
+          </li>
 
-          <button type="button" class="nav-item btn btn-outline-light me-2 Gray_5 ms-5">CONTACT US</button>
+ 
+          <button type="button" class="nav-item btn btn-outline-light me-2 Gray_5 ms-5 gnbBtn" id = ''>CONTACT US</button>
         </div>
       </div>
     </nav>
@@ -196,7 +210,7 @@
       <div class="container ">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
           <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none">
-            <img class="logo" src="./img/common/CNAI(white).png" width="70px">
+            <img class="logo" src="/img/common/CNAI(white).png" width="70px">
           </a>
           <div class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 Body_2_eng" id='gnb-dark'>
             <li class="my-auto px-5"><a href="/company"
