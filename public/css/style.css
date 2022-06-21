@@ -3,6 +3,28 @@
   height: 100%;
 }
 
+/* 모바일  */
+@media only screen and (max-width: 992px) {
+  .home-1{
+    padding-left:0;
+    padding-right: 0;
+  }
+  .Title_1,.Title_2,.Title_2_eng,.Title_3_eng, .Title_3, .Title_1_eng, .Body_1, .Body_1_eng, .Body_2, .Body_2_eng, .cn2Title, .SubTitle_1, .text-c, .c-text-2{
+    font-size: 1rem !important;
+  }
+
+  .m-height{
+    height: 100% !important;
+  }
+
+  /* .{
+    font-size: 2rem !important;
+  } */
+}
+
+.w-gnb{
+  width: 8vw;
+}
 
 .full-width {
   width: 100vw;
@@ -161,7 +183,7 @@ color: #4E5968;
   font-family: 'Apple SD Gothic Neo';
   font-weight: 500;
   font-size: 1.25rem;
-  line-height: 2.25rem;
+  /* line-height: 2.25rem; */
   /* or 180% */
   letter-spacing: -2%;
 }

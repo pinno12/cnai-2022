@@ -89,17 +89,15 @@ Class name automatically added to element */
 </div>
 
 
-<div class='isBg-1 card rounded-0 border-0'>
-  <img class='' style='background: linear-gradient(147.1deg, #CBBAFF 5.67%, rgba(203, 186, 255, 0) 52.89%);
-transform: rotate(-180deg); height: 550vh'>
+<div class='isBg-1' style = 'background: linear-gradient(154.46deg, rgba(203, 186, 255, 0) 51.73%, #CBBAFF 89.37%), #FFFFFF;' >
+  
 
 
-  <div class='card-img-overlay'>
-    <div class="container col-8 mt-4">
+    <div class="container col-md-8 col-12 mt-4">
 
 
       <section class="py-5 text-center container navbar-example" style='height:100vh;'>
-        <div class="row py-lg-5 mt-5">
+        <div class="row py-md-5 mt-5">
           <div class="mx-auto">
             <p class="better" data-aos="fade-up">BETTER DATA, FUTURE FOR AI</p> <br />
             <p class="lead text-muted" data-aos="fade-up" style='margin-bottom: 8vw;'>데이터가 주도하는 인공지능의 미래</p>
@@ -118,7 +116,7 @@ transform: rotate(-180deg); height: 550vh'>
           <div class="bg-purple mb-4 " id='tech' style='height: 70vh;'>
             <div class="container c1-img d-flex flex-column h-100 p-4">
               <div class='row g-0 h-100'>
-                <div class='col-lg-6 col-12 d-flex flex-column '>
+                <div class='col d-flex flex-column '>
                   <p class=" c1-title Title_1_eng mb-0 gray_0">Data Warehouse</p>
                   <a href="/coretech" class="Body_1 Gray_1 text-mute">더 알아보기 <i class="angle right icon"></i></a>
                   <div class='mt-auto '>
@@ -135,13 +133,13 @@ transform: rotate(-180deg); height: 550vh'>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-6 ps-0">
+        <div class="row gy-3">
+          <div class="col-md-6 col-12 ps-0 pe-md-3 pe-0">
 
             <div class="bg-purple mb-4 " id="" style="height: 100%">
               <div class="container c2-img d-flex flex-column h-100 p-4">
                 <div class="row g-0 h-100">
-                  <div class="col-6 d-flex flex-column ">
+                  <div class="col-md-6 col-12 d-flex flex-column ">
                     <p class=" c2-title Title_1_eng mb-0 gray_0">Future AI를 위한 데이터 합성 솔루션</p>
                     <a href="/coretech#box2" class="Body_1 Gray_1 text-mute">더 알아보기 <i class="angle right icon"></i></a>
                     <div class="mt-auto ">
@@ -159,14 +157,14 @@ transform: rotate(-180deg); height: 550vh'>
             </div>
 
           </div>
-          <div class="col-lg-6 pb-0">
+          <div class="col-md-6 col-12 pb-0">
             <div class="row">
               <div class="mb-4 card w-100 border-0 rounded-0 p-0" id="">
                 <img src="img/home/0.png" class="card-img rounded-0" alt="비즈니스에 가능성을 
               더하는 AI Human">
                 <div class="card-img-overlay container c3-img d-flex flex-column h-100 p-4 rounded-0">
                   <div class="row g-0 h-100">
-                    <div class="col-7 d-flex flex-column ">
+                    <div class="col-md-7 d-flex flex-column ">
                       <p class=" c3-title Title_1_eng mb-0 gray_0">비즈니스에 가능성을
                         더하는 AI Human</p>
                       <a href="/coretech" class="Body_1 Gray_1 text-mute">더 알아보기 <i class="angle right icon"></i></a>
@@ -213,12 +211,14 @@ transform: rotate(-180deg); height: 550vh'>
         <div class="subTitle_1 Gray_3" style='margin-top: 30vh;'>
           Our Use Cases
         </div>
-
         <p class=' Title_2 my-4 pb-4 Gray_1'>
           데이터 합성 솔루션이 가져올 변화
         </p>
+      </div>
 
-        <div class="swiper mySwiper full-width" style="
+
+
+        <div class="swiper mySwiper" style="
         height: 70vh;
     ">
           <div class="swiper-wrapper">
@@ -235,16 +235,16 @@ transform: rotate(-180deg); height: 550vh'>
             %}
             {% for item in say1 %}
             <div class="swiper-slide ">
-              <div class="row"
+              <div class="row gx-0 justify-content-between"
                 style="background: linear-gradient(96.66deg, rgba(255, 255, 255, 0) -8.55%, rgba(255, 255, 255, 0.8) 159.35%), #5A54F5;">
-                <div class="col Gray_5" style='
-              padding-left: 17vw; padding-right: 17vw;
+                <div class="col-md-3 col-12 Gray_5 offset-md-2" style='
+            
           '>
                   <p class="Body_1  mt-5 ">{{ item.title }}</p>
                   <p class="Title_2 ">{{ item.title2 }} </p>
                   <p class="Body_1 ">{{ item.description }}</p>
                 </div>
-                <div class="col">
+                <div class="col-md-5 col-12 mt-3 mt-md-0">
                   <img src="/img/home/{{ loop.index }}.png" class="img-fluid w-100" alt="...">
                 </div>
               </div>
@@ -256,9 +256,10 @@ transform: rotate(-180deg); height: 550vh'>
           <div class="swiper-pagination position-absolute start-50 translate-middle-x Label Gray_1" style="bottom:7vh;">
           </div>
         </div>
+     
       </section>
 
-    </div>
+ 
 
 
 
@@ -266,7 +267,7 @@ transform: rotate(-180deg); height: 550vh'>
     margin-top: 48vh;
 ">
 
-      <div class='container'>
+      <div class='container col-12'>
         <h5 class='Gray_2 SubTitle_1'>Our Partners </h5>
         <h3 class='Gray_1 Title_1'>CN.AI의 성장과 함께하는 파트너사</h3>
       </div>
