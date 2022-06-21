@@ -20,10 +20,11 @@ showUp = (myId, category) => {
   $(say)
   .transition('fade up')
   ;
+  document.getElementsByClassName(blur)[0].classList.toggle("bg-blur");
   if (category == 'home'){
     document.getElementsByClassName(title)[0].classList.toggle("text-white");
   }else{
-    document.getElementsByClassName(blur)[0].classList.toggle("bg-blur");
+    // document.getElementsByClassName(blur)[0].classList.toggle("bg-blur");
 
   }
 }
