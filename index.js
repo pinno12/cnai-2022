@@ -177,12 +177,13 @@ app.get('/community/20220405', (req,res) => {
 
 
 app.get("/career", (req, res) => {
+  let questions = ['CN.AI에서 나는 어떤 사람? ','CN.AI에서 일하면서 좋은 점은 무엇인가요?', '동료로서, 어떤 성향의 사람이 잘 맞나요? ', 'I LIKE THIS', 'CN.AI에서 앞으로 이루고 싶은 목표가 있다면?']
   let sql = "SELECT * FROM career";
   db.all(sql, [], (err, rows) => {
     if (err) {
       return console.error(err.message);
     }
-    res.render("career", { data: rows, title: '채용-' });
+    res.render("career", { data: rows, title: '채용-', questions:questions });
   });
 });
 

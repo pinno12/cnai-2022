@@ -1,4 +1,4 @@
-  {% macro banner(src = '', title = '안녕', btn = 'btn') %}
+  {% macro footerBanner(src = '', title = '안녕', btn = 'btn') %}
 
     <section class="py-5 text-center container-fluid text-light" id="btn-career"
       style="height: 38vh;background: linear-gradient(180deg, #7E53FF -8.57%, rgba(126, 83, 255, 0) 46.58%), #5A54F5;">
@@ -8,6 +8,6 @@
         <a href = '{{ src }}' class="ui button">{{ btn }}</a>
       </div>
     </section>
-  </main>
+  
 
   {% endmacro %}
