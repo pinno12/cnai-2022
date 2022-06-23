@@ -139,7 +139,7 @@ app.get("/", function (req, res) {
     if (err){
       return console.error(err.message);
     }else{
-      console.log(data);
+      // console.log(data);
     res.render('index', {title: 'Hello', data:data});
   }
   })  
@@ -164,7 +164,7 @@ app.get('/community', (req,res) => {
     if (err){
       return console.error(err.message);
     }else{
-      console.log(data);
+      ;
     res.render('community', {title: '커뮤니티-', data:data});
   }
   })  
@@ -176,7 +176,7 @@ app.get('/community/20220405', (req,res) => {
     if (err){
       return console.error(err.message);
     }else{
-      console.log(data);
+      ;
     res.render('community-board', {title: '투자-', data:data});
   }
   })  

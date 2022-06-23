@@ -9,7 +9,7 @@
   <meta name="generator" content="Jekyll v4.1.1" />
   <meta property="og:title" content="(주)씨앤에이아이" />
   <meta property="og:description" content="Change for New Normal" />
-  <meta property="og:image" content="img/common/og.jpeg" />
+  <meta property="og:image" content="/img/common/og.jpeg" />
   <meta name="twitter:image" content="/img/common/og.jpeg" />
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="(주)씨앤에이아" />
@@ -115,13 +115,13 @@
         <div class="container h-100 mobileNav" id = ''>
           <a class="navbar-toggler border-0 " type="button" data-bs-toggle="collapse" data-bs-target="#gnb" aria-controls="gnb"
             aria-expanded="false" aria-label="Toggle navigation" style="position: absolute;height: 100%;top: 2vh;">
-            <!-- <span class="navbar-toggler-icon"></span> -->
-            <span class="burger" onclick="this.classList.toggle('active');"></span>
+            <img src = '/img/icon/08 hamburger.png' id = 'bars2' class = 'navicon'>
+        <img src = '/img/icon/09 back.png' id = 'back2' class = 'navicon d-none'>
         </a>
           <a class="navbar-brand mx-auto mb-2 me-md-5" href="/"> <img class="" src="/img/common/CNAI(blue).png" width="80px"></a>       
           <div class="collapse navbar-collapse" id="gnb">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 Body_2_eng h-100">
-              <li class="nav-item  my-auto lineOn text-center ms-3 d-none d-md-block">
+              <li class="nav-item  my-auto lineOn2  text-center ms-3 d-none d-md-block">
                 <a class="nav-link text-uppercase Gray_0 h-100 py-0 " href="/company">company</a>
               </li>
               <li class="nav-item  my-auto h-100 d-block d-md-none px-3 py-2 position-relative" style="    border-top: 1px solid #EEEEEE; ">
@@ -140,15 +140,15 @@
                 <a class="nav-link text-uppercase Gray_0 h-100 d-block d-md-none mobileMenu" href="/career">career</a>
               </li>
   
-              <li class="nav-item my-auto text-white d-block d-md-none mobileMenu">
+              <li class="nav-item my-auto Gray_0 d-block d-md-none mobileMenu">
                 KO | EN
               </li>
   
               <!-- <li class="nav-item my-auto lineOn">
                 <a class="nav-link text-uppercase Gray_5 " href="/community">COMMUNITY</a>
               </li>  -->
-              <li class="ui compact menu nav-item my-auto h-100 ms-4 d-none d-md-block border-0 shadow-none" style="background: none;">
-                <div class="ui simple dropdown item Gray_0 en d-none d-md-block" id="moveArrow" tabindex="0">
+              <li class="ui compact menu nav-item my-auto  h-100 ms-4 d-none d-md-block border-0 shadow-none" style="background: none;">
+                <div class="ui simple dropdown item Gray_0 en d-none d-md-block lineOn2Dropdown" id="moveArrow" tabindex="0">
                   COMMUNITY
                   <i class="angle down icon" id="myArrow"></i>
                   <div class="menu " tabindex="-1">
@@ -159,7 +159,7 @@
                 </div>
               </li>
               <div class="ui compact menu nav-item ms-3 my-auto h-100  d-none d-md-block border-0 shadow-none" style="background: none;">
-                <div class="ui simple dropdown item Gray_0 en text-uppercase " id="moveArrow" tabindex="0">
+                <div class="ui simple dropdown item Gray_0 en text-uppercase lineOn2Dropdown" id="moveArrow" tabindex="0">
                   career
                   <i class="angle down icon" id="myArrow"></i>
                   <div class="menu " tabindex="-1">
@@ -170,7 +170,7 @@
               </div>
             </ul>
             <li class="nav-item my-auto  navbar-nav d-none d-md-block"> <a href="/en" class="nav-link">
-              <i class="globe icon text-white gnbBtn"></i></a> 
+              <i class="globe icon text-dark gnbBtn"></i></a> 
             </li> 
             <a href= 'mailto:contact@cnai.ai'class="nav-item btn btn-outline-dark me-2 Gray_0 ms-5 gnbBtn d-none d-md-block" id="">CONTACT US</a>
           </div>
@@ -189,9 +189,11 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0" aria-label="최상단 메뉴" >
       <div class="container h-100" id = 'mobileNav'>
         <a class="navbar-toggler border-0 " type="button" data-bs-toggle="collapse" data-bs-target="#gnb" aria-controls="gnb"
-          aria-expanded="false" aria-label="Toggle navigation" style="position: absolute;height: 100%;top: 2vh;">
-          <!-- <span class="navbar-toggler-icon"></span> -->
-          <span class="burger" onclick="this.classList.toggle('active');"></span>
+          aria-expanded="false" aria-label="Toggle navigation" ">
+        <img src = '/img/icon/08 hamburger.png' id = 'bars1' class = 'naviconDark'>
+        <img src = '/img/icon/09 back.png' id = 'back1' class = 'naviconDark d-none'>
+      
+       
       </a>
         <a class="navbar-brand mx-auto mb-2 me-md-5" href="/"> <img class="" src="/img/common/CNAI(white).png" width="80px"></a>       
         <div class="collapse navbar-collapse" id="gnb">
@@ -199,12 +201,12 @@
             <li class="nav-item  my-auto lineOn text-center ms-3 d-none d-md-block">
               <a class="nav-link text-uppercase Gray_5 h-100 py-0 " href="/company">company</a>
             </li>
-            <li class="nav-item  my-auto h-100 d-block d-md-none px-3 py-2 position-relative" style="    border-top: 1px solid #EEEEEE; ">
+            <li class="nav-item  my-auto h-100 d-block d-md-none px-3 py-2 position-relative navTopLine" >
               <a class=" text-uppercase Gray_5 position-absolute top-50 start-2 translate-middle-y" href="mailto:contact@cnai.ai">CN.AI MLOps 도입 문의는</a>
               <a href= 'mailto:contact@cnai.ai'class="nav-item mini ui button me-2 Gray_5 gnbBtn float-end mobileMenu " style="background-color: #938FF8;" id="">CONTACT US</a>
             </li>
             <li class="nav-item my-auto ">
-              <a class="nav-link text-uppercase Gray_5 h-100 d-block d-md-none mobileMenu" href="/company">company</a>
+              <a class="nav-link text-uppercase Gray_5 h-100 d-block d-md-none mobileMenu navTopLine" href="/company">company</a>
             </li>
             <li class="nav-item my-auto nav-scroller">
               <a class="nav-link text-uppercase Gray_5 h-100 d-block d-md-none mobileMenu" href="/community">community</a>
@@ -252,26 +254,7 @@
       </div>
     </nav>
 
-    <!-- <header class="bg-dark  menu py-2" id='headr_dark' style='height:4vw;'>
-
-      <div class="container ">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none">
-            <img class="logo" src="/img/common/CNAI(white).png" width="70px">
-          </a>
-          <div class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 Body_2_eng" id='gnb-dark'>
-            <li class="my-auto px-5"><a href="/company"
-                class="nav-link px-2 Gray_5 lineOn">COMPANY</a></li>
-
-          
-            <li class='my-auto'><a href="/career" class="nav-link px-2 Gray_5 Body_2_eng">CAREER</a></li>
-          </div>
-          <div class="text-end">
-
-          </div>
-        </div>
-      </div>
-    </header> -->
+  
 
     {% block content %} {% endblock %}
 
@@ -284,7 +267,7 @@
       <div class="row Body_2_eng Gray_1" style="margin-top: 6rem;">
         <div class='col-lg-8 col-12'>
           <div class='row'>
-            <div class="col-lg-2 col-6">
+            <div class="col-lg-2 col-6 mt-5 my-md-0 mt-5 my-md-0 d-none">
               <h4 class="">Core Tech</h4>
               <div class="ui  link list">
                 <a href="#" class="item lh-lg">Data Warehouse </a>
@@ -293,62 +276,57 @@
 
               </div>
             </div>
-            <div class="col-lg-2 col-6">
+            <div class="col-lg-2 col-6 mt-5 my-md-0">
               <h4 class="">Company</h4>
               <div class="ui link list">
-                <a class="item lh-lg" href="#">Our Core Value</a>
-                <a class="item lh-lg" href="#"> Our Journey</a>
-                <a class="item lh-lg" href="#"> Media Kit</a>
-                <a class="item lh-lg" href="#"> Contact Us</a>
+                <a class="item lh-lg" href="/company">Our Core Value</a>
+                <a class="item lh-lg" href="/company"> Our Journey</a>
+                <a class="item lh-lg" href="/company"> Media Kit</a>
+                <a class="item lh-lg" href="mailto:contact@cnai.ai"> Contact Us</a>
               </div>
             </div>
-            <div class="col-lg-2 col-6">
+            <div class="col-lg-2 col-6 mt-5 my-md-0">
               <h4 class="">Career</h4>
               <div class="ui link list">
-                <a class="item lh-lg" href="#">Our Value</a>
-                <a class="item lh-lg" href="#"> CN.AI Team</a>
-                <a class="item lh-lg" href="#"> Recruit</a>
+                <a class="item lh-lg" href="/career">Our Value</a>
+                <a class="item lh-lg" href="/career"> CN.AI Team</a>
+                <a class="item lh-lg" href="/career"> Recruit</a>
               </div>
             </div>
-            <div class="col-lg-2 col-6">
+            <div class="col-lg-2 col-6 mt-5 my-md-0">
               <h4 class="">Community</h4>
               <div class="ui link list">
-                <a class="item lh-lg" href="#">Recent News</a>
-                <a class="item lh-lg" href="#">Investment</a>
-                <a class="item lh-lg" href="#">Tech Blog</a>
+                <a class="item lh-lg" href="/community">Recent News</a>
+                <a class="item lh-lg" href="/community">Investment</a>
+                <a class="item lh-lg d-none" href="/community">Tech Blog</a>
               </div>
             </div>
-            <div class="col-lg-2 col-6">
+            <div class="col-lg-2 col-6 mt-5 my-md-0">
               <h4 class="">Contact us</h4>
               <div class="ui link list">
-                <a class="item lh-lg footer-text" href="#">사업 제휴</a>
-                <a class="item lh-lg  footer-text" href="#">마케팅·PR</a>
-                <a class="item lh-lg  footer-text" href="#">IR</a>
-                <a class="item lh-lg footer-text" href="#">오시는 길 </a>
+                <a class="item lh-lg footer-text" href="mailto:contact@cnai.ai">사업 제휴</a>
+                <a class="item lh-lg  footer-text" href="mailto:contact@cnai.ai">마케팅·PR</a>
+                <a class="item lh-lg  footer-text" href="mailto:contact@cnai.ai">IR</a>
+                <a class="item lh-lg footer-text" href="/company">오시는 길 </a>
               </div>
             </div>
           </div>
         </div>
-        <div class='col-lg-4 col-12 Body_2_eng Gray_1'>
+        <div class='col-lg-4 col-12 Body_2_eng Gray_1 my-5 my-md-0'>
           <div class='channel'>
             <h4 class="">Channel</h4>
 
-            <button class="ui circular facebook icon button">
-              <i class="facebook icon"></i>
-            </button>
-            <button class="ui circular twitter icon button">
-              <i class="twitter icon"></i>
-            </button>
-            <button class="ui circular linkedin icon button">
-              <i class="linkedin icon"></i>
-            </button>
-            <button class="ui circular google plus icon button">
-              <i class="google plus icon"></i>
-            </button>
+
+{% for i in ["https://www.instagram.com/cnai.ai/", "https://www.youtube.com/channel/UC2VAxP6sgZWvlVNpaNxMXLQ", "https://www.notion.so/CNAI-124e0d7e280d4a079ea9d56f5d173691"] %}       
+
+<a href = '{{ i }}' target="_blank">
+              <img src = '/img/icon/{{ loop.index + 10 }}.png' class = 'col-1'>
+            </a>
+        {% endfor %}
 
 
           </div>
-          <p class="my-5 pt-3">Media Kit</p>
+          <p class="my-3 pt-5">Media Kit</p>
           <button class='ui button'>C.I Download</button>
         </div>
       </div>

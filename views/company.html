@@ -49,7 +49,7 @@ line-height: 150%;
 
 
 
-<div class='isBg-1 card rounded-0 border-0'>
+<div class='isBg-1 card rounded-0 border-0 masthead'>
   <video autoplay muted loop id="myVideo">
     <source src="img/2/2.mov" type="video/mp4">
   </video>
@@ -72,24 +72,22 @@ line-height: 150%;
   <div class="w-100">
     <p class="SubTitle_1 Gray_2">Our Numbers </p>
   </div>
-  <div class="row mt-5 gx-5 w-75">
-    <div class="col-md-auto col-12">
-      <h1 data-aos="fade-up" class="cn2Title Gray_6 mb-5 aos-init aos-animate">1 st</h1>
-      <p class="Gray_4 Body_1">국내 최초 <br>
+  <div class="row mt-5 gx-5 w-100">
+    <div class="col-md col-12">
+      <h1 data-aos="fade-up" class="cn2Title Gray_6 mb-md-5 mb-0 aos-init aos-animate">1 st</h1>
+      <p class="Gray_4 Body_1 mb-5 mb-md-0">국내 최초 <br>
 
         합성 데이터 활용 기업</p>
     </div>
-    <div class="col-md-7 col-12">
-      <h1 data-aos="fade-up" class="cn2Title Gray_6 mb-5 aos-init aos-animate" data-aos-delay="200">10,000,000 <span><i
-            class="plus icon fs-3"></i></span></h1>
-      <p class="Gray_4 Body_1">합성 데이터를 위해 <br />
+    <div class="col-md-6 col-12">
+      <h1 data-aos="fade-up" class="cn2Title Gray_6 mb-md-5 mb-0 aos-init aos-animate" data-aos-delay="200">10,000,000 <span><i class="plus icon fs-3"></i></span></h1>
+      <p class="Gray_4 Body_1 mb-5 mb-md-0">합성 데이터를 위해 <br>
         수집한 원천 데이터 수</p>
 
     </div>
-    <div class="col-md-auto col-12">
-      <h1 data-aos="fade-up" class="cn2Title Gray_6 mb-5 aos-init aos-animate" data-aos-delay="400">92 <span><i
-            class="plus icon fs-3"></i></span></h1>
-      <p class="Gray_4 Body_1">프로젝트를 위해 보유한 <br />
+    <div class="col-md col-12">
+      <h1 data-aos="fade-up" class="cn2Title Gray_6 mb-md-5 mb-0 aos-init aos-animate" data-aos-delay="400">92 <span><i class="plus icon fs-3"></i></span></h1>
+      <p class="Gray_4 Body_1 mb-5 mb-md-0">프로젝트를 위해 보유한 <br>
         AI 모델의 수(2022.2월 기준)
       </p>
     </div>
@@ -214,7 +212,7 @@ line-height: 150%;
               </div>
           </div>
           <div class="col-md-5 d-flex align-items-end">
-            <img src="/img/2/leaders/{{ loop.index -8}}.png" class="img-fluid" alt="{{ s.name }}">
+            <img src="/img/2/leaders/{{ loop.index -8}}.png" class="img-fluid mx-auto" alt="{{ s.name }}">
           </div>
         </div>
       </div>
@@ -297,21 +295,22 @@ line-height: 150%;
 
   <section id='story' class='row g-0 '
     style='background: linear-gradient(96.7deg, rgba(255, 255, 255, 0) -7.21%, #FFFFFF 138.74%), #5A54F5; margin-top: 45vh;'>
-    <div class='col-4 text-center position-relative text-white'>
-      <p class='SubTitle_1 mt-5'>Our Story</p>
-      <p class='position-absolute start-50 translate-middle-x Title_2_eng' style='bottom:7vh;'>More
-        <button type="button" class="circular ui icon button bg-transparent" data-bs-toggle="modal"
-          data-bs-target="#exampleModal">
-          <span class='ms-3'><i class="bi bi-arrow-right-circle"></i></span>
+    <div class="col-md-4 position-relative text-white d-flex flex-column">
+      <p class="SubTitle_1 mt-5 offset-md-4">Our Story</p>
+      <div class="mt-auto Title_2_eng offset-md-4 mb-4" style="bottom:7vh;">More
+        <button type="button" class="circular ui icon button bg-transparent" data-bs-toggle="modal" data-bs-target="#exampleModal" style="">
+          <span class="" style="bottom: 3vh;"><img src="/img/icon/02 arrow-right-circle-dark.png" width="44" style="
+    margin-bottom: 2vh;
+"></span>
         </button>
-      </p>
+      </div>
     </div>
     <div class='col-8'>
       <img src="/img/1.jpeg" class="img-fluid w-100" alt="...">
     </div>
   </section>
   <!-- Modal -->
-  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content bg-transparent border-0">
         <button type="button"
@@ -322,7 +321,7 @@ line-height: 150%;
           allow="accelerometer; autoplay;"></iframe>
       </div>
     </div>
-  </div> -->
+  </div>
 
 
 
@@ -396,10 +395,12 @@ line-height: 150%;
         </div>
 
         <div class="row mt-5">
-          <div class="col-md-3 Tab Gray_1"><button class="ui button bgGray5 engFont">Contact us</button></div>
+          <a href = 'mailto:hr_team@cnai.ai' class="col-md-3 Tab Gray_1"><button class="ui button bgGray5 engFont">Contact us</button></a>
           <div class="col-12 col-auto offset-1 Body_1 lh-lg">
             <p>
-            <span class="Gray_0"><u>hr_team@cnai.ai</u></span>
+            <span class="Gray_0" style="
+            border-bottom: 2px solid black;
+        ">hr_team@cnai.ai</span>
             <span class="Gray_2">문의하기 <i class="angle right icon"></i> </span> <br/>
                  
           유선 번호 <span class = 'Body_1_eng'>Call. 02 2088 1216 </span> <br/>

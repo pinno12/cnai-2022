@@ -194,18 +194,18 @@
 
 
 <img src='img/career/banner.png' class='w-100'>
-<div class="float-end" style="
+<!-- <div class="float-end" style="
     position: fixed;
     bottom: 10vh;
     right: 10vw;
     z-index:2;
     
-">
+"> -->
   <a href='https://defiant-sodalite-85a.notion.site/Beta-6dfeaaf6dd024663a7467620ca7dad24' target='_blank'
-    class="ui button shadow-lg pBtn Gray_4">
+    class="ui button shadow-lg pBtn Gray_4" id = 'shortcut'>
     채용공고 보러가기
   </a>
-</div>
+<!-- </div> -->
 
 <section id='banner' class='container'>
   <div class='row'>
@@ -466,9 +466,9 @@
     </div>
 
     <div class='row mt-4'>
-      <div class='col-md-2 Body_1 Gray_0 ' style='position:absolute' id = 'c1-text'>실무진들의 면밀한 검토를
+      <div class='col-md-2 Body_1 Gray_0 d-none d-md-block ' style='position:absolute' id = 'c1-text'>실무진들의 면밀한 검토를
         통한 서류 평가 과정 </div>
-      <div class='col-md-3 Body_1 Gray_0 mt-4 ' style='position:absolute' id = 'c3-text'>역량, 컬쳐핏이 CN과 부합하는지
+      <div class='col-md-3 Body_1 Gray_0 mt-4 d-none d-md-block ' style='position:absolute' id = 'c3-text'>역량, 컬쳐핏이 CN과 부합하는지
         알아보기 위한 역량/문화 인터뷰</div>
     </div>
 
@@ -477,11 +477,11 @@
 
   <div class='container' style="padding-top: 23vh; padding-bottom: 23vh;">
     <div class='col'>
-      <span class="ui huge label bg-white Gray_1">
+      <span class="ui huge label bg-white Gray_1 mx-2">
         채용 문의
       </span>
       <a href='mailto:hr_team@cnai.ai' class='Gray_0'>hr_team@cnai.ai</a>
-      <span class='Gray_2'>문의하기 > </span>
+      <a href='mailto:hr_team@cnai.ai' class='Gray_2'>문의하기 > </a>
     </div>
   </div>
 
@@ -499,7 +499,7 @@
 
   makeSwiper = (className) => {
     new Swiper(className, {
-      slidesPerView: 2,
+      slidesPerView: 1,
       // centeredSlides: true,
       spaceBetween: 30,
       grabCursor: true,
