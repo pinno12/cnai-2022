@@ -134,8 +134,18 @@ app.listen(8080, () => {
     console.log("다음 주소에 연결되었어요( http://localhost:8080/ ) !");
 });
 app.get("/", function (req, res) {
-  res.render('index',{title: ''});
+  let sql  ="SELECT * FROM cnai WHERE category = 'homeNews'";
+  db.all(sql,[],(err,data)=>{
+    if (err){
+      return console.error(err.message);
+    }else{
+      console.log(data);
+    res.render('index', {title: 'Hello', data:data});
+  }
+  })  
  });
+
+
 
 app.get('/company', (req,res) => {
   let sql = "SELECT * FROM cnai WHERE category = 'companyHistory' OR category = 'companyLeader'";
@@ -158,7 +168,6 @@ app.get('/community', (req,res) => {
     res.render('community', {title: '커뮤니티-', data:data});
   }
   })  
-
 })
 
 app.get('/community/20220405', (req,res) => {

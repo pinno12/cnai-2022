@@ -26,6 +26,7 @@
     "express-session": "^1.16.1",
     "font-applesdgothicneo": "^1.0.3",
     "helmet": "^3.16.0",
+    "isotope-masonry-horizontal": "^2.0.1",
     "jquery-simplyscroll": "^2.1.1",
     "morgan": "^1.10.0",
     "mysql2": "^2.0.2",
