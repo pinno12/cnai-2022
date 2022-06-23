@@ -71,69 +71,84 @@ Class name automatically added to element */
     height: 200px;
   }
 
-  .News, .Investment{
-    width: 44vh;
-    height: 18vh;
+  .News,
+  .Investment {
+    /* width: 55vh;
+    height: 18vh; */
+    width: 440px;
+    height: 180px;
   }
 
-  .Team{
-    width: 44vh;
-    height: 34vh;
+  .Team {
+    /* width: 47vh;
+    height: 34vh; */
+    width: 440px;
+    height: 340px;
   }
 
 
   .isotope {
-  background: #DDD;
-  height: 50vh; /* inherit height from body */
-}
+    /* background: #DDD; */
+    height: 590px;
+    ;
+    max-height: 590px;
+    /* max-height: 640px; */
+  }
 
-/* clear fix */
-.isotope:after {
-  content: '';
-  display: block;
-  clear: both;
-}
+  .element-item {
+    margin: 0.5rem;
+  }
 
-/* ---- .item ---- */
+  /* clear fix */
+  .isotope:after,
+  .element-item:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
 
-.grid-sizer {
-  height: 30vh;
-}  
-
-/* clear fix */
-.element-item:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
+  .wrapper {
+    width: 100%;
+    height: auto;
+    /* max-height: 640px; */
+    /* padding: 0 50px; */
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    /* background-color: tomato; */
+  }
 </style>
 
 <!-- The video -->
-<div class='isBg-1 card rounded-0 border-0'>
-  <video autoplay muted loop id="myVideo">
+<!-- <div class='isBg-1 card rounded-0 border-0 video-container' style="position: relative;">
+  <video autoplay muted loop id="myVideo"  style="position:absolute">
     <source src="img/home/1.mov" type="video/mp4">
   </video>
-  <div class="card-img-overlay h-100">
-    <div class="container h-100 justify-content-center text-center align-items-center d-flex" style="">
-      <div style="" data-aos="fade-up">
-        <!-- position-absolute 쓰면 fade up 불가 -->
-        <h1 class="Title_1 text-white">당신이 원하는 모든 것, AI로 이루어 드립니다</h1>
-
+  <video autoplay muted loop id="" style="position:absolute">
+    <source src="img/home/Title.mov" type="video/mp4">
+  </video>
+  </div> -->
+  <div class='isBg-1 card rounded-0 border-0 masthead'>
+    <video autoplay muted loop id="myVideo">
+      <source src="img/home/1.mov" type="video/mp4">
+    </video>
+    <div class="card-img-overlay " style = 'height:90vh;'>
+      <div class="container h-100 justify-content-center text-center align-items-center d-flex" >
+        <div  data-aos="fade-up">
+          <!-- position-absolute 쓰면 fade up 불가 -->
+          <h1 class="Title_1 text-white">당신이 원하는 모든 것, AI로 이루어 드립니다</h1>
+  
+        </div>
       </div>
     </div>
   </div>
-</div>
+  
 
 
 <div class='isBg-1'
   style='background: linear-gradient(154.46deg, rgba(203, 186, 255, 0) 51.73%, #CBBAFF 89.37%), #FFFFFF;'>
 
-
-
   <div class="container col-md-8 col-12 pt-4">
-
-
     <section class="py-5 text-center container navbar-example" style='height:100vh;'>
       <div class="row py-md-5 mt-5">
         <div class="mx-auto">
@@ -183,7 +198,7 @@ Class name automatically added to element */
             <img src="img/home/-1.png" class="card-img rounded-0" alt="비즈니스에 가능성을 
               더하는 AI Human">
 
-            <div class=" mb-4 card-img-overlay  c2-img" id="" style="height: 100%">
+            <div class=" card-img-overlay  c2-img" id="" style="height: 100%">
               <div class="container c2-img d-flex flex-column h-100 p-4">
                 <div class="row g-0 h-100">
                   <div class="col-md-6 col-12 d-flex flex-column ">
@@ -212,7 +227,7 @@ Class name automatically added to element */
             <div class="mb-4 card w-100 border-0 rounded-0 p-0" id="">
               <img src="img/home/0.png" class="card-img rounded-0" alt="비즈니스에 가능성을 
               더하는 AI Human">
-              <div class="card-img-overlay container c3-img d-flex flex-column h-100 p-4 rounded-0">
+              <div class="card-img-overlay container c3-img d-flex flex-column h-100 p-5 rounded-0">
                 <div class="row g-0 h-100">
                   <div class="col-md-7 d-flex flex-column ">
                     <p class=" c3-title Title_1_eng mb-0 gray_0">비즈니스에 가능성을
@@ -234,12 +249,12 @@ Class name automatically added to element */
             </div>
           </div>
           <div class="row">
-            <div class=" " id=""
+            <div class="pb-4" id=""
               style="background: linear-gradient(108.12deg, #7E53FF 14.18%, rgba(126, 83, 255, 0) 43.27%), #5A54F5; ">
               <div class="container d-flex flex-column h-100 p-4">
                 <div class="row g-0 h-100">
                   <div class="col-7 d-flex align-items-center">
-                    <p class=" Title_1_eng mb-0 text-white">AI Human의 베타 서비스를
+                    <p class=" Title_3 mb-0 text-white">AI Human의 베타 서비스를
                       신청해보세요!</p>
 
                   </div>
@@ -258,7 +273,7 @@ Class name automatically added to element */
 
 
     <section class="ourUseCases">
-      <div class="subTitle_1 Gray_3" style='margin-top: 30vh;'>
+      <div class="SubTitle_1 Gray_3" style='margin-top: 30vh;'>
         Our Use Cases
       </div>
       <p class=' Title_2 my-4 pb-4 Gray_1'>
@@ -287,9 +302,7 @@ Class name automatically added to element */
       <div class="swiper-slide ">
         <div class="row gx-0 justify-content-between"
           style="background: linear-gradient(96.66deg, rgba(255, 255, 255, 0) -8.55%, rgba(255, 255, 255, 0.8) 159.35%), #5A54F5;">
-          <div class="col-md-3 col-12 Gray_5 offset-md-2" style='
-            
-          '>
+          <div class="col-md-3 col-12 Gray_5 offset-md-2" >
             <p class="Body_1  mt-5 ">{{ item.title }}</p>
             <p class="Title_2 ">{{ item.title2 }} </p>
             <p class="Body_1 ">{{ item.description }}</p>
@@ -306,15 +319,10 @@ Class name automatically added to element */
     <div class="swiper-pagination position-absolute start-50 translate-middle-x Label Gray_1" style="bottom:7vh;">
     </div>
   </div>
-  
-
-
-
 
 
   <section id='partners' style="
-    margin-top: 48vh;
-">
+    margin-top: 48vh;">
 
     <div class='container col-12'>
       <h5 class='Gray_2 SubTitle_1'>Our Partners </h5>
@@ -343,50 +351,60 @@ Class name automatically added to element */
   </section>
 </div>
 
-<section id = 'news'>
-  <p class = 'Title_1 Gray_1' style="margin-top: 36vh; margin-bottom: 8vh;">
-    CN.AI의 새로운 소식을 확인하세요!
-  </p>
 
-  
-  <div id="filters" class="button-group mb-5">
-    <button class="btn-blue-tab is-checked bg-transparent border-0 mx-3 px-3 is-checked px-3"
-      data-filter="*">All</button>
-    <button class="btn-blue-tab bg-transparent border-0 mx-3 px-3" data-filter=".Investment">Investment</button>
-    <button class="btn-blue-tab bg-transparent border-0 mx-3 px-3" data-filter=".News">News</button>
-    <button class="btn-blue-tab bg-transparent border-0 mx-3 px-3" data-filter=".Team">Team</button>
+<div class='isBg-1 card rounded-0 border-0'>
+  <video autoplay muted loop id="myVideo">
+    <source src="img/home/2.mp4" type="video/mp4">
+  </video>
+</div>
 
-  </div>
+<div class='isBg bg-Gray6' style="padding-top: 30vh">
+  <section id='news' class='offset-md-2 '>
+    <p class='Title_1 Gray_1' style="margin-top: 36vh; margin-bottom: 8vh;">
+      CN.AI의 새로운 소식을 확인하세요!
+    </p>
 
+    <div id="filters" class="button-group mb-5">
+      <button class="btn-blue-tab is-checked bg-transparent border-0 mx-3 px-3 is-checked px-3"
+        data-filter="*">All</button>
+      <button class="btn-blue-tab bg-transparent border-0 mx-3 px-3" data-filter=".Investment">Investment</button>
+      <button class="btn-blue-tab bg-transparent border-0 mx-3 px-3" data-filter=".News">News</button>
+      <button class="btn-blue-tab bg-transparent border-0 mx-3 px-3" data-filter=".Team">Team</button>
 
-  <section class='isotope'   data-isotope-options='{ "layoutMode": "masonryHorizontal", "itemSelector": ".element-item", "masonryHorizontal": { "rowHeight": ".grid-sizer" } }'>
-    <div class="grid-sizer"></div>
-    {% for i in data %}
-    {% if i.name  == 'Team' %}
-    <div class  = 'card element-item {{ i.name }}' data-category = '{{ i.name }}' >
-      <img src="/img/home/team/{{i.content2}}">
-      <div class = 'card-img-overlay'>
-        <div class="card-footer bg-transparent border-0 text-white">
-          <p class='Label Gray_1'>{{ i.name }}</p>
-          <p class='Title_3 Gray_1' >{{i.title}}</p>
-        </div>
-      </div>
     </div>
-  
-    {% else %}
+    <!-- data-isotope-options='{ "layoutMode": "masonryHorizontal", "itemSelector": ".element-item", "masonryHorizontal": { "rowHeight": ".grid-sizer" } }' -->
+    <div class='wrapper'>
+      <section class='isotope'>
+        <!-- <div class="grid-sizer"></div> -->
+        {% for i in data %}
+        {% if i.name == 'Team' %}
+        <div class='card border-0 element-item {{ i.name }}' data-category='{{ i.name }}'>
+          <div class='number d-none'>{{ i.order }}</div>
+          <img src="/img/home/team/{{i.content2}}">
+          <div class='card-img-overlay d-flex d-column'>
+            <div class="card-footer bg-transparent border-0 text-white mt-auto">
+              <p class='Label '>{{ i.name }}</p>
+              <p class='Title_3 text-wrap'>{{i.title}}</p>
+            </div>
+          </div>
+        </div>
 
-    <a href = '{{ i.content }}' class = 'element-item {{ i.name }} card' data-category = '{{ i.name }}' target = '_blank'>
-      <p class='Label Gray_1'>{{i.name}}</p>
-    
-      <p class='Title_3 Gray_1' >{{i.title}}</p>
+        {% else %}
 
-    </a>
-    {% endif %}
+        <a href='{{ i.content }}' class='element-item border-0 {{ i.name }} card p-3' data-category='{{ i.name }}'
+          target='_blank'>
+          <p class='Label Gray_1'>{{i.name}}</p>
+          <div class='number d-none'>{{ i.order }}</div>
+          <p class='Title_3 Gray_1 text-wrap'>{{i.title}}</p>
 
-    {% endfor %}        
+        </a>
+        {% endif %}
+
+        {% endfor %}
+      </section>
+    </div>
   </section>
-
-</section>
+</div>
 
 {% import 'partials/footerBanner.nj' as box2 %}
 {{ box2.footerBanner(src = 'mailto:contact@cnai.ai', title = 'CN.AI의 솔루션에 대한 상담이 필요하다면', btn = 'CONTACT US') }}
@@ -401,16 +419,24 @@ Class name automatically added to element */
 <script src="//npmcdn.com/isotope-masonry-horizontal@2/masonry-horizontal.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/6.0.0/shuffle.min.js"></script>
 <script>
- // init Isotope
+  // init Isotope
 
- var $container = $('.isotope').isotope({
+  var $container = $('.isotope').isotope({
     itemSelector: '.element-item',
-  //   layoutMode: 'masonryHorizontal',
-  //   masonryHorizontal: {
-  //   rowHeight: $('.element-item')[0]*2
-  //   // 110
-  // },
-  
+    layoutMode: 'masonryHorizontal',
+    // layoutMode: 'fitRows',
+    sortBy: 'number',
+
+    sortAscending: true,
+    masonryHorizontal: {
+      // gutter: 10,
+      // horizontalOrder: true,
+      // rowWidth: ,
+      columnWidth: 440,
+    },
+
+    // resizesContainer: false,
+
     getSortData: {
       name: '.name',
       symbol: '.symbol',
@@ -423,8 +449,8 @@ Class name automatically added to element */
     }
   });
   // var isHorizontal = true;
-var $window = $( window );
-// $('.isotope').attr('data-is-horizontal');
+  var $window = $(window);
+  // $('.isotope').attr('data-is-horizontal');
 
   // filter functions
   var filterFns = {

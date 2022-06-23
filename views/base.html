@@ -110,27 +110,73 @@
 
   <main role="main" class="flex-shrink-0 ">
 
-    <section class="bg-light ui large top fixed menu transition hidden" id="header_light">
-      <div class="container ">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <img class="logo" src="/img/common/CNAI(white).png" width="15%"> CNAI
-          </a>
-
-          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="/company" class="nav-link px-2 text-secondary">COMPANY</a></li>
-            <li><a href="/community" class="nav-link px-2 text-white">COMMUNITY</a></li>
-            <li><a href="/career" class="nav-link px-2 text-white">CAREER</a></li>
-          </ul>
-
-
-          <div class="text-end">
-            <a><i class="globe icon"></i></a>
-            <button type="button" class="btn btn-outline-light me-2">CONTACT US</button>
+    <!-- <section class="bg-light ui large top fixed menu  " id="header_light"> -->
+      <nav class="navbar navbar-expand-lg shadow-sm py-0 transition hidden ui top fixed menu" id="header_light" aria-label="아래쪽 메뉴" >
+        <div class="container h-100 mobileNav" id = ''>
+          <a class="navbar-toggler border-0 " type="button" data-bs-toggle="collapse" data-bs-target="#gnb" aria-controls="gnb"
+            aria-expanded="false" aria-label="Toggle navigation" style="position: absolute;height: 100%;top: 2vh;">
+            <!-- <span class="navbar-toggler-icon"></span> -->
+            <span class="burger" onclick="this.classList.toggle('active');"></span>
+        </a>
+          <a class="navbar-brand mx-auto mb-2 me-md-5" href="/"> <img class="" src="/img/common/CNAI(blue).png" width="80px"></a>       
+          <div class="collapse navbar-collapse" id="gnb">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 Body_2_eng h-100">
+              <li class="nav-item  my-auto lineOn text-center ms-3 d-none d-md-block">
+                <a class="nav-link text-uppercase Gray_0 h-100 py-0 " href="/company">company</a>
+              </li>
+              <li class="nav-item  my-auto h-100 d-block d-md-none px-3 py-2 position-relative" style="    border-top: 1px solid #EEEEEE; ">
+                <a class=" text-uppercase Gray_0 position-absolute top-50 start-2 translate-middle-y" href="mailto:contact@cnai.ai">CN.AI MLOps 도입 문의는</a>
+                <a href= 'mailto:contact@cnai.ai'class="nav-item mini ui button me-2 Gray_0 gnbBtn float-end mobileMenu " style="background-color: #938FF8;" id="">CONTACT US</a>
+              </li>
+              <li class="nav-item my-auto ">
+                <a class="nav-link text-uppercase Gray_0 h-100 d-block d-md-none mobileMenu" href="/company">company</a>
+              </li>
+              <li class="nav-item my-auto nav-scroller">
+                <a class="nav-link text-uppercase Gray_0 h-100 d-block d-md-none mobileMenu" href="/community">community</a>
+         
+              </li>
+  
+              <li class="nav-item my-auto ">
+                <a class="nav-link text-uppercase Gray_0 h-100 d-block d-md-none mobileMenu" href="/career">career</a>
+              </li>
+  
+              <li class="nav-item my-auto text-white d-block d-md-none mobileMenu">
+                KO | EN
+              </li>
+  
+              <!-- <li class="nav-item my-auto lineOn">
+                <a class="nav-link text-uppercase Gray_5 " href="/community">COMMUNITY</a>
+              </li>  -->
+              <li class="ui compact menu nav-item my-auto h-100 ms-4 d-none d-md-block border-0 shadow-none" style="background: none;">
+                <div class="ui simple dropdown item Gray_0 en d-none d-md-block" id="moveArrow" tabindex="0">
+                  COMMUNITY
+                  <i class="angle down icon" id="myArrow"></i>
+                  <div class="menu " tabindex="-1">
+                    <a class="item" href="/community">Publications</a>
+                    <a class="item " href="/community">Tech Blog
+                      <i class="external alternate icon"></i></a>
+                  </div>
+                </div>
+              </li>
+              <div class="ui compact menu nav-item ms-3 my-auto h-100  d-none d-md-block border-0 shadow-none" style="background: none;">
+                <div class="ui simple dropdown item Gray_0 en text-uppercase " id="moveArrow" tabindex="0">
+                  career
+                  <i class="angle down icon" id="myArrow"></i>
+                  <div class="menu " tabindex="-1">
+                    <a class="item" href="/career">CN.AI Team</a>
+                    <a class="item" href="/community">Recruit<i class="external alternate icon"></i></a>
+                  </div>
+                </div>
+              </div>
+            </ul>
+            <li class="nav-item my-auto  navbar-nav d-none d-md-block"> <a href="/en" class="nav-link">
+              <i class="globe icon text-white gnbBtn"></i></a> 
+            </li> 
+            <a href= 'mailto:contact@cnai.ai'class="nav-item btn btn-outline-dark me-2 Gray_0 ms-5 gnbBtn d-none d-md-block" id="">CONTACT US</a>
           </div>
         </div>
-      </div>
-    </section>
+      </nav>
+    <!-- </section> -->
 
 
 
@@ -147,16 +193,14 @@
           <!-- <span class="navbar-toggler-icon"></span> -->
           <span class="burger" onclick="this.classList.toggle('active');"></span>
       </a>
-        <a class="navbar-brand mx-auto mb-2 me-md-5" href="/"> <img class="" src="/img/common/CNAI(white).png" width="80px"></a>
-        
-
+        <a class="navbar-brand mx-auto mb-2 me-md-5" href="/"> <img class="" src="/img/common/CNAI(white).png" width="80px"></a>       
         <div class="collapse navbar-collapse" id="gnb">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0 Body_2_eng h-100">
             <li class="nav-item  my-auto lineOn text-center ms-3 d-none d-md-block">
               <a class="nav-link text-uppercase Gray_5 h-100 py-0 " href="/company">company</a>
             </li>
-            <li class="nav-item  my-auto h-100 d-block d-md-none mobileMenu position-relative bg-Gray6" style="    border-top: 1px solid #EEEEEE; ">
-              <a class=" text-uppercase Gray_2 position-absolute top-50 start-2 translate-middle-y" href="mailto:contact@cnai.ai">CN.AI MLOps 도입 문의는</a>
+            <li class="nav-item  my-auto h-100 d-block d-md-none px-3 py-2 position-relative" style="    border-top: 1px solid #EEEEEE; ">
+              <a class=" text-uppercase Gray_5 position-absolute top-50 start-2 translate-middle-y" href="mailto:contact@cnai.ai">CN.AI MLOps 도입 문의는</a>
               <a href= 'mailto:contact@cnai.ai'class="nav-item mini ui button me-2 Gray_5 gnbBtn float-end mobileMenu " style="background-color: #938FF8;" id="">CONTACT US</a>
             </li>
             <li class="nav-item my-auto ">
@@ -231,18 +275,7 @@
 
     {% block content %} {% endblock %}
 
-
-    <!-- <section class="py-5 text-center container-fluid text-light" id="btn-career"
-      style="height: 38vh;background: linear-gradient(180deg, #7E53FF -8.57%, rgba(126, 83, 255, 0) 46.58%), #5A54F5;">
-      <div style="margin-top:5vh" data-aos="fade-up" class="aos-init aos-animate">
-
-        <h1>{% block title %} {% endblock %} </h1>
-        <div class="ui button">{% block btn %} {% endblock %}</div>
-      </div>
-    </section> -->
   </main>
-
-
 
   <!-- Footer -->
 

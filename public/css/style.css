@@ -6,7 +6,7 @@
 /* 모바일  */
 @media only screen and (max-width: 992px) {
 
-  #mobileNav{
+  .mobileNav{
     padding: 0;
   }
 
@@ -61,6 +61,16 @@ button.gnbBtn:hover, .gnbBtn:active{
 .ui.menu .ui.dropdown .menu>.item:hover{
   color: #f2f5f8 !important;
 }
+
+/* 
+#header_light .ui.menu .ui.dropdown .menu>.item{
+  color: white !important;
+} */
+
+#header_light .ui.menu .ui.dropdown .menu>.item:hover{
+  color: #5A54F5 !important;
+}
+
 
 .burger {
   display: flex;
@@ -135,7 +145,7 @@ html {
   font-family: 'AppleSDGothicNeo' !important;
 }
 
-@import "//cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/all.min.css";
+/* @import "//cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/all.min.css"; */
 
 .en {
   font-family: 'made-tommy' !important;
@@ -493,6 +503,11 @@ body[lang=kr] {
 @font-face {
   font-family: made-tommy;
   src: url("/css/font/made-tommy/webfonts/made-tommy.woff") format("woff")
+}
+
+@font-face {
+  font-family: AppleSDGothicNeo;
+  src: url("/css/font/apple/AppleSDGothicNeoR.woff") format("woff")
 }
 
   .better{
