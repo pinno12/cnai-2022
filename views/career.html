@@ -183,12 +183,12 @@
     font-size: 5.93rem;
   }
 
-  .process{
+  .process {
     background-color: #F2F5F8;
   }
 
-  .ui.secondary.pointing.menu .item{
-    border-bottom:  2px solid rgba(90, 84, 245, 0.2);
+  .ui.secondary.pointing.menu .item {
+    border-bottom: 2px solid rgba(90, 84, 245, 0.2);
   }
 </style>
 
@@ -201,10 +201,10 @@
     z-index:2;
     
 "> -->
-  <a href='https://defiant-sodalite-85a.notion.site/Beta-6dfeaaf6dd024663a7467620ca7dad24' target='_blank'
-    class="ui button shadow-lg pBtn Gray_4" id = 'shortcut'>
-    채용공고 보러가기
-  </a>
+<a href='https://defiant-sodalite-85a.notion.site/Beta-6dfeaaf6dd024663a7467620ca7dad24' target='_blank'
+  class="ui button shadow-lg pBtn Gray_4" id='shortcut'>
+  채용공고 보러가기
+</a>
 <!-- </div> -->
 
 <section id='banner' class='container'>
@@ -300,7 +300,7 @@
           </span><span class='Title_1 Gray_1'>{{ questions[0]}}</span></div>
 
         <div class="swiper mySwiper1" style="height: inherit;">
-          <div class="swiper-wrapper" >
+          <div class="swiper-wrapper">
             {% for s in data %}
             {% if s.question == 1 %}
             <div class="swiper-slide w1">
@@ -357,16 +357,18 @@
     padding-top: 12vh;
     position: absolute;
 "><span onclick="showPrev()"><i class="angle left icon"></i></span>
-        <span id="currentPage">1</span> /5 <span id="showNext" onclick="showNext(1)"><i class="angle right icon"></i></span></p>
-   
+        <span id="currentPage">1</span> /5 <span id="showNext" onclick="showNext(1)"><i
+            class="angle right icon"></i></span>
+      </p>
+
       <div class="ui pointing secondary menu border-0" style="
       padding-bottom: 10vh;
   ">
 
-  {% for i in range(1,6) %}  
-        <a class="item px-5 " data-tab="member-{{ i }}" id = "member-{{ i }}" onClick = 'updatePage(this)'></a>
-        
-  {% endfor %}
+        {% for i in range(1,6) %}
+        <a class="item px-md-5 px-3" data-tab="member-{{ i }}" id="member-{{ i }}" onClick='updatePage(this)'></a>
+
+        {% endfor %}
       </div>
 
     </div>
@@ -379,7 +381,7 @@
   <div class=' row justify-content-center' style="margin-top: 30vh;">
     <h5 class='Gray_2 SubTitle_1 text-center'>Our Welfare
     </h5>
-    <h4 class='col-md-6 Title_2 Gray_1'>아낌없는 지원으로 업무 몰입 뿐 아니라,
+    <h4 class='col-md-6 Title_2 Gray_1 text-center'>아낌없는 지원으로 업무 몰입 뿐 아니라,
       팀원들의 성장과 자아실현까지 이끌어갑니다.</h4>
   </div>
 
@@ -401,7 +403,7 @@
   </div>
 </section>
 
-<section class='process' >
+<section class='process'>
   <!-- height: 150vh; -->
   <div style='margin-bottom: 6rem; padding-top:12vh '>
     <h1 class='text-center Title_1 Gray_1'>영입 절차 </h1>
@@ -409,9 +411,9 @@
   </div>
 
   <div class='row'>
-    <div class='col-md-2 d-none d-md-block Body_1 Gray_0 mt-4 ' style='position:absolute' id = 'c2-text'>지원자의 역량을 확인하기 위한
+    <div class='col-md-2 d-none d-md-block Body_1 Gray_0 mt-4 ' style='position:absolute' id='c2-text'>지원자의 역량을 확인하기 위한
       인적성 적합도 평가 과정</div>
-    <div class='col-md-2 Body_1 Gray_0 d-none d-md-block ' style='position:absolute' id = 'c4-text'>3개월간의 수습 기간 동안
+    <div class='col-md-2 Body_1 Gray_0 d-none d-md-block ' style='position:absolute' id='c4-text'>3개월간의 수습 기간 동안
       적합도 평가를 통해 정직원 전환 진행</div>
   </div>
 
@@ -429,7 +431,7 @@
 
     </div>
 
-    
+
     <div class="ui circular segment position-relative border-0 my-auto c2">
       <div class='circle-text Gray_1'>
         <p class='label mb-2'> 02</p>
@@ -454,7 +456,7 @@
 
     </div>
 
-    <div class="ui circular segment position-relative border-0 my-auto c4" id = 'c4'>
+    <div class="ui circular segment position-relative border-0 my-auto c4" id='c4'>
       <div class='circle-text Gray_1'>
         <p class='label'> 04</p>
         <div class="col-md-3 mx-auto mb-3" style="border-bottom: 2px solid #4E5968"></div>
@@ -466,9 +468,10 @@
     </div>
 
     <div class='row mt-4'>
-      <div class='col-md-2 Body_1 Gray_0 d-none d-md-block ' style='position:absolute' id = 'c1-text'>실무진들의 면밀한 검토를
+      <div class='col-md-2 Body_1 Gray_0 d-none d-md-block ' style='position:absolute' id='c1-text'>실무진들의 면밀한 검토를
         통한 서류 평가 과정 </div>
-      <div class='col-md-3 Body_1 Gray_0 mt-4 d-none d-md-block ' style='position:absolute' id = 'c3-text'>역량, 컬쳐핏이 CN과 부합하는지
+      <div class='col-md-3 Body_1 Gray_0 mt-4 d-none d-md-block ' style='position:absolute' id='c3-text'>역량, 컬쳐핏이 CN과
+        부합하는지
         알아보기 위한 역량/문화 인터뷰</div>
     </div>
 
@@ -499,7 +502,7 @@
 
   makeSwiper = (className) => {
     new Swiper(className, {
-      slidesPerView: 1,
+      slidesPerView: 2,
       // centeredSlides: true,
       spaceBetween: 30,
       grabCursor: true,
@@ -546,52 +549,52 @@
     }
   });
 
-  updatePage = (item) =>{
-    document.getElementById('currentPage').innerHTML = item.dataset.tab.substr(7,1);
+  updatePage = (item) => {
+    document.getElementById('currentPage').innerHTML = item.dataset.tab.substr(7, 1);
   }
 
-  showNext = (num) =>{
-    cPage = Number(document.getElementById('currentPage').innerHTML) + 1*(num)
+  showNext = (num) => {
+    cPage = Number(document.getElementById('currentPage').innerHTML) + 1 * (num)
     id = 'member-' + cPage;
-    current = 'member-' + Number(document.getElementById('currentPage').innerHTML);    
-    $('.tab[data-tab]')[cPage-2*num].classList.remove('active')
+    current = 'member-' + Number(document.getElementById('currentPage').innerHTML);
+    $('.tab[data-tab]')[cPage - 2 * num].classList.remove('active')
 
-    $('.tab[data-tab]')[cPage-1*num].classList.add('active')
+    $('.tab[data-tab]')[cPage - 1 * num].classList.add('active')
 
     document.getElementById(current).classList.remove('active');
     document.getElementById(id).classList.add('active');
 
-    document.getElementById('currentPage').innerHTML = cPage;    
+    document.getElementById('currentPage').innerHTML = cPage;
   }
 
 
-  showPrev = () =>{
-    cPage = Number(document.getElementById('currentPage').innerHTML) -1
+  showPrev = () => {
+    cPage = Number(document.getElementById('currentPage').innerHTML) - 1
     id = 'member-' + cPage;
-    current = 'member-' + Number(document.getElementById('currentPage').innerHTML);    
-    $('.tab[data-tab]')[cPage-1].classList.add('active')
+    current = 'member-' + Number(document.getElementById('currentPage').innerHTML);
+    $('.tab[data-tab]')[cPage - 1].classList.add('active')
     $('.tab[data-tab]')[cPage].classList.remove('active')
 
     document.getElementById(current).classList.remove('active');
     document.getElementById(id).classList.add('active');
 
-    document.getElementById('currentPage').innerHTML = cPage;    
+    document.getElementById('currentPage').innerHTML = cPage;
   }
 
 
-  processPos = (myClass) =>{
-  let target = document.getElementsByClassName(myClass)[0]
-  let targetText = myClass + '-text'
-  document.getElementById(targetText).style.marginLeft = (target.getBoundingClientRect().width/2 + target.getBoundingClientRect().x+10)+ "px";
-  // console.log(myClass, 'completed')
-}
+  processPos = (myClass) => {
+    let target = document.getElementsByClassName(myClass)[0]
+    let targetText = myClass + '-text'
+    document.getElementById(targetText).style.marginLeft = (target.getBoundingClientRect().width / 2 + target.getBoundingClientRect().x + 10) + "px";
+    // console.log(myClass, 'completed')
+  }
 
-processPos('c1');
-processPos('c2');
-processPos('c3');
-processPos('c4');
+  processPos('c1');
+  processPos('c2');
+  processPos('c3');
+  processPos('c4');
 
 
-  
+
 </script>
 {% endblock %}

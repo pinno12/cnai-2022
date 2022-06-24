@@ -34,15 +34,24 @@
 </style>
 
 
-{% import 'partials/banner.nj' as box %}
-{{ box.banner('/img/4/1.png', 'CN.AI의 소식을 알려드립니다.') }}
+
+<section class="card bg-transparent border-0 rounded-0 masthead">
+  <img src="/img/4/1.png">
+  <div class="card-img-overlay">
+<section class="py-5 text-center container-fluid mb-5 text-light h-auto">
+  <div class = 'CN.AI의 소식을 알려드립니다.' style="margin-top: 40vh;" data-aos="fade-up">
+  {{ title }}
+  </div>
+</section>
+</div>
+</section>
 
 
 <section id='news' class='container'>
   <p class='my-5 Title_1 Gray_1'>{% block e1 %}한발 빠르게 받아보는 소식 {% endblock%}</p>
   <div class="ui pointing secondary menu border-0">
     <a class="item active " data-tab="first">Recent News</a>
-    <a class="item " data-tab="second">Publications</a>
+    <a class="item d-none " data-tab="second">Publications</a>
   </div>
 
   <div class="ui bottom attached tab segment border-0" data-tab="first">
@@ -190,13 +199,13 @@
                 <p class="Label Gray_2 mb-0">GitHub.io</p>
                 <p class="Title_2_eng Gray_1">Tech blog</p>
 
-                <a href="#" target = '_blank' class="mt-auto Gray_2 d-none d-md-block "><i class="bi bi-arrow-right-circle" style="font-size: 3rem;"></i></a>
+                <span href="#" target = '_blank' class="mt-auto Gray_2 d-none d-md-block myPopup"><i class="bi bi-arrow-right-circle" style="font-size: 3rem;" data-content="준비 중 입니다"></i></span>
               </div>
             </div>
             <div class="col-md-4">
-              <a href="#" target = '_blank' >
+              <span href="#" target = '_blank' >
               <img src="img/4/03 github.png" class="img-fluid rounded-start" style="height: 5rem;" alt="...">
-            </a>
+              </span>
             </div>
           </div>
         </div>
@@ -237,7 +246,9 @@
 $('.menu .item')
   .tab()
 ;
-
+$('.myPopup')
+  .popup()
+;
 
   // init Isotope
   var $container = $('.isotope').isotope({

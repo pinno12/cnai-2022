@@ -169,7 +169,7 @@ Class name automatically added to element */
           <img src="img/home/-2.png" class="card-img rounded-0" alt="비즈니스에 가능성을 
             더하는 AI Human">
 
-          <div class=" mb-4 card-img-overlay  c1-img" id='tech' style='height: 70vh;'>
+          <div class=" mb-4 card-img-overlay  c1-img" id='tech'>
             <div class="container c1-img d-flex flex-column h-100 p-4">
               <div class='row g-0 h-100'>
                 <div class='col d-flex flex-column '>
@@ -511,7 +511,9 @@ Class name automatically added to element */
     },
   });
 
-  $("#scrollerTop").simplyScroll({
+
+  scrollPartner = (x,y)=>{
+  $(x).simplyScroll({
     customClass: "simply-scroll",
     frameRate: 20,
     speed: 1,
@@ -519,24 +521,15 @@ Class name automatically added to element */
     auto: !0,
     autoMode: "loop",
     manualMode: "end",
-    direction: "forwards",
+    direction: y,
     startOnLoad: !1,
-    initialOffset: 0
+    initialOffset: 0,
+    pauseOnHover: false
   });
+}
 
-  $("#scrollerBottom").simplyScroll({
-    customClass: "simply-scroll",
-    frameRate: 20,
-    speed: 1,
-    orientation: "horizontal",
-    auto: !0,
-    autoMode: "loop",
-    manualMode: "end",
-    direction: "backwards",
-    startOnLoad: !1,
-    initialOffset: 0
-  });
-
+scrollPartner('#scrollerTop', 'forwards')
+scrollPartner('#scrollerBottom', 'backwards')
 
 </script>
 

@@ -30,9 +30,9 @@
   .mobileNav{
     padding: 0;
   }
-  #shortcut{
+  /* #shortcut{
  right:34vw;
-  }
+  } */
   .mobileMenu{
     padding: 1rem ;
     border-bottom: 1px solid #EEEEEE;
@@ -124,14 +124,14 @@ button.gnbBtn:hover, .gnbBtn:active{
 
 html {
   font-size: 16px;
-  font-family: 'AppleSDGothicNeo', 'made-tommy', sans-serif;
+  font-family: 'Pretendard', 'made-tommy', sans-serif;
 }
 
 .kr{
-  font-family: 'AppleSDGothicNeo' !important;
+  font-family: 'Pretendard' !important;
 }
 
-/* @import "//cdn.jsdelivr.net/npm/font-applesdgothicneo@1.0/all.min.css"; */
+/* @import "//cdn.jsdelivr.net/npm/font-Pretendard@1.0/all.min.css"; */
 
 .en {
   font-family: 'made-tommy' !important;
@@ -220,7 +220,7 @@ button{
 }
 
 .Title_1 {
-  font-family: 'Apple SD Gothic Neo';
+  font-family: 'Pretendard';
   font-style: normal;
   font-weight: 800;
   font-size: 2.25rem;
@@ -230,8 +230,8 @@ button{
 }
 
 .Title_2 {
-  /* Apple SD Gothic Neo / Semi Bold / 1.875rem / line height 2.813rem / letter spacing -2%  */
-  font-family: 'Apple SD Gothic Neo';
+  /* Pretendard / Semi Bold / 1.875rem / line height 2.813rem / letter spacing -2%  */
+  font-family: 'Pretendard';
   font-style: normal;
   font-weight: 600;
   font-size: 1.875rem;
@@ -240,8 +240,8 @@ button{
 }
 
 .Title_3 {
-  /* Apple SD Gothic Neo / Semi Bold / 1.625rem / line height 2.5rem / letter spacing -2%  */
-  font-family: 'Apple SD Gothic Neo';
+  /* Pretendard / Semi Bold / 1.625rem / line height 2.5rem / letter spacing -2%  */
+  font-family: 'Pretendard';
   font-weight: 600;
   font-size: 1.625rem;
   line-height: 2.5rem;
@@ -249,7 +249,7 @@ button{
 }
 
 .footer-text{
-font-family: 'Apple SD Gothic Neo';
+font-family: 'Pretendard';
 font-style: normal;
 font-weight: 600;
 font-size: 0.9rem;
@@ -262,8 +262,8 @@ color: #4E5968;
 
 }
 .Body_1 {
-  /* Apple SD Gothic Neo / Medium / 1.25rem / line height 2.25rem / letter spacing -2%  */
-  font-family: 'Apple SD Gothic Neo';
+  /* Pretendard / Medium / 1.25rem / line height 2.25rem / letter spacing -2%  */
+  font-family: 'Pretendard';
   font-weight: 500;
   font-size: 1.25rem;
   /* line-height: 2.25rem; */
@@ -272,7 +272,7 @@ color: #4E5968;
 }
 
 .Body_2 {
-  font-family: 'Apple SD Gothic Neo';
+  font-family: 'Pretendard';
   font-weight: 500;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -352,7 +352,7 @@ footer .ui.link.list .item, .ui.link.list .item a:not(.ui), .ui.link.list a.item
 }
 
 .member-Tab{
-  font-family: 'Apple SD Gothic Neo';
+  font-family: 'Pretendard';
 font-style: normal;
 font-weight: 600;
 font-size: 20px;
@@ -510,7 +510,7 @@ h5,
 h6,
 html[lang=kr],
 body[lang=kr] {
-  font-family: 'AppleSDGothicNeo';
+  font-family: 'Pretendard';
 }
 
 
@@ -526,10 +526,16 @@ body[lang=kr] {
   font-family: made-tommy;
   src: url("/css/font/made-tommy/webfonts/made-tommy.woff") format("woff")
 }
+/* 
+@font-face {
+  font-family: Pretendard;
+  src: url("/css/font/apple/PretendardR.woff") format("woff")
+} */
+
 
 @font-face {
-  font-family: AppleSDGothicNeo;
-  src: url("/css/font/apple/AppleSDGothicNeoR.woff") format("woff")
+  font-family: Pretendard;
+  src: url("/css/font/Pretendard/Pretendard-Regular.woff") format("woff")
 }
 
   .better{
