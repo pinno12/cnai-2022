@@ -201,7 +201,7 @@ app.get('/test', (req,res) => {
   res.render('test', {title: 'test'});
 })
 
-// app.get("/", function (req, res) {
+// app.get("/admin/login", function (req, res) {
 //   res.redirect("login");
 //  });
 

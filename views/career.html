@@ -207,7 +207,7 @@
 </a>
 <!-- </div> -->
 
-<section id='banner' class='container'>
+<section id='banner' class='container masthead'>
   <div class='row'>
     <div class='col-8'>
       <h1 class='text-c'>함께이기에 <br />
@@ -307,9 +307,8 @@
               <div class="card border-0 mb-3 shadow member mt-5 w-100 p-4 rounded-4" style="height: 45vh;">
                 <p class="Title_2 ">나는 CN.AI의 <br /><span class='Title_1' style="color: #{{ s.color }} ">{{ s.title
                     }}</span></p>
-                <button class="mini ui circular icon button col-1 btn-sm-member m{{ loop.index }}-btn"
-                  style='width:0.7rem; height: 0.7rem;' onclick="showUp2($(this).attr('id')) " id="m{{ loop.index }}"><i
-                    class="angle down icon"></i></button>
+                <button class=" border-0 bg-transparent btn-sm-member m{{ loop.index }}-btn btn-sm-1"
+                 ' onclick="showUp2($(this).attr('id')) " id="m{{ loop.index }}">   <img src = '/img/icon/07 dropdown.png' class = 'btn-sm-1'></button>
                 <div class="card-body Gray_2 m{{ loop.index }} d-none">
                   <p class="card-text">{{ s.content | striptags(true) | escape | nl2br}}</p>
                 </div>
@@ -512,7 +511,8 @@
       },
       breakpoints: {
         640: {
-          slidesPerView: 'auto'
+          slidesPerView: 3,
+          spaceBetween: 30,
         }
       }
     });
