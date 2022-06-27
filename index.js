@@ -321,7 +321,7 @@ app.get("/en", function (req, res) {
       return console.error(err.message);
     }else{
       // console.log(data);
-    res.render('index', {title: 'Hi ', data:data});
+    res.render('en/home', {title: 'Hi ', data:data});
   }
   })  
  });
