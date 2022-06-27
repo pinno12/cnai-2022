@@ -7,8 +7,19 @@ console.log(`Welcome to
 ┃┃╱╭┫┃╰╮┃┃╰━╯┃┃┃
 ┃╰━╯┃┃╱┃┃┃╭━╮┣┫┣╮
 ╰━━━┻╯╱╰━┻╯╱╰┻━━╯
-`)
+You can check job openings at https://bit.ly/cnaijob`)
 
+if (window.location.href.search('/en')){
+  document.getElementById("enFooter").innerHTML = `
+  CNAI <br />
+  Company Registration Number ｜CEO : Wonseop Lee <br />
+  29-9 Seoripul-gil, Seocho-gu, Seoul ｜ 4F, 101, Jungang-ro, Jung-gu, Daejeon<br />
+  © 2022. CNAI Inc. all rights reserved.  
+  `;
+}
+
+
+// console.log(zc['c1'])
 
 showUp = (myId, category) => {
   let blur = myId + '-img';

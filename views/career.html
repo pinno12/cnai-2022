@@ -193,14 +193,8 @@
 </style>
 
 
-<img src='img/career/banner.png' class='w-100'>
-<!-- <div class="float-end" style="
-    position: fixed;
-    bottom: 10vh;
-    right: 10vw;
-    z-index:2;
-    
-"> -->
+<img src='/img/career/banner.png' class='w-100'>
+
 <a href='https://defiant-sodalite-85a.notion.site/Beta-6dfeaaf6dd024663a7467620ca7dad24' target='_blank'
   class="ui button shadow-lg pBtn Gray_4" id='shortcut'>
   채용공고 보러가기
@@ -210,8 +204,7 @@
 <section id='banner' class='container masthead'>
   <div class='row'>
     <div class='col-8'>
-      <h1 class='text-c'>함께이기에 <br />
-        더 빛이 나는 사람들,</h1>
+      <h1 class='text-c'> {{ zc[1] }}</h1>
     </div>
     <div class='col-4 d-flex '>
       <h1 class='Point_1 mt-auto c-text-2'>CN.TEAMS</h1>
@@ -240,31 +233,21 @@
     <div class="swiper career-slide h-100">
       <div class="swiper-wrapper">
 
-        {% set say1 = [{ title: "시행착오의 가치를 믿어요.", id: 1, description: "실패는 잘못이 아니에요. 넘어지는 것을 두려워하지 않고, 다시 일어나 두 걸음 더
-        앞으로 나아가요." },
-        { title: "함께 성장하는 힘을 믿어요.", id: 2, description: "혼자보다 함께할 때 더 큰 변화를 만들 수 있음을 믿고, 신뢰를 기반으로 소통하며 하나의 목표를 위해 협력해
-        나가요."} ,
-        {title: "스스로 업무를 정의해나가요.", id: 3, description: "주체적으로 롤을 정의하고 업무를 선택하며 깊이 몰입해요. 끊임없이 역량을 쌓으며 더 나은 미래를 만들어
-        나가요."},
-        {title: "솔직함과 자유로움으로 성과를 만들어 나가요.", id:4, description: "의견 충돌을 두려워하지 않고 피드백을 나누며 서로가 더 건강하게 성장해요. 치열한 논의와
-        소통을 통해, 최고의 결과를 도출해요."}]
-        %}
-
-        {% for item in say1 %}
+        {% for i in range(1,5) %}
         <div class="swiper-slide w-60">
           <div class="card w-100 border-0 rounded-0 ">
-            <img src="img/career/howWeWork/{{ item.id }}.png" alt="{{ item.title   }}" class='card-img member2-img'>
+            <img src="/img/career/howWeWork/{{ say1[i]['id'] }}.png" alt="{{ say1[i]['title']   }}" class='card-img member2-img'>
             <div class="card-img-overlay member{{ loop.index }}-img p-0 rounded-0">
               <div class='row g-0 h-100'>
                 <div class='col-lg-4 d-flex flex-column p-5 '>
-                  <h5 class="Title_1 Gray_1">{{ item.title | striptags(true) | escape | nl2br}}</h5>
+                  <h5 class="Title_1 Gray_1">{{ say1[i].title | striptags(true) | escape | nl2br}}</h5>
                   <div class='mt-auto '>
-                    <p class="Title_3 Gray_0  member{{ loop.index }} transition hidden">{{ item.description }} </p>
+                    <p class="Title_3 Gray_0  member{{ say1[i]['id'] }} transition hidden">{{ say1[i]['description'] }} </p>
                   </div>
                 </div>
                 <div class='col align-self-end p-5'>
-                  <button onClick="showUp($(this).attr('id'))" id='member{{ loop.index }}'
-                    class="align-items-baseline border-0 card-text bg-transparent float-end c-btn member{{ loop.index }}-btn">
+                  <button onClick="showUp($(this).attr('id'))" id="member{{ say1[i]['id'] }}"
+                    class="align-say1[i]s-baseline border-0 card-text bg-transparent float-end c-btn member{{ say1[i]['id']}}-btn">
                     <i class="bi bi-plus-circle text-white fs-1"></i>
                   </button>
                 </div>
@@ -380,18 +363,17 @@
   <div class=' row justify-content-center' style="margin-top: 30vh;">
     <h5 class='Gray_2 SubTitle_1 text-center'>Our Welfare
     </h5>
-    <h4 class='col-md-6 Title_2 Gray_1 text-center'>아낌없는 지원으로 업무 몰입 뿐 아니라,
-      팀원들의 성장과 자아실현까지 이끌어갑니다.</h4>
+    <h4 class='col-md-6 Title_2 Gray_1 text-center'>.</h4>
   </div>
 
-  <img class='w-100 my-3' src='img/career/5.png'>
+  <img class='w-100 my-3' src='/img/career/5.png'>
 
   <div class='row g-5' style='margin-top: 30vh; margin-bottom: 30vh'>
     {% for s in data %}
     {% if s.question == 6 %}
 
     <div class='col-md-3 offset-lg-1 my-5 py-5' data-aos="fade-up" data-aos-delay="{{ (loop.index-25) * 100 }}">
-      <img src='img/career/{{ s.color }}.svg' alt='{{ s.title }} ' class='col-md-2'>
+      <img src='/img/career/{{ s.color }}.svg' alt='{{ s.title }} ' class='col-md-2'>
       <h4 class='mt-3 Gray_1 Title_3'>{{ s.title }}</h4>
       <h5 class='Body_1' style='color:#7E7E7E; '>{{ s.content }}</h5>
     </div>
