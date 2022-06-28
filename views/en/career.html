@@ -17,3 +17,10 @@
 {% block x15 %}Careers FAQ{% endblock %}
 {% block x16 %}A peek into the daily life of CNAI's development team{% endblock %}
 {% block title %}Shortcut to Tech Blog{% endblock %}
+
+
+{% block l1 %}CN.AI{% endblock %}
+
+{% block f1 %}{{ s.title_en  }}{% endblock %}
+{% block f2 %}{{ s.content_en | striptags(true) | escape | nl2br}}{% endblock %}
+{% block f3 %}{{ s.writer_en }}{% endblock %}

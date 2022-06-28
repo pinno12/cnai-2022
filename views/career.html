@@ -289,14 +289,14 @@
             {% if s.question == 1 %}
             <div class="swiper-slide w1">
               <div class="card border-0 mb-3 shadow member mt-5 w-100 p-4 rounded-4" style="height: 45vh;">
-                <p class="Title_2 ">나는 CN.AI의 <br /><span class='Title_1' style="color: #{{ s.color }} ">
-                  {{ s.title  }}</span></p>
+                <p class="Title_2 ">{%block l1 %}%나는 CN.AI의 {% endblock %}<br /><span class='Title_1' style="color: #{{ s.color }} ">
+                  {% block f1 %}{{ s.title  }}{% endblock %}</span></p>
                 <button class=" border-0 bg-transparent btn-sm-member m{{ loop.index }}-btn btn-sm-1"
                  ' onclick="showUp2($(this).attr('id')) " id="m{{ loop.index }}">   <img src = '/img/icon/07 dropdown.png' class = 'btn-sm-1'></button>
                 <div class="card-body Gray_2 m{{ loop.index }} d-none">
-                  <p class="card-text Body_2 Gray_2">{{ s.content | striptags(true) | escape | nl2br}}</p>
+                  <p class="card-text Body_2 Gray_2">{% block f2 %}{{ s.content | striptags(true) | escape | nl2br}}{% endblock %}</p>
                 </div>
-                <div class="card-footer mt-auto bg-transparent border-0 Gray_1 member-Tab">{{ s.writer }}</div>
+                <div class="card-footer mt-auto bg-transparent border-0 Gray_1 member-Tab">{%block f3 %}{{ s.writer }}{% endblock %}</div>
               </div>
             </div>
             {% endif %}
