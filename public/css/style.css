@@ -22,6 +22,10 @@
   right: 10vw;
   z-index:2;
 }
+
+.mhome{
+  height: 100%;
+}
 /* 모바일  */
 @media only screen and (max-width: 992px) {
 .navbar-brand{
@@ -29,6 +33,10 @@
 }
   .mobileNav{
     padding: 0;
+  }
+
+  .mHome{
+   height: auto !important; 
   }
   /* #shortcut{
  right:34vw;
