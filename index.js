@@ -150,7 +150,7 @@ app.get("/", function (req, res) {
       console.log("data['content_en']", data['name'])
       // let contents = data['content_en']
       // console.log(contents)
-    res.render('index', {title: 'Hello', data:data});
+    res.render('index', {title: 'Hello',fB: 'CN.AI의 다양한 AI 솔루션에 대해 궁금하신가요?', data:data,  say1: JSON.parse(JSON.stringify(main['say1Ko']))});
   }
   })
   
@@ -165,7 +165,7 @@ app.get('/company', (req,res) => {
     if (err){
       return console.error(err.message);
     }
-    res.render('company',{title: '회사-', data:history});
+    res.render('company',{title: '회사-', data:history, say1: JSON.parse(JSON.stringify(company['say1Ko']))});
   })  
 })
 
@@ -223,7 +223,7 @@ app.get('/en/company', (req,res) => {
     if (err){
       return console.error(err.message);
     }
-    res.render('company',{title: 'company-', data:history});
+    res.render('company',{title: 'company-', data:history, say1: JSON.parse(JSON.stringify(company['say1En']))});
   })  
 })
 
@@ -272,7 +272,7 @@ say1En: {1: { title: "We believe in the value of trial and error", id: 1, descri
 }
 
 let main = {
-  say1Kr: {1: { title: "Medical 의료 분야", id: 1, title2: "일반적으로 구하기 어려운 희귀 병변 데이터를 생성하고 정밀하게 탐지합니다.", description: "개인 민감정보 활용 이슈에서 자유로운 의료 합성데이터를 만듭니다. 합성데이터는 학습 데이터의 부족 문제를 해결해 AI 진단의 정확도를 높입니다." },
+  say1Ko: {1: { title: "Medical 의료 분야", id: 1, title2: "일반적으로 구하기 어려운 희귀 병변 데이터를 생성하고 정밀하게 탐지합니다.", description: "개인 민감정보 활용 이슈에서 자유로운 의료 합성데이터를 만듭니다. 합성데이터는 학습 데이터의 부족 문제를 해결해 AI 진단의 정확도를 높입니다." },
 2: {title: "AI Human 가상인간", id: 2, title2: "AI Human을 통해 가치를 전달하고, 언택트 시대의 소통을 혁신합니다.",description: "고도화된 영상/음성 합성기술로 실제 인간과 구분할 수 없는 수준의 가상인간을 만듭니다."} ,
 3: {title: "Autonomous Driving 자율주행", title2: "보다 현실에 가까운 학습데이터로 자율주행의 안전성을 높입니다.", id: 3, description: "도로/주차 운전 시, 일상에서 수집하기 어려운 여러 상황을 학습데이터로 만듭니다."},
 },
@@ -321,7 +321,7 @@ app.get("/en", function (req, res) {
       return console.error(err.message);
     }else{
       // console.log(data);
-    res.render('en/home', {title: 'Hi ', data:data});
+    res.render('en/home', {title: 'Hi ',fB: 'Do you have interest in CNAI’s various AI solutions?', data:data, say1: JSON.parse(JSON.stringify(main['say1En']))});
   }
   })  
  });

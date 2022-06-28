@@ -156,7 +156,7 @@
                   COMMUNITY
                   <i class="angle down icon" id="myArrow"></i>
                   <div class="menu " tabindex="-1">
-                    <a class="item" href="/community">Publications</a>
+                    <a class="item" href="/community" id = '/en/community'>Publications</a>
                     <a class="item " href="/community">Tech Blog
                       <i class="external alternate icon"></i></a>
                   </div>
@@ -261,7 +261,14 @@
   
 
     {% block content %} {% endblock %}
-
+    <section class="py-5 text-center container-fluid text-light" id="btn-career"
+    style="height: 38vh;background: linear-gradient(180deg, #7E53FF -8.57%, rgba(126, 83, 255, 0) 46.58%), #5A54F5;">
+    <div style="margin-top:5vh" data-aos="fade-up" class="aos-init aos-animate">
+      <!-- position-absolute 쓰면 fade up 불가 -->
+      <h1>{% block title %} {% endblock %} </h1>
+      <div class="ui button">{% block btn %} {% endblock %}</div>
+    </div>
+  </section>
   </main>
 
   <!-- Footer -->

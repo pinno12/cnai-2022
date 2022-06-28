@@ -51,7 +51,7 @@ line-height: 150%;
     <div class="container h-100 justify-content-center text-center align-items-center d-flex" >
       <div  data-aos="fade-up" >
         <!-- position-absolute 쓰면 fade up 불가 -->
-        <h1 class="Title_1 text-white">합성 데이터로 새로운 패러다임을 만듭니다.</h1>
+        <h1 class="Title_1 text-white">{% block x1 %}합성 데이터로 새로운 패러다임을 만듭니다.{% endblock %}</h1>
 
       </div>
     </div>
@@ -69,20 +69,25 @@ line-height: 150%;
   <div class="row mt-5 gx-5 w-100">
     <div class="col-md col-12">
       <h1 data-aos="fade-up" class="cn2Title Gray_6 mb-md-5 mb-0 ">1 st</h1>
-      <p class="Gray_4 Body_1 mb-5 mb-md-0">국내 최초 <br>
-
-        합성 데이터 활용 기업</p>
+      <p class="Gray_4 Body_1 mb-5 mb-md-0">
+        {% block x3 %}
+        국내 최초 <br>
+        합성 데이터 활용 기업{% endblock %}</p>
     </div>
     <div class="col-md-6 col-12">
       <h1 data-aos="fade-up" class="cn2Title Gray_6 mb-md-5 mb-0 " data-aos-delay="200">10,000,000 <span><i class="plus icon fs-3"></i></span></h1>
-      <p class="Gray_4 Body_1 mb-5 mb-md-0">합성 데이터를 위해 <br>
-        수집한 원천 데이터 수</p>
+      <p class="Gray_4 Body_1 mb-5 mb-md-0">
+        {% block x4 %}
+        합성 데이터를 위해 <br>
+        수집한 원천 데이터 수{% endblock %}</p>
 
     </div>
     <div class="col-md col-12">
       <h1 data-aos="fade-up" class="cn2Title Gray_6 mb-md-5 mb-0 " data-aos-delay="400">92 <span><i class="plus icon fs-3"></i></span></h1>
-      <p class="Gray_4 Body_1 mb-5 mb-md-0">프로젝트를 위해 보유한 <br>
-        AI 모델의 수(2022.2월 기준)
+      <p class="Gray_4 Body_1 mb-5 mb-md-0">
+        {% block x5 %}
+        프로젝트를 위해 보유한 <br>
+        AI 모델의 수(2022.2월 기준){% endblock %}
       </p>
     </div>
   </div>
@@ -98,7 +103,9 @@ line-height: 150%;
     <div class="mt-auto mb-5 container" data-aos="fade-up">
 
       <p class='SubTitle_1 Gray_3'>Our Core Value </p>
-      <h2 class='Gray_6 Title_2' style='' data-aos="fade-right">코드를 넘어, 더 나은 미래를 설계합니다.</h2>
+      <h2 class='Gray_6 Title_2' style='' data-aos="fade-right">
+        {% block x6 %}
+        코드를 넘어, 더 나은 미래를 설계합니다.{% endblock %}</h2>
 
     </div>
   </div>
@@ -107,20 +114,20 @@ line-height: 150%;
 <section id="description" class="container">
   <div class="row align-items-center justify-content-between" style="height: 100vh">
     <div class="col-md-3" data-aos="fade-up" id="d1">
-      <p class='Title_1 Gray_1'>진정성 있는</p>
-      <p class='Title_3 Gray_0'>‘진정성’있게, 서로에 대한 신뢰를
-        바탕으로 끊임없이 소통합니다. </p>
+      <p class='Title_1 Gray_1'>{% block x7 %}진정성 있는{% endblock %}</p>
+      <p class='Title_3 Gray_0'>{% block x8 %}‘진정성’있게, 서로에 대한 신뢰를
+        바탕으로 끊임없이 소통합니다.{% endblock %} </p>
     </div>
     <div class="col-md-3" data-aos="fade-up" id='d2' data-aos-delay="200">
-      <h1 class='Title_1 Gray_1'>함께 성장하는</h1>
-      <p class='Title_3 Gray_0'>잠재력이 가득한 최고의 팀원들이
-        함께 멋진 미래를 만들어 나갑니다.</p>
+      <h1 class='Title_1 Gray_1'>{% block x9 %}함께 성장하는{% endblock %}</h1>
+      <p class='Title_3 Gray_0'>{% block x10 %}잠재력이 가득한 최고의 팀원들이
+        함께 멋진 미래를 만들어 나갑니다.{% endblock %}</p>
 
     </div>
     <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
-      <h1 class='Title_1 Gray_1'>끊임없이 도전하는</h1>
-      <p class='Title_3 Gray_0'>최선의 결과를 위해 고민하고 도전하며,
-        질문에 대한 해답을 찾아냅니다.
+      <h1 class='Title_1 Gray_1'>{% block x11 %}끊임없이 도전하는{% endblock %}</h1>
+      <p class='Title_3 Gray_0'>{% block x12 %}최선의 결과를 위해 고민하고 도전하며,
+        질문에 대한 해답을 찾아냅니다.{% endblock %}
       </p>
     </div>
   </div>
@@ -134,8 +141,8 @@ line-height: 150%;
     <div class="row ">
       <p class="SubTitle_1 Gray_3">Our Journey</p>
       <p class="col-md-4 Gray_1 Title_1">
-        대한민국 최고의 합성 데이터
-        기업으로 거듭나겠습니다.
+        {% block x13 %}  대한민국 최고의 합성 데이터
+        기업으로 거듭나겠습니다.{% endblock %}
       </p>
     </div>
   </div>
@@ -185,7 +192,7 @@ line-height: 150%;
 
     
     <h5 class = 'subTitle_1 Gray_3 my-3'>Our Leaders</h5>
-    <h2 class = 'Gray_1 Title_1 mb-5'>AI의 미래를 그리는 사람들</h2>
+    <h2 class = 'Gray_1 Title_1 mb-5'>{% block x14 %}AI의 미래를 그리는 사람들{% endblock %}</h2>
     <div class="row row-cols-2 g-4">
       {% for s in data %}
      {% if s.category == 'companyLeader' %}
@@ -223,9 +230,11 @@ line-height: 150%;
 
         <div class="col-md-6 d-flex flex-column card-body">
           <p class="SubTitle_1 Gray_3">Our Team</p>
-          <p class="card-text kr Title_1 Gray_1">함께이기에 <br>
-            빛이 나는 사람들</p>
-          <p class="Gray_1 Title_2 mt-auto">그들의 이야기가 궁금하다면
+          <p class="card-text kr Title_1 Gray_1">
+            {% block x15 %}
+            함께이기에 <br>
+            빛이 나는 사람들{% endblock %}</p>
+          <p class="Gray_1 Title_2 mt-auto">{% block x16 %}그들의 이야기가 궁금하다면{% endblock %}
             <a href="/career" class="ms-3 text-dark "><i class="bi bi-arrow-right-circle"></i></a>
           </p>
 
@@ -241,33 +250,22 @@ line-height: 150%;
 
   <section id='welfare' class='ms-md-5 ps-md-5' style='margin-top: 16vh'>
     <p class="SubTitle_1 Gray_3">Our Welfare</p>
-    <p class="card-text kr Title_2 Gray_1 col-md-6">아낌없는 지원으로 업무 몰입 뿐 아니라,
-      팀원들의 성장과 자아실현까지 이끌어갑니다.
+    <p class="card-text kr Title_2 Gray_1 col-md-6">{% block x17 %}아낌없는 지원으로 업무 몰입 뿐 아니라,
+      팀원들의 성장과 자아실현까지 이끌어갑니다.{% endblock %}
     <div class="swiper ourWelfare" style="margin-top: 20vh; ">
       <div class="swiper-wrapper" >
 
-        {% set say1 = [{ title: "사내 동아리 활동 운영",
-        description: "골프 , 싸이클, 풋살, 클라이밍 등
-        동료들과 함께 즐기는 사내 동아리" },
-        { title: "업무 몰입 및 역량 개발 지원",
-        description: "업무용 최신 장비 지원 및
-        세미나, 도서 구입 등 자기개발비 지원" } ,
-        {title: "식대 및 차대 제공 ",description: "점심식사와 커피 한잔은 물론, 간식과
-        야근식대까지 든든하게 보장"},
-        {title: "리프레쉬 휴가(3, 5, 7주년)",description: "회사의 성장을 이끌어준 팀원들을
-        위해 리프레시 휴가 지급(2주)"}]
-        %}
-        {% for i in say1 %}
+        {% for i in range(1,4) %}
 
         <div class="swiper-slide">
           <div class="row g-0 h-75">
             <div class="col-md-4 h-100">
-              <img src="img/2/{{loop.index + 3}}.png" class="img-fluid" alt="{{ i.title }}">
+              <img src="img/2/{{ say1[i]['id'] + 3 }}.png" class="img-fluid" alt="{{ i.title }}">
             </div>
             <div class="col-md-7 offset-md-1 d-flex flex-column">
-              <p class=" Title_3 mt-auto Gray_0">{{ i.title }}
+              <p class=" Title_3 mt-auto Gray_0">{{say1[i]['title'] }}
               </p>
-              <p class="Body_2 col-md-8 Gray_1">{{ i.description }}</p>
+              <p class="Body_2 col-md-8 Gray_1">{{  say1[i]['description'] }}</p>
             </div>
           </div>
         </div>
@@ -309,7 +307,7 @@ line-height: 150%;
         <button type="button"
           class="position-absolute top-0 start-100 translate-middle bg-white circular ui icon button"
           data-bs-dismiss="modal" aria-label="Close"><i class="times circle outline icon"></i></button>
-        <iframe width="100%" height="315"
+        <iframe width="200%" height="630"
           src="https://www.youtube.com/embed/8x1K-UDeTac?autoplay=1&cc_load_policy=1&mute=1" frameborder="0"
           allow="accelerometer; autoplay;"></iframe>
       </div>
@@ -362,11 +360,11 @@ line-height: 150%;
 
         <p class='Title_2_eng Gray_0 my-5'>Company Identity</p>
         <p class='Body_2 Gray_1'>
-          사명의 의미인 ‘Change New Code’의 CN을
-          심플하게 형상화한 심볼과 로고타입 A, B TYPE입니다.
+          {% block x18 %}     사명의 의미인 ‘Change New Code’의 CN을
+          심플하게 형상화한 심볼과 로고타입 A, B TYPE입니다.{% endblock %}
         </p>
 
-        <a class="ui button" href = '/img/2/mediaKit/CNAI.zip' download>C.I 다운로드</a>
+        <a class="ui button" href = '/img/2/mediaKit/CNAI.zip' download>  {% block x19 %}C.I 다운로드{% endblock %}</a>
 
       </section>
 
@@ -374,18 +372,18 @@ line-height: 150%;
       <div class="offset-md-5">
        <div class = "bg-white p-5" style="margin-top: -13vh; position:absolute">
         <p class="SubTitle_1 Gray_2">Contact</p>
-        <p class="Title_1 col-md-7" style="margin-bottom: 5.5rem;">CN.AI에게 궁금한 점이 있다면, 
-          언제든 문의 남겨주세요!</p>
+        <p class="Title_1 col-md-7" style="margin-bottom: 5.5rem;">  {% block x20 %}CN.AI에게 궁금한 점이 있다면, 
+          언제든 문의 남겨주세요!{% endblock %}</p>
    
         <div class="row mb-5">
           <div class="col-md-3 Tab Gray_1">CN.AI Seoul</div>
-          <div class="col-12 col-auto offset-md-1 Body_1 lh-lg">서울특별시 서초구 서리풀길 29-9<br>
-            <span class="Point_1">교대역 도보 13분 </span></div>
+          <div class="col-12 col-auto offset-md-1 Body_1 lh-lg">  {% block x21 %}서울특별시 서초구 서리풀길 29-9{% endblock %}<br>
+            <span class="Point_1"> {% block xx21 %}교대역 도보 13분 {% endblock %}</span></div>
         </div>
         <div class="row my-5">
           <div class="col-md-3 Tab Gray_1">CN.AI Dajeon</div>
-          <div class="col-12 col-auto offset-1 Body_1 lh-lg">대전광역시 중구 중앙로 101 대전창업허브 4F<br>
-            <span class="Point_1">중구청역 도보 3분</span></div>
+          <div class="col-12 col-auto offset-1 Body_1 lh-lg">{% block x22 %}대전광역시 중구 중앙로 101 대전창업허브 4F<br>
+            <span class="Point_1">{% block xx22 %}중구청역 도보 3분{% endblock %}</span></div>
         </div>
 
         <div class="row mt-5">

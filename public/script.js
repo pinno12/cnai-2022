@@ -16,6 +16,8 @@ if (window.location.href.search('/en')){
   29-9 Seoripul-gil, Seocho-gu, Seoul ｜ 4F, 101, Jungang-ro, Jung-gu, Daejeon<br />
   © 2022. CNAI Inc. all rights reserved.  
   `;
+
+  document.getElementById("/en/community").href = "/en/community";
 }
 
 
