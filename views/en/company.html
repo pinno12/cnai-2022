@@ -40,8 +40,12 @@ Over The Code, We Code Better Future.
 {% block x18 %}It is a simple symbol and logo A, B TYPE that embody the CN of 'Change New Code', which means the company name.{% endblock %}
 {% block x19 %}C.I download{% endblock %}
 {% block x20 %}If you have any questions for CN.AI, please feel free to contact us!{% endblock %}
-{% block x21 %}29-9 Seoripul-gil, Seocho-gu, Seoul
-{% block xx21 %}13 minutes' walk from Seoul Nat’l Univ. of Education Station{% endblock %}"
-{% block x22 %}4F, 101, Jungang-ro, Jung-gu, Daejeon
-{% block xx22 %}3 minutes’ walk from Jung-gu District Office{% endblock %}"
-{% block x23 %}If you interest in CN.AI’s Core Technologies,{% endblock %}
+{% block x21 %}29-9 Seoripul-gil, Seocho-gu, Seoul{% endblock %}
+{% block xx21 %}13 minutes' walk from Seoul Nat’l Univ. of Education Station{% endblock %}
+{% block x22 %}4F, 101, Jungang-ro, Jung-gu, Daejeon {% endblock %}
+{% block xx22 %}3 minutes’ walk from Jung-gu District Office{% endblock %}
+{% block title %}If you interest in CN.AI’s Core Technologies,{% endblock %}
+
+{% block f1 %} 
+{{ s.content_en | striptags(true) | escape | nl2br}}
+{% endblock %}

@@ -145,11 +145,7 @@ app.get("/", function (req, res) {
     if (err){
       return console.error(err.message);
     }else{
-      console.log(data);
- 
-      console.log("data['content_en']", data['name'])
-      // let contents = data['content_en']
-      // console.log(contents)
+
     res.render('index', {title: 'Hello',fB: 'CN.AI의 다양한 AI 솔루션에 대해 궁금하신가요?', data:data,  say1: JSON.parse(JSON.stringify(main['say1Ko']))});
   }
   })
@@ -203,7 +199,7 @@ app.get("/career", (req, res) => {
     if (err) {
       return console.error(err.message);
     }
-    res.render("career", { data: rows, title: '채용-', questions:questions });
+    res.render("career", { data: rows, title: '채용-', questions:questions, say1: JSON.parse(JSON.stringify(career['say1Kr']))});
   });
 });
 
@@ -223,7 +219,7 @@ app.get('/en/company', (req,res) => {
     if (err){
       return console.error(err.message);
     }
-    res.render('company',{title: 'company-', data:history, say1: JSON.parse(JSON.stringify(company['say1En']))});
+    res.render('en/company',{title: 'company-', data:history, say1: JSON.parse(JSON.stringify(company['say1En']))});
   })  
 })
 
@@ -234,7 +230,7 @@ app.get('/en/community', (req,res) => {
       return console.error(err.message);
     }else{
       ;
-    res.render('community', {title: 'community-', data:data});
+    res.render('en/community', {title: 'community-', data:data});
   }
   })  
 })
@@ -253,12 +249,12 @@ app.get('/en/community/20220405', (req,res) => {
 })
 
 let career = {
-  cHeadEn: {1: "Search CN.AI Job Openings", 2: "Together, We shine brighter",0:"Search CN.AI Job Openings", 4: 'The way we advance'},
-  cHeadKr: {1:'함께이기에 <br />빛이 나는 사람들', 2:'그들의 이야기가 궁금하다면', 
-  3: `아낌없는 지원으로 업무 몰입 뿐 아니라,
-  팀원들의 성장과 자아실현까지 이끌어갑니다`,
-  0: '채용공고 보러가기', 4:'우리가 성장하는 방식'
-},
+//   cHeadEn: {1: "Search CN.AI Job Openings", 2: "Together, We shine brighter",0:"Search CN.AI Job Openings", 4: 'The way we advance'},
+//   cHeadKr: {1:'함께이기에 <br />빛이 나는 사람들', 2:'그들의 이야기가 궁금하다면', 
+//   3: `아낌없는 지원으로 업무 몰입 뿐 아니라,
+//   팀원들의 성장과 자아실현까지 이끌어갑니다`,
+//   0: '채용공고 보러가기', 4:'우리가 성장하는 방식'
+// },
 say1Kr: {1: { title: "시행착오의 가치를 믿어요.", id: 1, description: "실패는 잘못이 아니에요. 넘어지는 것을 두려워하지 않고, 다시 일어나 두 걸음 더 앞으로 나아가요." },
 2: {title: "함께 성장하는 힘을 믿어요.", id: 2, description: "혼자보다 함께할 때 더 큰 변화를 만들 수 있음을 믿고, 신뢰를 기반으로 소통하며 하나의 목표를 위해 협력해 나가요."} ,
 3: {title: "스스로 업무를 정의해나가요.", id: 3, description: "주체적으로 롤을 정의하고 업무를 선택하며 깊이 몰입해요. 끊임없이 역량을 쌓으며 더 나은 미래를 만들어 나가요."},
@@ -283,7 +279,7 @@ say1En: {1: { title: "BioMedical", id: 1, title2: "Generate rare lesion data tha
 }
 
 let company = {
-  say1Kr:{1: { title: "사내 동아리 활동 운영",
+  say1Ko:{1: { title: "사내 동아리 활동 운영",
   description: "골프 , 싸이클, 풋살, 클라이밍 등 동료들과 함께 즐기는 사내 동아리" },
   2: { title: "업무 몰입 및 역량 개발 지원",
   description: "업무용 최신 장비 지원 및 세미나, 도서 구입 등 자기개발비 지원" } ,
@@ -309,8 +305,7 @@ console.log(JSON.stringify(career['cHeadEn']))
     if (err) {
       return console.error(err.message);
     }
-    res.render("career", { data: rows, title: 'Job Openings-', questions:questions , zc :JSON.parse(JSON.stringify(career['cHeadEn'])), 
-    say1: JSON.parse(JSON.stringify(career['say1Kr']))});
+    res.render("en/career", { data: rows, title: 'Job Openings-', questions:questions , say1: JSON.parse(JSON.stringify(career['say1Kr']))});
   })
 });
 

@@ -425,12 +425,12 @@ Class name automatically added to element */
 </div>
 
 
-{% import 'partials/footerBanner.nj' as box2 %}
-{{ box2.footerBanner(src = 'mailto:contact@cnai.ai', title = fB, btn = 'CONTACT US') }}
-
 
 {% endblock %}
 
+{% block fB %}mailto:contact@cnai.ai{% endblock %}
+{% block title %}fB {% endblock %}
+{% block btn %} CONTACT US {% endblock %}
 
 
 {% block localScript %}

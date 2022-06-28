@@ -417,6 +417,10 @@ padding-left: 1rem; */
   width: 48px !important;
 }
 
+.btn-sm-24{
+  width: 24px !important;
+}
+
 
 .bgGray5{
   background: #F2F5F8 !important;

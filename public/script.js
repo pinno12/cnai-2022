@@ -9,7 +9,7 @@ console.log(`Welcome to
 ╰━━━┻╯╱╰━┻╯╱╰┻━━╯
 You can check job openings at https://bit.ly/cnaijob`)
 
-if (window.location.href.search('/en')){
+if (window.location.href.search('/en')>0){
   document.getElementById("enFooter").innerHTML = `
   CNAI <br />
   Company Registration Number ｜CEO : Wonseop Lee <br />
@@ -17,7 +17,21 @@ if (window.location.href.search('/en')){
   © 2022. CNAI Inc. all rights reserved.  
   `;
 
-  document.getElementById("/en/community").href = "/en/community";
+  var links = document.querySelectorAll('.goEng');
+  for(var i = 0; i < links.length; i++){
+    links[i].href  = '/en' + links[i].pathname;
+  }
+}
+
+goGlobal = () => {
+  if (window.location.href.search('/en')>0){
+    let toGo = window.location.href.replace('/en','')
+    console.log(toGo)
+    window.location.href = toGo;
+
+  } else{
+    window.location.href = '/en' + window.location.pathname;
+  }
 }
 
 
